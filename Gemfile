@@ -7,7 +7,6 @@ gem 'rails', '3.2.8'
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
@@ -33,6 +32,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+gem 'rubycas-server'
 
 gem 'haml'
 # To use ActiveModel has_secure_password
