@@ -13,7 +13,7 @@ Background: project in database
 Scenario: add a file to an existing project
   When I go to the project page for "ProjA"
   Then I should not see "TestFile.doc"
-  And  I press "Upload File"
+  When I press "Upload File
   When I upload my file named "TestFile.doc"
   Then I should be on the project page for "ProjA"
   And  I should see "TestFile.doc"
