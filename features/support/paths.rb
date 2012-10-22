@@ -19,6 +19,9 @@ module NavigationHelpers
     when /^the login page$/
       '/auth/developer'
 
+    when /^the Berkeley page$/
+      '/berkeley'
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
