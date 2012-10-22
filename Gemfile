@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
+gem 'omniauth'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -18,6 +19,7 @@ group :development, :test do
 end
 group :production do
   gem 'pg'
+  gem 'omniauth'
 end
 
 # Gems used only for assets and not required
