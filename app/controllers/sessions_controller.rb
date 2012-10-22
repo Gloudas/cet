@@ -1,10 +1,21 @@
 class SessionsController < ApplicationController
 
+  @@current_user
+
   def create
     @user = User.find_or_create_from_auth_hash(auth_hash)
-    self.current_user = @user
-    # TODO: should redirect to user's school, not to general homepage
-    redirect_to '/'
+    @@current_user = @user
+#   session[:user_id] = @user.id
+    redirect_to '/berkeley'
+  end
+
+  def failure
+    render :text => "Sorry, but we didn't receive the permissions we need for your account."
+  end
+
+  def destroy
+    @@current_user = nil
+    render :text => "You've logged out!"
   end
 
   def auth_hash

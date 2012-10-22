@@ -14,9 +14,8 @@
 ActiveRecord::Schema.define(:version => 1) do
 
   create_table "users", :force => true do |t|
-    t.string  "login"
-    t.string  "password"
-    t.integer "profile_id"
+    t.string  "name"
+    t.string  "email"
   end
 
 end
