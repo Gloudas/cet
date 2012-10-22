@@ -1,18 +1,15 @@
 ---
 Cucumber Features:
   :original_result:
-    /home/ubuntu/Desktop/cet/app/controllers/application_controller.rb:
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/application_controller.rb:
     - 1
     - 1
     - !!null 
-    /home/ubuntu/Desktop/cet/app/helpers/application_helper.rb:
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/helpers/application_helper.rb:
     - 1
     - !!null 
-    /home/ubuntu/Desktop/cet/app/controllers/schools_controller.rb:
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/schools_controller.rb:
     - 1
-    - !!null 
-    - 1
-    - !!null 
     - !!null 
     - 1
     - !!null 
@@ -23,8 +20,11 @@ Cucumber Features:
     - 1
     - !!null 
     - !!null 
+    - 1
     - !!null 
-    /home/ubuntu/Desktop/cet/app/models/school.rb:
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/models/school.rb:
     - !!null 
     - 1
     - !!null 
@@ -32,7 +32,7 @@ Cucumber Features:
     - !!null 
     - !!null 
     - !!null 
-    /home/ubuntu/Desktop/cet/app/controllers/sessions_controller.rb:
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/sessions_controller.rb:
     - 1
     - !!null 
     - 1
@@ -66,7 +66,7 @@ Cucumber Features:
     - !!null 
     - !!null 
     - !!null 
-    /home/ubuntu/Desktop/cet/app/controllers/users_controller.rb:
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/users_controller.rb:
     - 1
     - !!null 
     - 1
@@ -79,7 +79,7 @@ Cucumber Features:
     - !!null 
     - !!null 
     - !!null 
-    /home/ubuntu/Desktop/cet/app/models/user.rb:
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/models/user.rb:
     - !!null 
     - 1
     - !!null 
@@ -106,7 +106,7 @@ Cucumber Features:
     - !!null 
     - !!null 
     - !!null 
-  :created_at: 2012-10-22 01:16:09.507424000 -07:00
+  :created_at: 2012-10-22 01:39:58.077379765 -07:00
 RSpec:
   :original_result:
     /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/application_controller.rb:
@@ -214,4 +214,4 @@ RSpec:
     - !!null 
     - !!null 
     - !!null 
-  :created_at: 2012-10-22 01:26:09.760468007 -07:00
+  :created_at: 2012-10-22 01:40:21.472010888 -07:00
