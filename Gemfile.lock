@@ -134,7 +134,6 @@ GEM
       activesupport (>= 3.0)
       railties (>= 3.0)
       rspec (~> 2.11.0)
-    rubycas-server (0.7.1.1)
     rubyzip (0.9.9)
     sass (3.2.1)
     sass-rails (3.2.5)
@@ -185,7 +184,6 @@ DEPENDENCIES
   pg
   rails (= 3.2.8)
   rspec-rails
-  rubycas-server
   sass-rails (~> 3.2.3)
   simplecov
   sqlite3

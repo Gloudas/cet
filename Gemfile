@@ -34,7 +34,7 @@ end
 
 gem 'jquery-rails'
 
-gem 'rubycas-server'
+#gem 'rubycas-server'
 
 gem 'haml'
 # To use ActiveModel has_secure_password
