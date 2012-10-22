@@ -8,9 +8,6 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_or_create_from_auth_hash(auth_hash)
-    print "\n\n\n\n\n\n\n\n"
-    print User.all
-    print "\n\n\n\n\n\n\n\n"
     @@current_user = @user
     session[:user_id] = @user.id
     redirect_to '/berkeley'
