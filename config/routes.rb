@@ -16,6 +16,7 @@ Cet::Application.routes.draw do
   match '/auth/:provider/callback' => 'sessions#create'
   match '/:school' => 'schools#index', :as => 'school'
   match '/auth/failure', :to => 'sessions#failure'
+  match '/:school/login' => 'sessions#login', :as => 'login'
   match '/:school/logout' => 'sessions#destroy', :as => 'logout'
 
   # Sample resource route with options:
