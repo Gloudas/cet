@@ -9,8 +9,6 @@ gem 'omniauth-cas'
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'cucumber-rails'
-  gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
@@ -21,6 +19,11 @@ end
 group :production do
   gem 'pg'
   gem 'omniauth'
+end
+
+group :test do
+  gem 'cucumber-rails'
+  gem 'cucumber-rails-training-wheels'
 end
 
 # Gems used only for assets and not required

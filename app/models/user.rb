@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 
   belongs_to :profile
 
-  has_many :projects
+  has_and_belongs_to_many :projects
 
   attr_accessible :uid, :name, :email
 
