@@ -13,6 +13,5 @@ Background:
 Scenario: log in with a Berkeley ID
   When I fill in "name" with "Noeleo"
   And I fill in "email" with "noelmoldvai@berkeley.edu"
-  And I press "Log in"
-  Then I should be redirected to the home page
-  And I should see "My Profile"
+  And I click "Sign In"
+  Then I should see "Name"
