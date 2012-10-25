@@ -93,6 +93,10 @@ GEM
     omniauth (1.1.1)
       hashie (~> 1.2)
       rack
+    omniauth-cas (0.0.7)
+      addressable (~> 2.2)
+      nokogiri (~> 1.5)
+      omniauth (~> 1.1.0)
     pg (0.14.1)
     pg (0.14.1-x86-mingw32)
     polyglot (0.3.3)
@@ -180,6 +184,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   omniauth
+  omniauth-cas
   pg
   rails (= 3.2.8)
   rspec-rails
