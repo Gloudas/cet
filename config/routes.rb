@@ -15,19 +15,23 @@ Cet::Application.routes.draw do
 
   
 
-  #Schools
-
-  #Users
-
-
-  #Projects
+  #Sessions
   match '/auth/:provider/callback' => 'sessions#create', :as => 'login_callback'
-  match '/:school' => 'schools#index', :as => 'school'
   match '/auth/failure', :to => 'sessions#failure'
   match '/:school/login' => 'sessions#login', :as => 'login'
   match '/:school/logout' => 'sessions#destroy', :as => 'logout'
+  #Schools
+  match '/:school' => 'schools#show', :as => 'school'
+  match '/:school/projects' => 'schools#index', :as => 'school_projects'
+  #Users
+  match '/:school/:uid' => 'users#show', :as => 'public_profile_path'
+  match '/:school/:uid/edit' => 'users#edit', :as => 'private_profile_path'
+  match '/:school/:uid/new_project' => 'users#new_project', :as => 'new_project'
+  #Projects
+  match '/:school/projects/:pid/edit' => 'projects#edit', :as => 'edit_project'
+  match '/:school/projects/:pid' => 'projects#show', :as => 'project'
+  match '/:school/projects/:pid/edit/collaborators' => 'projects#edit_collaborators', :as => 'edit_collaborators'
   
-  match '/:school/projects' => 'schools#index', :as => 'projects'
 
   # Sample resource route with options:
   #   resources :products do
