@@ -13,7 +13,7 @@ Cet::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  
+
 
   #Sessions
   match '/auth/:provider/callback' => 'sessions#create', :as => 'login_callback'
@@ -22,7 +22,8 @@ Cet::Application.routes.draw do
   match '/:school/logout' => 'sessions#destroy', :as => 'logout'
   #Schools
   match '/:school' => 'schools#show', :as => 'school'
-  match '/:school/projects' => 'schools#index', :as => 'school_projects'
+  match '/:school/projects' => 'schools#projects', :as => 'school_projects'
+  match '/schools' => 'schools#index', :as => 'all_schools'
   #Users
   match '/:school/:uid' => 'users#show', :as => 'public_profile_path'
   match '/:school/:uid/edit' => 'users#edit', :as => 'private_profile_path'
@@ -31,7 +32,7 @@ Cet::Application.routes.draw do
   match '/:school/projects/:pid/edit' => 'projects#edit', :as => 'edit_project'
   match '/:school/projects/:pid' => 'projects#show', :as => 'project'
   match '/:school/projects/:pid/edit/collaborators' => 'projects#edit_collaborators', :as => 'edit_collaborators'
-  
+
 
   # Sample resource route with options:
   #   resources :products do
