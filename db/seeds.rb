@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+s = School.create(name: 'UC Berkeley', location: 'Berkeley, CA')
+u = User.create(name: 'Stan Marsh', email: 'barrett_get_me_coffee@front_end_bitch.com')
+p = Project.create(title: 'cet', description: 'ai squared...', creator_id:u.id)
+
+s.projects << p
+s.users << u
+
+u.projects << p
+u.school = s
+
+p.user = u
+p.school = s
