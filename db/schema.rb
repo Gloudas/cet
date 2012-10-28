@@ -16,8 +16,6 @@ ActiveRecord::Schema.define(:version => 20121028010258) do
   create_table "projects", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.integer  "creator_id"
-    t.integer  "school_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

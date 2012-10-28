@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :projects
   belongs_to :school
 
-  attr_accessible :uid, :name, :email
+  attr_accessible :uid, :name, :email, :school, :projects
 
   def self.find_or_create_from_auth_hash(auth_hash)
     print out the auth_hash

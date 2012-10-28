@@ -8,8 +8,9 @@
 
 s = School.create(name: 'UC Berkeley', location: 'Berkeley, CA')
 u = User.create(name: 'Stan Marsh', email: 'barrett_get_me_coffee@front_end_bitch.com')
-p = Project.create(title: 'cet', description: 'ai squared...', creator_id:u.id)
+p = Project.create(title: 'cet', description: 'ai squared...', creator: u)
 
+=begin
 s.projects << p
 s.users << u
 
@@ -18,3 +19,4 @@ u.school = s
 
 p.user = u
 p.school = s
+=end
