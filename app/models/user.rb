@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   attr_accessible :uid, :name, :email, :school, :projects
 
   def self.find_or_create_from_auth_hash(auth_hash)
-    print out the auth_hash
+    #print out the auth_hash
     auth_hash.keys.each do |k|
       print "key:    " + k + "\n"
       print "value:    "
