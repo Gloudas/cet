@@ -36,4 +36,9 @@ class ProjectsController < ApplicationController
   def destroy
   end
 
+  def add_collaborator
+    @collaborator = User.find(params[:userID])
+    Project.add_collaborator(@collaborator)
+  end
+
 end
