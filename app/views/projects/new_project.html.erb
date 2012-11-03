@@ -1,0 +1,26 @@
+require "erb"
+
+<html>
+<head>
+  <%= image_tag("logo.png") %>
+  <title>Applied Innovations Institute</title>
+  <%= stylesheet_link_tag "bootstrap" %>
+</head>
+
+<body>
+  <h1>New Project</h1>
+
+  <form>
+  Title: <input type="text" name="name" size="5"><br>
+  <p>Description: <textarea type="text" name="description" rows="5" cols="150">
+  </textarea></p>
+  
+  Collaborator 1: <input type="text" name="collaborator1" size="30"><br>
+  Collaborator 2: <input type="text" name="collaborator2" size="30"><br>
+  Collaborator 3: <input type="text" name="collaborator3" size="30"><br>
+  Collaborator 4: <input type="text" name="collaborator4" size="30"><br>
+  <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>
