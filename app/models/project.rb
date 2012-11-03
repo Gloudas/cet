@@ -10,5 +10,8 @@ class Project < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :description
 
+  def add_collaborator(user)
+    self.users << user
+  end
 
 end
