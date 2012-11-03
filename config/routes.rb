@@ -14,7 +14,7 @@ Cet::Application.routes.draw do
   #   resources :products
 
   #Home
-  root :to => 'home#show'
+  root :to => 'home#show', :as => 'home'
   #Sessions
   match '/auth/:provider/callback' => 'sessions#create', :as => 'login_callback'
   match '/auth/failure', :to => 'sessions#failure'

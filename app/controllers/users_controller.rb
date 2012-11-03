@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  before_filter :set_current_user
+
   def new
     # this should be handled by User model
   end
