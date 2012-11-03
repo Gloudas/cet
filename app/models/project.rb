@@ -13,5 +13,4 @@ class Project < ActiveRecord::Base
   def add_collaborator(user)
     self.users << user
   end
-
 end
