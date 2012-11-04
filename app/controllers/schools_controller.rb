@@ -7,9 +7,9 @@ class SchoolsController < ApplicationController
   end
 
   def show
-    name = params[:school]
-    school = School.find_by_name(name)
-    @projects = school.projects
+    @name = params[:school]
+    @school = School.find_by_name(@name)
+    @projects = @school.projects
   end
 
   def new
