@@ -30,6 +30,7 @@ Cet::Application.routes.draw do
   match '/:school/:uid/new_project' => 'projects#new_project', :as => 'new_project'
   #Projects
   match '/:school/projects/:pid/edit' => 'projects#edit', :as => 'edit_project'
+  match '/:school/projects/create' => 'project#create', :as => 'create_project'
   match '/:school/projects/:pid' => 'projects#show', :as => 'project'
   match '/:school/projects/:pid/edit/collaborators' => 'projects#edit_collaborators', :as => 'edit_collaborators'
 
