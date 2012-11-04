@@ -6,10 +6,10 @@
 </head>
 
 <body>
-  <h1>@project.title</h1>
+  <h1><%= @project.title %></h1>
 
   <form>
-  <br> Enter a short description: <textarea class="field span12" id="description" rows="6" value=<% @project.description %>></textarea></br>
+  <br> Enter a short description: <textarea class="field span12" id="description" rows="6"><%= @project.description %></textarea></br>
   <%= button_to "Create Project", create_project_path, :id => "create_project" %>
   </form>
 
