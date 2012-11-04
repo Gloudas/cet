@@ -15,23 +15,6 @@ class ProjectsController < ApplicationController
     end
     project_info = params[:project]
 
-#collabs = Array.new
-#   if not params[:collab1].nil?
-#     collabs.push(User.find_by_name(project_info[:collab1]))
-#   end
-#   if not params[:collab2].nil?
-#     collabs.push(User.find_by_name(project_info[:collab2]))
-#   end
-#   if not params[:collab3].nil?
-#     collabs.push(User.find_by_name(project_info[:collab3]))
-#   end
-#   if not params[:collab4].nil?
-#     collabs.push(User.find_by_name(project_info[:collab4]))
-#   end
-#   collabs.each do |collab|
-#     project.users << collab
-#   end
-
     if project_info[:collaborator]
       project_info[:collaborator].each do |email|
         # ignore nil values
@@ -48,7 +31,7 @@ class ProjectsController < ApplicationController
     # to do: validations on the project model
     success = project.save!
     redirect_to project_path(project.id) and return if success
-    # if unsuccessful, put a notice
+    # if unsuccessful, flash an error
     if params[:pid]
       flash[:error] = "Sorry, something went wrong with editing this project."
       redirect_to edit_project_path(project.id)
