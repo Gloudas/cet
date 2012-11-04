@@ -14,7 +14,7 @@
     <%= text_field :project, 'title', :value => @project.title %>
 
     <%= label :project, :description, "Enter a short description:" %>
-    <textarea class="field span12" id="description" rows="6"><%= @project.description %></textarea>
+    <textarea class="field span12" id="description" name="project[description]" rows="6"><%= @project.description %></textarea>
     
     <br> Collaborators
     <% @project.users.each do |user| %>

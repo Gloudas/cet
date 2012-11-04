@@ -46,7 +46,7 @@ class ProjectsController < ApplicationController
     project.creator_id = @user.id
 
     # to do: validations on the project model
-    success = project.save
+    success = project.save!
     redirect_to project_path(project.id) and return if success
     # if unsuccessful, put a notice
     if params[:pid]
