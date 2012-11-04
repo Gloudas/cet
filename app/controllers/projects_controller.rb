@@ -7,7 +7,6 @@ class ProjectsController < ApplicationController
   end
 
   def new_or_edit
-
     # see if we are creating a new project or just editing an existing one
     if params[:pid]
       project = params[:pid]
@@ -36,20 +35,30 @@ class ProjectsController < ApplicationController
       project.users << collab
     end
 
-    project.save!
-
-    redirect_to edit_project_path(project.id)
+    # to do: validations on the project model
+    success = project.save
+    redirect_to project_path(project.id) and return if success
+    # if unsuccessful, put a notice
+    if params[:pid]
+      flash[:error] = "Sorry, something went wrong with editing this project."
+      redirect_to edit_project_path(project.id)
+    else
+      flash[:error] = "Sorry, something went wrong with creating a new project."
+      redirect_to new_project_path
+    end
   end
 
   def new
     if params[:project]
-      new_or_edit
+      # process the form
+      new_or_edit and return
     end
   end
 
   def edit
     if params[:project]
-      new_or_edit
+      # process the form
+      new_or_edit and return
     end
     @project = Project.find_by_id(params[:pid])
   end
