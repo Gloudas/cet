@@ -8,12 +8,22 @@
 <body>
   <h1><%= @project.title %></h1>
 
-  <form>
-  <br><textarea class="field span12" id="description" rows="6"><%= @project.description %></textarea></br>
-  <% @project.users.each do |user| %>
-  <%= user.name %>
+  <%= form_tag edit_project_path do %>
+
+    <%= label :project, :name, "Title:" %>
+    <%= text_field :project, 'title', :value => @project.title %>
+
+    <%= label :project, :description, "Enter a short description:" %>
+    <br><textarea class="field span12" id="description" rows="6"><%= @project.description %></textarea></br>
+
+    Collaborators
+    <%= @project.users.each do |user| %>
+      <%= user.name %>
+    <% end %>
+
+  <%= submit_tag "Create Project" %>
+
   <% end %>
-  </form>
 
 </body>
 </html>
