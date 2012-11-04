@@ -4207,7 +4207,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar .container {
-  width: auto;
+  width: auto;m
 }
 
 .nav-collapse.collapse {
@@ -4218,8 +4218,8 @@ input[type="submit"].btn.btn-mini {
 .navbar .brand {
   display: block;
   float: left;
-  padding: 10px 20px 10px;
-  margin-left: -20px;
+  padding: 5px 20px 5px;
+  margin-left: -30px;
   font-size: 20px;
   font-weight: 200;
   color: #777777;
@@ -4583,7 +4583,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar-inverse {
-  color: #999999;
+  color: #999999
 }
 
 .navbar-inverse .navbar-inner {

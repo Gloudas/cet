@@ -1,30 +1,31 @@
 <html>
 
 <head>
- <link href="../../assets/css/bootstrap.css" rel="stylesheet">
-    <link href="../../assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <%= stylesheet_link_tag "bootstrap" %>
+  <%= stylesheet_link_tag "bootstrap-responsive" %>
 </head>
 <body>
 
   <div class="navbar navbar-inverse">
     <div class="navbar-inner">
-      <a class="brand" href="#">
-        <%= image_tag("logo2.png", :size => "500x50", :border => 0) %></a>
+      <a class="brand" href="/">
+       <%= image_tag("logo.png", :size => "100x50", :border => 0) %></a>
+      <font size="4">
       <ul class="nav">
-        <li class="active">
-          <a href="#" >Berkeley Home</a></li>
+        <li><a href="#">Berkeley Home</a></li>
         <li><a href="#">My Projects</a></li>
         <li><a href="#">Create Project</a></li>
-        <li><% link_to "Login", "/auth/developer", :id=>'login' %></li>
       </ul>
+      </font> 
       <form class="navbar-search pull-right">
         <span class="add-on"><i class="icon-search"></i></span>
         <input type="text" class="search-query" placeholder="Search">
       </form>
+      <!--<a class="pull-right" href= "/auth/developer" id = 'login'>Login</a>-->
+
     </div>
+
   </div>
 
 </body>
-
-
 </html>
