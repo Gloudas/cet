@@ -1,0 +1,23 @@
+<html>
+<head>
+  <%= image_tag("logo.png") %>
+  <title>Applied Innovations Institute</title>
+  <%= stylesheet_link_tag "bootstrap" %>
+</head>
+
+<body>
+  <h1>New Project</h1>
+
+  <form>
+  Title: <input type="text" name="title" size="5"><br>
+  <br> Enter a short description: <textarea class="field span12" id="description" rows="6"></textarea></br>
+  
+  Collaborator 1: <input type="text" name="collab1" size="30"><br>
+  Collaborator 2: <input type="text" name="collab2" size="30"><br>
+  Collaborator 3: <input type="text" name="collab3" size="30"><br>
+  Collaborator 4: <input type="text" name="collab4" size="30"><br>
+  <%= button_to "Create Project", create_project_path, :id => "create_project" %>
+  </form>
+
+</body>
+</html>
