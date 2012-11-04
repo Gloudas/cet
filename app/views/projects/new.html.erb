@@ -8,13 +8,13 @@
 <body>
   <h1>New Project</h1>
 
-  <%= form_tag create_project_path do %>
+  <%= form_tag new_project_path do %>
 
     <%= label :project, :name, "Title:" %>
     <%= text_field :project, 'title' %>
 
-    <%= label :project, :description, "Enter a short description:" %>
-    <%= text_field :project, 'description' %>
+    <%= label :project, :description, "Enter a short Description:" %>
+    <p><textarea class="field span12" name="project[description]" rows="6"></textarea></p>
 
     <%= label :project, :collab1, "Collaborator 1:" %>
     <%= text_field :project, 'collab1' %>
@@ -28,7 +28,7 @@
     <%= label :project, :collab4, "Collaborator 4:" %>
     <%= text_field :project, 'collab4' %>
 
-    <%= submit_tag "Create Project" %>
+    <br><%= submit_tag "Create Project" %></br>
   <% end %>
 
 </body>

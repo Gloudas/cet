@@ -9,8 +9,10 @@
   <h1><%= @project.title %></h1>
 
   <form>
-  <br> Enter a short description: <textarea class="field span12" id="description" rows="6"><%= @project.description %></textarea></br>
-  <%= button_to "Create Project", create_project_path, :id => "create_project" %>
+  <br><textarea class="field span12" id="description" rows="6"><%= @project.description %></textarea></br>
+  <% @project.users.each do |user| %>
+  <%= user.name %>
+  <% end %>
   </form>
 
 </body>
