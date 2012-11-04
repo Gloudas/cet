@@ -25,14 +25,14 @@ Cet::Application.routes.draw do
   match '/:school/projects' => 'schools#projects', :as => 'school_projects'
   match '/schools' => 'schools#index', :as => 'all_schools'
   #Users
-  match '/:school/:uid' => 'users#show', :as => 'public_profile_path'
-  match '/:school/:uid/edit' => 'users#edit', :as => 'private_profile_path'
-  match '/:school/projects/new' => 'projects#new', :as => 'new_project'
+  match '/profile' => 'users#show', :as => 'public_profile_path'
+  match '/profile/edit' => 'users#edit', :as => 'private_profile_path'
   #Projects
-  match '/:school/projects/:pid/edit' => 'projects#edit', :as => 'edit_project'
-  match '/:school/projects/create' => 'project#create', :as => 'create_project'
-  match '/:school/projects/:pid' => 'projects#show', :as => 'project'
-  match '/:school/projects/:pid/edit/collaborators' => 'projects#edit_collaborators', :as => 'edit_collaborators'
+  match '/projects/new' => 'projects#new', :as => 'new_project'
+  match '/projects/:pid/edit' => 'projects#edit', :as => 'edit_project'
+  match '/projects/create' => 'projects#create', :as => 'create_project'
+  match '/projects/:pid' => 'projects#show', :as => 'project'
+  match '/projects/:pid/edit/collaborators' => 'projects#edit_collaborators', :as => 'edit_collaborators'
 
 
   # Sample resource route with options:
