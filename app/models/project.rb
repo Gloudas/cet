@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
 
-  attr_accessible :title, :description, :creator_id, :creator, :users, :school
+  attr_accessible :title, :description, :creator_id, :creator, :users
 
   #has_many :collaborators, :class_name =>"User", :foreign_key => "id"
   has_and_belongs_to_many :users

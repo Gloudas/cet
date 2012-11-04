@@ -17,16 +17,16 @@
     <p><textarea class="field span12" name="project[description]" rows="6"></textarea></p>
 
     <%= label :project, :collab1, "Collaborator 1:" %>
-    <%= text_field :project, 'collab1' %>
+    <%= text_field :project, 'collaborator[0]' %>
 
     <%= label :project, :collab2, "Collaborator 2:" %>
-    <%= text_field :project, 'collab2' %>
+    <%= text_field :project, 'collaborator[1]' %>
 
     <%= label :project, :collab3, "Collaborator 3:" %>
-    <%= text_field :project, 'collab3' %>
+    <%= text_field :project, 'collaborator[2]' %>
 
     <%= label :project, :collab4, "Collaborator 4:" %>
-    <%= text_field :project, 'collab4' %>
+    <%= text_field :project, 'collaborator[3]' %>
 
     <br><%= submit_tag "Create Project" %></br>
   <% end %>

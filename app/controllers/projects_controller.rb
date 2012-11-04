@@ -15,25 +15,33 @@ class ProjectsController < ApplicationController
     end
     project_info = params[:project]
 
-    collabs = Array.new
-    if not params[:collab1].nil?
-      collabs.push(User.find_by_name(project_info[:collab1]))
+#collabs = Array.new
+#   if not params[:collab1].nil?
+#     collabs.push(User.find_by_name(project_info[:collab1]))
+#   end
+#   if not params[:collab2].nil?
+#     collabs.push(User.find_by_name(project_info[:collab2]))
+#   end
+#   if not params[:collab3].nil?
+#     collabs.push(User.find_by_name(project_info[:collab3]))
+#   end
+#   if not params[:collab4].nil?
+#     collabs.push(User.find_by_name(project_info[:collab4]))
+#   end
+#   collabs.each do |collab|
+#     project.users << collab
+#   end
+
+    project_info[:collaborator].each do |email|
+      # ignore nil values
+      next if not email
+      collab = User.find_by_email(email)
+      project.users << collab if collab
     end
-    if not params[:collab2].nil?
-      collabs.push(User.find_by_name(project_info[:collab2]))
-    end
-    if not params[:collab3].nil?
-      collabs.push(User.find_by_name(project_info[:collab3]))
-    end
-    if not params[:collab4].nil?
-      collabs.push(User.find_by_name(project_info[:collab4]))
-    end
-    
+
     project.title = project_info[:title]
     project.description = project_info[:description]
-    collabs.each do |collab|
-      project.users << collab
-    end
+    project.creator_id = @user.id
 
     # to do: validations on the project model
     success = project.save
