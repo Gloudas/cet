@@ -9,7 +9,7 @@ class ProjectsController < ApplicationController
   def new_or_edit
     # see if we are creating a new project or just editing an existing one
     if params[:pid]
-      project = params[:pid]
+      project = Project.find_by_id(params[:pid])
     else
       project = Project.new
     end
@@ -32,11 +32,13 @@ class ProjectsController < ApplicationController
 #     project.users << collab
 #   end
 
-    project_info[:collaborator].each do |email|
-      # ignore nil values
-      next if not email
-      collab = User.find_by_email(email)
-      project.users << collab if collab
+    if project_info[:collaborator]
+      project_info[:collaborator].each do |email|
+        # ignore nil values
+        next if not email
+        collab = User.find_by_email(email)
+        project.users << collab if collab
+      end
     end
 
     project.title = project_info[:title]
