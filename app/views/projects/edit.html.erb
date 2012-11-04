@@ -17,8 +17,8 @@
     <br><textarea class="field span12" id="description" rows="6"><%= @project.description %></textarea>
     
     Collaborators
-    <%= @project.users.each do |user| %>
-      <%= # you have to make it so your own name doesn't appear on this list %>
+    <% @project.users.each do |user| %>
+      <% # you have to make it so your own name doesn't appear on this list %>
       <%= user.name %>
     <% end %>
 
