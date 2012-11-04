@@ -14,8 +14,8 @@
     <%= text_field :project, 'title', :value => @project.title %>
 
     <%= label :project, :description, "Enter a short description:" %>
-    <br><textarea class="field span12" id="description" rows="6"><%= @project.description %></textarea></br>
-
+    <br><textarea class="field span12" id="description" rows="6"><%= @project.description %></textarea>
+    
     Collaborators
     <%= @project.users.each do |user| %>
       <%= # you have to make it so your own name doesn't appear on this list %>
@@ -25,6 +25,6 @@
   <%= submit_tag "Create Project" %>
 
   <% end %>
-
+  
 </body>
 </html>
