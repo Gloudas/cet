@@ -29,8 +29,8 @@ Cet::Application.routes.draw do
   match '/profile/edit' => 'users#edit', :as => 'private_profile_path'
   #Projects
   match '/projects/new' => 'projects#new', :as => 'new_project'
-  match '/projects/:pid/edit' => 'projects#edit', :as => 'edit_project'
   match '/projects/create' => 'projects#create', :as => 'create_project'
+  match '/projects/:pid/edit' => 'projects#edit', :as => 'edit_project'
   match '/projects/:pid' => 'projects#show', :as => 'project'
   match '/projects/:pid/edit/collaborators' => 'projects#edit_collaborators', :as => 'edit_collaborators'
 

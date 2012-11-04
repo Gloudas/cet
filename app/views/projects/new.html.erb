@@ -8,16 +8,28 @@
 <body>
   <h1>New Project</h1>
 
-  <form>
-  Title: <input type="text" name="title" size="5"><br>
-  <br> Enter a short description: <textarea class="field span12" id="description" rows="6"></textarea></br>
-  
-  Collaborator 1: <input type="text" name="collab1" size="30"><br>
-  Collaborator 2: <input type="text" name="collab2" size="30"><br>
-  Collaborator 3: <input type="text" name="collab3" size="30"><br>
-  Collaborator 4: <input type="text" name="collab4" size="30"><br>
-  <%= submit_tag "Create Poject", :action => create_project_path, :id => "create_project" %>
-  </form>
+  <%= form_tag create_project_path do %>
+
+    <%= label :project, :name, "Title:" %>
+    <%= text_field :project, 'title' %>
+
+    <%= label :project, :description, "Enter a short description:" %>
+    <%= text_field :project, 'description' %>
+
+    <%= label :project, :collab1, "Collaborator 1:" %>
+    <%= text_field :project, 'collab1' %>
+
+    <%= label :project, :collab2, "Collaborator 2:" %>
+    <%= text_field :project, 'collab2' %>
+
+    <%= label :project, :collab3, "Collaborator 3:" %>
+    <%= text_field :project, 'collab3' %>
+
+    <%= label :project, :collab4, "Collaborator 4:" %>
+    <%= text_field :project, 'collab4' %>
+
+    <%= submit_tag "Create Project" %>
+  <% end %>
 
 </body>
 </html>
