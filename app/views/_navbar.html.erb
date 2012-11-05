@@ -12,15 +12,20 @@
        <%= image_tag("logo.png", :size => "100x50", :border => 0) %></a>
       <font size="4">
       <ul class="nav">
-        <li><a href="#">Berkeley Home</a></li>
-        <li><a href="#">My Projects</a></li>
-        <li><a href="#">Create Project</a></li>
+        <li><a href="/berkeley">Berkeley Home</a></li>
+        <li><a href="/profile/edit">My Profile</a></li>
+        <li><a href="/project/create">Create Project</a></li>
       </ul>
       </font> 
       <form class="navbar-search pull-right">
         <span class="add-on"><i class="icon-search"></i></span>
         <input type="text" class="search-query" placeholder="Search">
       </form>
+      <font size="4">
+      <ul class="nav pull-right">
+        <li><a href="/auth/logout">Logout</a></li>
+      </ul>
+      </font> 
       <!--<a class="pull-right" href= "/auth/developer" id = 'login'>Login</a>-->
 
     </div>

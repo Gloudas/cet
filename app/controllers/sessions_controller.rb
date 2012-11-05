@@ -3,7 +3,8 @@ class SessionsController < ApplicationController
   @@current_user
 
   def login
-    redirect_to 'auth/developer/'
+    print "\n\n\n\n\n\n\n\n\n\n IT WORKED \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+    redirect_to '/auth/developer/'
   end
 
   def create
