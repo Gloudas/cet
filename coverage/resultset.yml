@@ -1,534 +1,471 @@
---- 
-Cucumber Features: 
-  :original_result: 
-    /home/ubuntu/Desktop/cet/app/controllers/application_controller.rb: 
+---
+Cucumber Features:
+  :original_result:
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/application_controller.rb:
     - 1
     - 1
-    - 
+    - !!null 
     - 1
-    - 
+    - !!null 
     - 0
     - 0
-    - 
-    - 
-    - 
-    /home/ubuntu/Desktop/cet/app/helpers/application_helper.rb: 
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/helpers/application_helper.rb:
     - 1
-    - 
-    /home/ubuntu/Desktop/cet/app/helpers/home_helper.rb: 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/helpers/home_helper.rb:
     - 1
-    - 
-    /home/ubuntu/Desktop/cet/app/controllers/home_controller.rb: 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/home_controller.rb:
     - 1
-    - 
+    - !!null 
     - 1
-    - 
-    - 
-    - 
-    /home/ubuntu/Desktop/cet/app/controllers/projects_controller.rb: 
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/projects_controller.rb:
     - 1
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - 1
-    - 
+    - !!null 
     - 2
     - 0
-    - 
+    - !!null 
     - 2
-    - 
+    - !!null 
     - 2
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - !!null 
     - 8
     - 8
     - 8
     - 2
-    - 
+    - !!null 
     - 2
     - 2
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - 2
     - 2
-    - 
+    - !!null 
     - 1
     - 0
     - 0
-    - 
+    - !!null 
     - 1
     - 1
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - !!null 
     - 1
     - 5
-    - 
+    - !!null 
     - 2
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - !!null 
     - 1
     - 0
-    - 
+    - !!null 
     - 0
-    - 
+    - !!null 
     - 0
-    - 
-    - 
-    - 1
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 0
-    - 0
-    - 
-    - 
-    - 
-    /home/ubuntu/Desktop/cet/app/models/project.rb: 
-    - 1
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 1
-    - 1
-    - 
-    - 1
-    - 1
-    - 
-    - 1
-    - 0
-    - 
-    - 
-    /home/ubuntu/Desktop/cet/app/controllers/schools_controller.rb: 
-    - 1
-    - 
-    - 1
-    - 
-    - 1
-    - 0
-    - 
-    - 
-    - 1
-    - 0
-    - 0
-    - 0
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 
-    /home/ubuntu/Desktop/cet/app/models/school.rb: 
-    - 1
-    - 1
-    - 
-    - 1
-    - 1
-    - 
-    - 
-    /home/ubuntu/Desktop/cet/app/controllers/sessions_controller.rb: 
-    - 1
-    - 
-    - 1
-    - 
-    - 1
-    - 1
-    - 1
-    - 
-    - 
-    - 1
-    - 0
-    - 0
-    - 0
-    - 0
-    - 
-    - 
-    - 1
-    - 0
-    - 
-    - 
-    - 1
-    - 0
-    - 0
-    - 0
-    - 
-    - 
-    - 1
-    - 0
-    - 
-    - 
-    - 
-    /home/ubuntu/Desktop/cet/app/controllers/users_controller.rb: 
-    - 1
-    - 
-    - 1
-    - 
-    - 1
-    - 
-    - 
-    - 
-    - 1
-    - 
-    - 0
-    - 
-    - 
-    - 0
-    - 0
-    - 
-    - 
-    - 0
-    - 0
-    - 0
-    - 
-    - 0
-    - 0
-    - 
-    - 
-    - 
-    - 
-    - 
-    /home/ubuntu/Desktop/cet/app/models/user.rb: 
-    - 1
-    - 
-    - 1
-    - 1
-    - 
-    - 1
-    - 
-    - 1
-    - 
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 0
-    - 0
-    - 0
-    - 
-    - 0
-    - 
-    - 
-    - 
-  :created_at: 2012-11-04 22:36:55.754857 -08:00
-RSpec: 
-  :original_result: 
-    /home/ubuntu/Desktop/cet/app/controllers/application_controller.rb: 
+    - !!null 
+    - !!null 
     - 1
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
-    /home/ubuntu/Desktop/cet/app/helpers/application_helper.rb: 
+    - !!null 
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
-    /home/ubuntu/Desktop/cet/app/controllers/projects_controller.rb: 
+    - !!null 
+    - 1
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/models/project.rb:
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - 1
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - 1
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - 1
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - 1
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    /home/ubuntu/Desktop/cet/app/models/project.rb: 
-    - 1
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - 1
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
     - 1
     - 1
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - 1
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    /home/ubuntu/Desktop/cet/app/controllers/schools_controller.rb: 
-    - 1
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
     - 1
     - 0
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - !!null 
-      str: ""
-      :@taguri: x-private:null
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/schools_controller.rb:
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - 1
+    - 0
+    - !!null 
+    - !!null 
     - 1
     - 0
     - 0
     - 0
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - !!null 
-      str: ""
-      :@taguri: x-private:null
-    /home/ubuntu/Desktop/cet/app/models/school.rb: 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/models/school.rb:
     - 1
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - 1
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - !!null 
-      str: ""
-      :@taguri: x-private:null
-    /home/ubuntu/Desktop/cet/app/controllers/sessions_controller.rb: 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/sessions_controller.rb:
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - !!null 
     - 1
     - 0
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - 1
-    - 1
-    - 1
-    - 1
-    - 1
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - 1
-    - 0
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
     - 1
     - 0
     - 0
     - 0
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - !!null 
-      str: ""
-      :@taguri: x-private:null
+    - 1
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/users_controller.rb:
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - !!null 
+    - 1
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/models/user.rb:
+    - 1
+    - !!null 
     - 1
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    /home/ubuntu/Desktop/cet/app/controllers/users_controller.rb: 
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
+    - 0
+    - 0
+    - 0
+    - 0
     - !!null 
-      str: ""
-      :@taguri: x-private:null
+    - 0
+    - 0
     - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - 1
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - 1
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    /home/ubuntu/Desktop/cet/app/models/user.rb: 
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - 1
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
+  :created_at: 2012-11-04 23:54:51.820339144 -08:00
+RSpec:
+  :original_result:
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/application_controller.rb:
     - 1
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - 1
     - !!null 
-      str: ""
-      :@taguri: x-private:null
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/helpers/application_helper.rb:
     - 1
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/helpers/home_helper.rb:
+    - 1
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/home_controller.rb:
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/projects_controller.rb:
+    - 1
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - 1
+    - !!null 
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    - 0
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - !!null 
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/models/project.rb:
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - 1
+    - 1
+    - 1
+    - !!null 
+    - 1
+    - 1
+    - !!null 
+    - 1
+    - 0
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/schools_controller.rb:
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - 1
+    - 0
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/models/school.rb:
+    - 1
+    - 1
+    - !!null 
+    - 1
+    - 1
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/sessions_controller.rb:
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - 1
+    - 1
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/users_controller.rb:
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - !!null 
+    - 1
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/models/user.rb:
+    - 1
+    - !!null 
+    - 1
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - 1
+    - !!null 
     - 2
     - 0
     - 0
     - 0
     - 0
+    - !!null 
+    - !!null 
+    - !!null 
     - 0
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
-    - !!null 
-      str: ""
-      :@taguri: x-private:null
     - 0
     - 0
     - 0
     - !!null 
-      str: ""
-      :@taguri: x-private:null
+    - 0
     - 0
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - !!null 
-      str: ""
-      :@taguri: x-private:null
     - !!null 
-      str: ""
-      :@taguri: x-private:null
-  :created_at: 2012-10-28 19:03:04.582371 -07:00
+  :created_at: 2012-11-04 23:52:28.659822849 -08:00

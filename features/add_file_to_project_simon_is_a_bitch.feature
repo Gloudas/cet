@@ -4,12 +4,7 @@ Feature: add a file to a project
   So that I can collaborate on files with other students
   I want to upload files to a project
 
-Background: project in database
-
-  Given the following project exists:
-  | title      | collaborators  | description |
-  | ProjA      | sam, jon, ken  | coolproj    |
-
+@wip
 Scenario: add a file to an existing project
   When I go to the project page for "ProjA"
   Then I should not see "TestFile.doc"
