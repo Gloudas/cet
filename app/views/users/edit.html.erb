@@ -16,7 +16,7 @@
 
     <%= render "/navbar"%>
 
-    <%= form_tag edit_profile_path do %>
+    <%= form_tag edit_profile_path(@user.id) do %>
       
       <%= label :profile, :name, "Name:" %>
       <%= text_field :profile, 'name', :value => @user.name, :id => 'name' %>
@@ -32,7 +32,7 @@
 
       <%= submit_tag "Update Profile" %>
 
-    <%= end %>
+    <% end %>
 
       <!-- FOOTER -->
       <footer>

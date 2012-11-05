@@ -26,7 +26,7 @@ Cet::Application.routes.draw do
   match '/schools' => 'schools#index', :as => 'all_schools'
   #Users
   match '/profile/:uid' => 'users#show', :as => 'profile'
-  match '/profile/edit' => 'users#edit', :as => 'edit_profile'
+  match '/profile/:uid/edit' => 'users#edit', :as => 'edit_profile'
   #Projects
   match '/project/new' => 'projects#new', :as => 'new_project'
   match '/project/:pid/edit' => 'projects#edit', :as => 'edit_project'

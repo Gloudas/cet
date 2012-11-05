@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_filter :set_current_user
 
   def show
-    # user is set in the filter
+    @profile = User.find_by_id(params[:uid])
   end
 
   def edit
