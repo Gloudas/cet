@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
     @user = User.find_or_create_from_auth_hash(auth_hash)
     @@current_user = @user
     session[:user_id] = @user.id
+    params[:name] = @user.name
     redirect_to '/berkeley'
   end
 
