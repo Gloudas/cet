@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = session[:user_id]
+    @name = User.find_by_id(@user)
   end
 
   def destroy

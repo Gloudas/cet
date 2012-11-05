@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Applied Innovations Institute &middot; </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le styles -->
+
+    <%= stylesheet_link_tag "bootstrap" %>
+    <%= stylesheet_link_tag "bootstrap-responsive" %>
+  </head>
+
+  <body>
+
+    <%= render "/navbar"%>
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="span6 offset3">
+          <h2><%= "Welcome #{@name}!" %></h2>
+        </div>
+      </div><!-- /.row -->
+    
+    <hr class="featurette-divider">
+
+      <div class="row">
+        <div class="span8 offset2">
+          This is your private user page where you can see your current projects and edit your personal info.
+        </div>
+      </div>
+    <hr class="featurette-divider">
+      <!-- START THE FEATURETTES -->
+      <div class="row">
+        <div class = "span7">
+          <h3><%= "Active Projects" %></h3>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Project Name</th>
+                  <th>Project Owner</th>
+                  <th>Date Created</th>
+                </tr>
+              </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Saving Africa</td>
+                <td>Mani Zimbabo</td>
+                <td>4/23/2012</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Saving Africa</td>
+                <td>Mani Zimbabo</td>
+                <td>4/23/2012</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Saving Africa</td>
+                <td>Mani Zimbabo</td>
+                <td>4/23/2012</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Saving Africa</td>
+                <td>Mani Zimbabo</td>
+                <td>4/23/2012</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class = "span5">
+          <h3>My Information</h3>
+            <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Your Info</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Name</td>
+                <td>Mani Zimbabo</td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td>maniz@gmail.com</td>
+              </tr>
+              <tr>
+                <td>School</td>
+                <td>UC Berkeley</td>
+              </tr>
+              <tr>
+                <td>Major</td>
+                <td>EECS</td>
+              </tr>
+              <tr>
+                <td>Graduation Year</td>
+                <td>2013</td>
+              </tr>
+              <tr>
+                <td>About Me</td>
+                <td>I like dancing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2012 CET &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+<!-- /.container -->
+
+
+  </body>
+</html>
