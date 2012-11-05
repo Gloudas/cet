@@ -5,8 +5,8 @@ Feature: Creating Projects in ai2
 	I want to add an entrepreneur project to the Berkeley ai2 website in my name
 
 Background: student is logged into ai2
-  Given I am logged in
-	And I am on the new project page
+#Given I am logged in
+	Given I am on the new project page
 
 Scenario: Create a new project (happy path)
 	When I fill in "title" with "My New Project"

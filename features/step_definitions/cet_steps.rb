@@ -6,7 +6,6 @@ require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "selectors"))
 
-# Continue
 Given /the following project exists:/ do |fields|
   fields.rows_hash.each do |title, collaborators, description|
     Given /I am on the new project page/ do
@@ -17,12 +16,20 @@ Given /the following project exists:/ do |fields|
   end
 end
 
+# this shit doesnt work because of the new project page and login page... doesn't see paths? i dunno
+Given /^I created a project$/ do
+  step %Q{Given I am on the new project page}
+  step %Q{When I fill in 'title' with "MOOHAHA"}
+  step %Q{And I fill in 'description' with "teyats"}
+  step %Q{And I press "Create Project"}
+end
+
 # Noel adding this shit for login
 Given /^I am logged in$/ do
-  %{Given I am on the login page}
-  %{When I fill in 'name' with "admin"}
-  %{And I fill in 'email' with "bitch@stfu.com"}
-  %{And I click 'Sign In'}
+  step %Q{Given I am on the login page}
+  step %Q{When I fill in 'name' with "admin"}
+  step %Q{And I fill in 'email' with "bitch@stfu.com"}
+  step %Q{And I click 'Sign In'}
 end
 
 # for selecting login
