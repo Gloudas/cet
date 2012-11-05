@@ -13,10 +13,12 @@ class User < ActiveRecord::Base
       print auth_hash[k]
       print "\n\n"
     end
+    print User.all
     # create a new user or retreive the user if he already exists
     @user = User.find_by_uid(auth_hash[:uid])
     if @user.nil?
-      @user = User.create(:uid => auth_hash[:uid])
+      print "HERE WE ARE!!"
+      @user = User.create(:uid => auth_hash[:uid], :name => "SUPBIGCOCK")
     end
     return @user
   end
