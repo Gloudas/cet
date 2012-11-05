@@ -16,7 +16,6 @@ Scenario: Create a new project (happy path)
   #Then I should be on the project page
   Then I should see "My New Project"
   And I should see "Here is the description for my project"
-  And I should see "Bob Blabla"
 
 Scenario: Create a new project (sad path)
 	When I fill in "description" with "Here is the description for my project"
