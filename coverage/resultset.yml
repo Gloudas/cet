@@ -1,7 +1,7 @@
---- 
-Cucumber Features: 
-  :original_result: 
-    /home/ubuntu/Desktop/cet/app/controllers/application_controller.rb: 
+---
+Cucumber Features:
+  :original_result:
+    C:/Users/Steven/Documents/GitHub/cet/app/controllers/application_controller.rb:
     - 1
     - 1
     - 
@@ -12,20 +12,20 @@ Cucumber Features:
     - 
     - 
     - 
-    /home/ubuntu/Desktop/cet/app/helpers/application_helper.rb: 
+    C:/Users/Steven/Documents/GitHub/cet/app/helpers/application_helper.rb:
     - 1
     - 
-    /home/ubuntu/Desktop/cet/app/helpers/home_helper.rb: 
+    C:/Users/Steven/Documents/GitHub/cet/app/helpers/home_helper.rb:
     - 1
     - 
-    /home/ubuntu/Desktop/cet/app/controllers/home_controller.rb: 
+    C:/Users/Steven/Documents/GitHub/cet/app/controllers/home_controller.rb:
     - 1
     - 
     - 1
     - 
     - 
     - 
-    /home/ubuntu/Desktop/cet/app/controllers/projects_controller.rb: 
+    C:/Users/Steven/Documents/GitHub/cet/app/controllers/projects_controller.rb:
     - 1
     - 
     - 
@@ -99,7 +99,7 @@ Cucumber Features:
     - 
     - 
     - 
-    /home/ubuntu/Desktop/cet/app/models/project.rb: 
+    C:/Users/Steven/Documents/GitHub/cet/app/models/project.rb:
     - 1
     - 
     - 1
@@ -116,164 +116,9 @@ Cucumber Features:
     - 0
     - 
     - 
-    /home/ubuntu/Desktop/cet/app/controllers/schools_controller.rb: 
+    C:/Users/Steven/Documents/GitHub/cet/app/controllers/schools_controller.rb:
     - 1
     - 
-    - 1
-    - 
-    - 1
-    - 0
-    - 
-    - 
-    - 1
-    - 0
-    - 0
-    - 0
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 
-    /home/ubuntu/Desktop/cet/app/models/school.rb: 
-    - 1
-    - 1
-    - 
-    - 1
-    - 1
-    - 
-    - 
-    /home/ubuntu/Desktop/cet/app/controllers/sessions_controller.rb: 
-    - 1
-    - 
-    - 1
-    - 
-    - 1
-    - 1
-    - 1
-    - 
-    - 
-    - 1
-    - 0
-    - 0
-    - 0
-    - 0
-    - 
-    - 
-    - 1
-    - 0
-    - 
-    - 
-    - 1
-    - 0
-    - 0
-    - 0
-    - 
-    - 
-    - 1
-    - 0
-    - 
-    - 
-    - 
-    /home/ubuntu/Desktop/cet/app/controllers/users_controller.rb: 
-    - 1
-    - 
-    - 1
-    - 
-    - 1
-    - 
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 
-    /home/ubuntu/Desktop/cet/app/models/user.rb: 
-    - 1
-    - 
-    - 1
-    - 1
-    - 
-    - 1
-    - 
-    - 1
-    - 
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 
-    - 
-    - 0
-    - 0
-    - 0
-    - 
-    - 0
-    - 
-    - 
-    - 
-  :created_at: 2012-11-04 20:43:36.420234 -08:00
-RSpec: 
-  :original_result: 
-    /home/ubuntu/Desktop/cet/app/controllers/application_controller.rb: 
-    - 1
-    - 1
-    - 
-    /home/ubuntu/Desktop/cet/app/helpers/application_helper.rb: 
-    - 1
-    - 
-    /home/ubuntu/Desktop/cet/app/controllers/projects_controller.rb: 
-    - 1
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 
-    /home/ubuntu/Desktop/cet/app/models/project.rb: 
-    - 1
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 1
-    - 1
-    - 
-    - 1
-    - 1
-    - 
-    - 
-    - 
-    /home/ubuntu/Desktop/cet/app/controllers/schools_controller.rb: 
     - 1
     - 
     - 1
@@ -296,7 +141,7 @@ RSpec:
     - 
     - 
     - 
-    /home/ubuntu/Desktop/cet/app/models/school.rb: 
+    C:/Users/Steven/Documents/GitHub/cet/app/models/school.rb:
     - 1
     - 1
     - 
@@ -304,7 +149,158 @@ RSpec:
     - 1
     - 
     - 
-    /home/ubuntu/Desktop/cet/app/controllers/sessions_controller.rb: 
+    C:/Users/Steven/Documents/GitHub/cet/app/controllers/sessions_controller.rb:
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 1
+    - 1
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 
+    C:/Users/Steven/Documents/GitHub/cet/app/controllers/users_controller.rb:
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 
+    C:/Users/Steven/Documents/GitHub/cet/app/models/user.rb:
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 
+  :created_at: 2012-11-04 21:50:50.942805000 -08:00
+RSpec:
+  :original_result:
+    /home/ubuntu/Desktop/cet/app/controllers/application_controller.rb:
+    - 1
+    - 1
+    - 
+    /home/ubuntu/Desktop/cet/app/helpers/application_helper.rb:
+    - 1
+    - 
+    /home/ubuntu/Desktop/cet/app/controllers/projects_controller.rb:
+    - 1
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 
+    /home/ubuntu/Desktop/cet/app/models/project.rb:
+    - 1
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 
+    - 
+    /home/ubuntu/Desktop/cet/app/controllers/schools_controller.rb:
+    - 1
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 
+    /home/ubuntu/Desktop/cet/app/models/school.rb:
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 
+    /home/ubuntu/Desktop/cet/app/controllers/sessions_controller.rb:
     - 1
     - 
     - 1
@@ -335,7 +331,7 @@ RSpec:
     - 
     - 
     - 
-    /home/ubuntu/Desktop/cet/app/controllers/users_controller.rb: 
+    /home/ubuntu/Desktop/cet/app/controllers/users_controller.rb:
     - 1
     - 
     - 1
@@ -356,7 +352,7 @@ RSpec:
     - 
     - 
     - 
-    /home/ubuntu/Desktop/cet/app/models/user.rb: 
+    /home/ubuntu/Desktop/cet/app/models/user.rb:
     - 
     - 1
     - 
@@ -382,4 +378,4 @@ RSpec:
     - 
     - 
     - 
-  :created_at: 2012-10-28 19:03:04.582371 -07:00
+  :created_at: 2012-10-28 19:03:04.582371000 -07:00
