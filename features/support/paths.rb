@@ -17,13 +17,13 @@ module NavigationHelpers
       '/'
 
     when /^the login page$/
-      '/auth/developer/'
+      login_path
 
     when /^the Berkeley page$/
-      '/berkeley'
+      school_path('berkeley')
 
-    when /^the create new project page$/
-      '/project/new'
+    when /^the new project page$/
+      new_project_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
