@@ -17,7 +17,7 @@ module NavigationHelpers
       '/'
 
     when /^the login page$/
-      '/auth/developer'
+      '/auth/developer/'
 
     when /^the Berkeley page$/
       '/berkeley'
