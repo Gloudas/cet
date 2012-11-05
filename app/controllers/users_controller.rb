@@ -15,12 +15,13 @@ class UsersController < ApplicationController
         @user[att] = value
       end
 
-    success = @user.save
-    if success
-      redirect_to profile_path(@user.id) and return
-    else
-      flash[:error] = "Sorry, something went wrong with editing your profile"
-      redirect_to edit_profile_path
+      success = @user.save
+      if success
+        redirect_to profile_path(@user.id) and return
+      else
+        flash[:error] = "Sorry, something went wrong with editing your profile"
+        redirect_to edit_profile_path
+      end
     end
   end
 
