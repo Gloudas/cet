@@ -231,4 +231,237 @@ Cucumber Features:
     - 
     - 
     - 
-  :created_at: 2012-11-05 01:30:58.931662 -08:00
+  :created_at: 2012-11-05 01:35:16.412069 -08:00
+RSpec: 
+  :original_result: 
+    /home/ubuntu/Desktop/cet/app/controllers/application_controller.rb: 
+    - 1
+    - 1
+    - 
+    - 1
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    /home/ubuntu/Desktop/cet/app/helpers/application_helper.rb: 
+    - 1
+    - 
+    /home/ubuntu/Desktop/cet/app/helpers/home_helper.rb: 
+    - 1
+    - 
+    /home/ubuntu/Desktop/cet/app/controllers/home_controller.rb: 
+    - 1
+    - 
+    - 1
+    - 
+    - 
+    - 
+    /home/ubuntu/Desktop/cet/app/controllers/projects_controller.rb: 
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 
+    - 0
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    /home/ubuntu/Desktop/cet/app/models/project.rb: 
+    - 1
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 
+    /home/ubuntu/Desktop/cet/app/controllers/schools_controller.rb: 
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 
+    /home/ubuntu/Desktop/cet/app/models/school.rb: 
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 
+    /home/ubuntu/Desktop/cet/app/controllers/sessions_controller.rb: 
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 
+    - 0
+    - 
+    - 
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 1
+    - 
+    - 
+    - 
+    /home/ubuntu/Desktop/cet/app/controllers/users_controller.rb: 
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 1
+    - 
+    - 0
+    - 
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 
+    /home/ubuntu/Desktop/cet/app/models/user.rb: 
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 2
+    - 2
+    - 1
+    - 
+    - 2
+    - 
+    - 
+    - 
+  :created_at: 2012-11-05 01:35:50.059238 -08:00

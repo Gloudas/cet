@@ -19,8 +19,8 @@ class UsersController < ApplicationController
       if success
         redirect_to profile_path(@user.id) and return
       else
-        flash[:error] = "Sorry, something went wrong with editing your profile"
-        redirect_to edit_profile_path
+        flash[:error] = "Sorry, something went wrong with editing your profile."
+        redirect_to edit_profile_path and return
       end
     end
   end

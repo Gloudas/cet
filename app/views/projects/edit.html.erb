@@ -13,7 +13,7 @@
 
   <%= form_tag edit_project_path do %>
 
-    <%= label :project, :name, "Title:" %>
+    <%= label :project, :title, "Title:" %>
     <%= text_field :project, 'title', :value => @project.title, :id => 'title' %>
 
     <%= label :project, :description, "Enter a short description:" %>

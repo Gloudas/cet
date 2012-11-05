@@ -40,6 +40,9 @@ ActiveRecord::Schema.define(:version => 20121105041135) do
     t.string   "name"
     t.string   "email"
     t.integer  "school_id"
+    t.string   "major"
+    t.integer  "gradyear"
+    t.string   "aboutme"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

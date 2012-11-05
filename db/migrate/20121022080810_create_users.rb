@@ -5,6 +5,9 @@ class CreateUsers < ActiveRecord::Migration
       t.string "name"
       t.string "email"
       t.integer "school_id"
+      t.string "major"
+      t.integer "gradyear"
+      t.string "aboutme"
       t.timestamps
     end
   end

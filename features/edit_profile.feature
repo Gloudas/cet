@@ -19,7 +19,7 @@ Scenario: View my profile information
   And I should see "Major"
   And I should see "About Me"
   And I should see "Graduation Year"
-  And I should see "Active Projects"
+#And I should see "Active Projects"
 
 Scenario: Edit my profile information (happy path)
   Given that I am on my profile page

@@ -25,7 +25,7 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="span6 offset3">
-          <h2><%= "Welcome #{@user.name}!" %></h2>
+          <h2><%= "Welcome #{@user.name}!" %><%= link_to "Edit", edit_profile_path %></h2>
         </div>
       </div><!-- /.row -->
     
@@ -85,27 +85,27 @@
             <tbody>
               <tr>
                 <td>Name</td>
-                <td>Mani Zimbabo</td>
+                <td><%= @user.name %></td>
               </tr>
               <tr>
                 <td>Email</td>
-                <td>maniz@gmail.com</td>
+                <td><%= @user.email %></td>
               </tr>
               <tr>
                 <td>School</td>
-                <td>UC Berkeley</td>
+                <td><%= @user.school_id %></td>
               </tr>
               <tr>
                 <td>Major</td>
-                <td>EECS</td>
+                <td><%= @user.major %></td>
               </tr>
               <tr>
                 <td>Graduation Year</td>
-                <td>2013</td>
+                <td><%= @user.gradyear %></td>
               </tr>
               <tr>
                 <td>About Me</td>
-                <td>I like dancing</td>
+                <td><%= @user.aboutme %></td>
               </tr>
             </tbody>
           </table>
