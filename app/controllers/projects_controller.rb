@@ -4,9 +4,6 @@ class ProjectsController < ApplicationController
   #before_filter :set_current_user
   # add filter for being able to edit other's projects/set permissions on who can edit
 
-  def index
-  end
-
   def new_or_edit
     # see if we are creating a new project or just editing an existing one
     if params[:pid]
@@ -16,14 +13,12 @@ class ProjectsController < ApplicationController
     end
     project_info = params[:project]
 
-    if project_info[:collaborator]
-      project_info[:collaborator].each do |email|
-        # ignore nil values
-        next if not email
-        collab = User.find_by_email(email)
-        project.users << collab if collab
-      end
-    end
+    project_info[:collaborator].each do |email|
+      # ignore nil values
+      next if not email
+      collab = User.find_by_email(email)
+      project.users << collab if collab
+    end if project_info[:collaborator]
 
     project.title = project_info[:title]
     project.description = project_info[:description]

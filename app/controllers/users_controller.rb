@@ -8,9 +8,10 @@ class UsersController < ApplicationController
 
   def edit
     # user is set in the filter
-  end
-
-  def destroy
+    if params[:project]
+      # process the form
+      params[:project]
+    end
   end
 
 end
