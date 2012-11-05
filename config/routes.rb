@@ -29,10 +29,8 @@ Cet::Application.routes.draw do
   match '/profile/edit' => 'users#edit', :as => 'private_profile_path'
   #Projects
   match '/project/new' => 'projects#new', :as => 'new_project'
-  match '/project/create' => 'projects#create', :as => 'create_project'
   match '/project/:pid/edit' => 'projects#edit', :as => 'edit_project'
   match '/project/:pid' => 'projects#show', :as => 'project'
-  match '/project/:pid/edit/collaborators' => 'projects#edit_collaborators', :as => 'edit_collaborators'
 
 
   # Sample resource route with options:

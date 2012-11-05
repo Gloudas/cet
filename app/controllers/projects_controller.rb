@@ -58,7 +58,8 @@ class ProjectsController < ApplicationController
     @project = Project.find_by_id(params[:pid])
   end
 
-  def edit_collaborators
+  def show
+    @project = Project.find_by_id(params[:pid])
   end
 
   def destroy
