@@ -21,21 +21,21 @@
       <img src="./assets/0.4.5/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-11-04T21:45:11-08:00">2012-11-04T21:45:11-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-11-04T21:50:51-08:00">2012-11-04T21:50:51-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     All Files
-    (<span class="red">66.36%</span>)
+    (<span class="red">66.98%</span>)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>11</b> files in total.
-    <b>110</b> relevant lines. 
-    <span class="green"><b>73</b> lines covered</span> and
-    <span class="red"><b>37</b> lines missed </span>
+    <b>106</b> relevant lines. 
+    <span class="green"><b>71</b> lines covered</span> and
+    <span class="red"><b>35</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -97,11 +97,11 @@
       
       <tr>
         <td><a href="#4082fe29c32662fb2679235d50101054e51f617b" class="src_link" title="./app/controllers/users_controller.rb">./app/controllers/users_controller.rb</a></td>
-        <td class="red">77.78 %</td>
-        <td>24</td>
-        <td>9</td>
-        <td>7</td>
-        <td>2</td>
+        <td class="green">100.0 %</td>
+        <td>16</td>
+        <td>5</td>
+        <td>5</td>
+        <td>0</td>
       </tr>
       
       <tr>
@@ -157,14 +157,14 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     Controllers
-    (<span class="red">68.35%</span>)
+    (<span class="red">69.33%</span>)
   </h2>
   <a name="Controllers"></a>
   <div>
     <b>6</b> files in total.
-    <b>79</b> relevant lines. 
-    <span class="green"><b>54</b> lines covered</span> and
-    <span class="red"><b>25</b> lines missed </span>
+    <b>75</b> relevant lines. 
+    <span class="green"><b>52</b> lines covered</span> and
+    <span class="red"><b>23</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -226,11 +226,11 @@
       
       <tr>
         <td><a href="#4082fe29c32662fb2679235d50101054e51f617b" class="src_link" title="./app/controllers/users_controller.rb">./app/controllers/users_controller.rb</a></td>
-        <td class="red">77.78 %</td>
-        <td>24</td>
-        <td>9</td>
-        <td>7</td>
-        <td>2</td>
+        <td class="green">100.0 %</td>
+        <td>16</td>
+        <td>5</td>
+        <td>5</td>
+        <td>0</td>
       </tr>
       
     </tbody>
@@ -2391,7 +2391,7 @@
     <tr>
       <td colspan="3">
         <h3>./app/controllers/users_controller.rb</h3>
-        <h4><span class="red">77.78 %</span> covered</h4>
+        <h4><span class="green">100.0 %</span> covered</h4>
       </td>
     </tr>
     <tr>
@@ -2460,7 +2460,7 @@
         <pre>5</pre>
       </td>
       <td>
-        <pre>  def new</pre>
+        <pre>  def show</pre>
       </td>
       <td class="hits">
         1
@@ -2473,7 +2473,7 @@
         <pre>6</pre>
       </td>
       <td>
-        <pre>    # this should be handled by User model</pre>
+        <pre>    # user is set in the filter</pre>
       </td>
       <td class="hits">
         
@@ -2512,7 +2512,7 @@
         <pre>9</pre>
       </td>
       <td>
-        <pre>  def new_project</pre>
+        <pre>  def edit</pre>
       </td>
       <td class="hits">
         1
@@ -2525,7 +2525,7 @@
         <pre>10</pre>
       </td>
       <td>
-        <pre></pre>
+        <pre>    # user is set in the filter</pre>
       </td>
       <td class="hits">
         
@@ -2564,7 +2564,7 @@
         <pre>13</pre>
       </td>
       <td>
-        <pre>  def show</pre>
+        <pre>  def destroy</pre>
       </td>
       <td class="hits">
         1
@@ -2598,113 +2598,9 @@
     </tr>
   
     
-    <tr class="hit" data-hits="1">
+    <tr class="never" >
       <td class="line_number">
         <pre>16</pre>
-      </td>
-      <td>
-        <pre>  def edit</pre>
-      </td>
-      <td class="hits">
-        1
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
-        <pre>17</pre>
-      </td>
-      <td>
-        <pre>    @user = session[:user_id]</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
-        <pre>18</pre>
-      </td>
-      <td>
-        <pre>    @name = User.find_by_id(@user)</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>19</pre>
-      </td>
-      <td>
-        <pre>  end</pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>20</pre>
-      </td>
-      <td>
-        <pre></pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="hit" data-hits="1">
-      <td class="line_number">
-        <pre>21</pre>
-      </td>
-      <td>
-        <pre>  def destroy</pre>
-      </td>
-      <td class="hits">
-        1
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>22</pre>
-      </td>
-      <td>
-        <pre>  end</pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>23</pre>
-      </td>
-      <td>
-        <pre></pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>24</pre>
       </td>
       <td>
         <pre>end</pre>
