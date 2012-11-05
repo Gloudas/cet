@@ -28,6 +28,14 @@ Capybara.add_selector(:element) do
   xpath { |locator| "//*[normalize-space(text())=#{XPath::Expression::StringLiteral.new(locator)}]" }
 end
 
+#class Capybara::XPath
+#  class << self
+#   def element(locator)
+#     append("//*[normalize-space(text())=#{s(locator)}]")
+#   end
+# end
+#end
+
 module WithinHelpers
   def with_scope(locator)
     locator ? within(*selector_for(locator)) { yield } : yield
@@ -35,8 +43,18 @@ module WithinHelpers
 end
 World(WithinHelpers)
 
-When 'I click "$locator"' do |locator|
+When /^I click "(.*)"$/ do |locator|
+  #msg = "No element could be found BITCH"
+  #locate(:xpath, Capybara::XPath.element(locator), msg).click
   find(:xpath, XPath::HTML.content(locator)).click
+end
+
+# Noel added this shit for login
+Given /^I am logged in$/ do
+  %{Given I am on the login page}
+  %{When I fill in 'name' with "admin"}
+  %{And I fill in 'email' with "bitch@stfu.com"}
+  %{And I click "Sign In"}
 end
 
 # Single-line step scoper

@@ -11,10 +11,10 @@
   <%= form_tag new_project_path do %>
 
     <%= label :project, :name, "Title:" %>
-    <%= text_field :project, 'title' %>
+    <%= text_field :project, 'title', :id => 'title' %>
 
     <%= label :project, :description, "Enter a short description:" %>
-    <p><textarea class="field span12" name="project[description]" rows="6"></textarea></p>
+    <p><textarea class="field span12" id="description" name="project[description]" rows="6"></textarea></p>
 
     <%= label :project, :collab1, "Collaborator 1:" %>
     <%= text_field :project, 'collaborator[0]' %>

@@ -1,0 +1,21 @@
+<html>
+<head>
+  <%= image_tag("logo.png") %>
+  <title>Applied Innovations Institute</title>
+  <%= stylesheet_link_tag "bootstrap" %>
+</head>
+
+<body>
+  <h1><%= @project.title %></h1>
+
+    <h2>Description</h2>
+    <p><%= @project.description %>
+
+    <h2>Collaborators</h2>
+    <% @project.users.each do |user| %>
+      <% # you have to make it so your own name doesn't appear on this list %>
+      <p><%= user.name %></p>
+    <% end %>
+  
+</body>
+</html>

@@ -5,7 +5,7 @@ Feature: login to the site
   I want to login to the site with my student credentials
 
 Background:
-  Given I am on the Berkeley page
+  Given I am on the home page
   Then I should see "Login"
   When I follow "Login"
   Then I should be on the login page
