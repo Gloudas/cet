@@ -22,6 +22,9 @@ module NavigationHelpers
     when /^the Berkeley page$/
       '/berkeley'
 
+    when /^the create new project page$/
+      '/project/new'
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

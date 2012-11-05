@@ -5,22 +5,20 @@ Feature: Creating Projects in ai2
 	I want to add an entrepreneur project to the Berkeley ai2 website in my name
 
 Background: student is logged into ai2
-	
-	Given I am on the home page
+  Given I am logged in
+	And I am on the create new project page
+  Then I should be on the create new project page
 
 Scenario: Create a new project (happy path)
-	Given I am on the create new project page
-	When I fill in "Title" with "My New Project"
-	And I fill in "Description" with "Here is the description for my project"
+	When I fill in "title" with "My New Project"
+	And I fill in "description" with "Here is the description for my project"
   And I press "Create Project"
-	Then I should be on the "My New Project" project page
-  And I should see "My New Project"
+  #Then I should be on the project page
+  Then I should see "My New Project"
   And I should see "Here is the description for my project"
   And I should see "Bob Blabla"
 
 Scenario: Create a new project (sad path)
-	Given I am on the create new project page
-	When I fill in "Description" with "Here is the description for my project"
+	When I fill in "description" with "Here is the description for my project"
   And I press "Create Project"
   Then I should be on the create new project page
-  And the "Title" field should have the error "Field missing error"

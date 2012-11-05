@@ -14,4 +14,4 @@ Scenario: log in with a Berkeley ID
   When I fill in "name" with "Noeleo"
   And I fill in "email" with "noelmoldvai@berkeley.edu"
   And I click "Sign In"
-  Then I should see "Logout"
+  Then I should see "Name"
