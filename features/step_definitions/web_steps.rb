@@ -49,6 +49,16 @@ When /^I click "(.*)"$/ do |locator|
   find(:xpath, XPath::HTML.content(locator)).click
 end
 
+Given /the following project exists:/ do |fields|
+  fields.rows_hash.each do |title, collaborators, description|
+    Given /I am on the new project page/ do
+      And %{I fill in "title" with "title"}
+      And %{I fill in "description" with "description"}
+      And /I press "Create Project"/
+    end
+  end
+end
+
 # Noel added this shit for login
 Given /^I am logged in$/ do
   %{Given I am on the login page}
