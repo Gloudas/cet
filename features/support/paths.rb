@@ -14,10 +14,10 @@ module NavigationHelpers
     case page_name
 
     when /^the home\s?page$/
-      '/'
+      home_path
 
     when /^the login page$/
-      login_path
+      '/auth/developer/'
 
     when /^the Berkeley page$/
       school_path('berkeley')

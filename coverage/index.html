@@ -21,21 +21,21 @@
       <img src="./assets/0.4.5/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-11-04T23:32:49-08:00">2012-11-04T23:32:49-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-11-04T23:39:02-08:00">2012-11-04T23:39:02-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     All Files
-    (<span class="red">45.45%</span>)
+    (<span class="red">60.91%</span>)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>11</b> files in total.
     <b>110</b> relevant lines. 
-    <span class="green"><b>50</b> lines covered</span> and
-    <span class="red"><b>60</b> lines missed </span>
+    <span class="green"><b>67</b> lines covered</span> and
+    <span class="red"><b>43</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -70,11 +70,11 @@
       
       <tr>
         <td><a href="#6cb498e77414f5bd6999532283da7ee6904684ad" class="src_link" title="./app/controllers/projects_controller.rb">./app/controllers/projects_controller.rb</a></td>
-        <td class="red">21.88 %</td>
+        <td class="red">75.0 %</td>
         <td>68</td>
         <td>32</td>
-        <td>7</td>
-        <td>25</td>
+        <td>24</td>
+        <td>8</td>
       </tr>
       
       <tr>
@@ -157,14 +157,14 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     Controllers
-    (<span class="red">39.24%</span>)
+    (<span class="red">60.76%</span>)
   </h2>
   <a name="Controllers"></a>
   <div>
     <b>6</b> files in total.
     <b>79</b> relevant lines. 
-    <span class="green"><b>31</b> lines covered</span> and
-    <span class="red"><b>48</b> lines missed </span>
+    <span class="green"><b>48</b> lines covered</span> and
+    <span class="red"><b>31</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -199,11 +199,11 @@
       
       <tr>
         <td><a href="#6cb498e77414f5bd6999532283da7ee6904684ad" class="src_link" title="./app/controllers/projects_controller.rb">./app/controllers/projects_controller.rb</a></td>
-        <td class="red">21.88 %</td>
+        <td class="red">75.0 %</td>
         <td>68</td>
         <td>32</td>
-        <td>7</td>
-        <td>25</td>
+        <td>24</td>
+        <td>8</td>
       </tr>
       
       <tr>
@@ -664,7 +664,7 @@
     <tr>
       <td colspan="3">
         <h3>./app/controllers/projects_controller.rb</h3>
-        <h4><span class="red">21.88 %</span> covered</h4>
+        <h4><span class="red">75.0 %</span> covered</h4>
       </td>
     </tr>
     <tr>
@@ -780,7 +780,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="2">
       <td class="line_number">
         <pre>9</pre>
       </td>
@@ -788,7 +788,7 @@
         <pre>    if params[:pid]</pre>
       </td>
       <td class="hits">
-        0
+        2
       </td>
     </tr>
   
@@ -819,7 +819,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="2">
       <td class="line_number">
         <pre>12</pre>
       </td>
@@ -827,7 +827,7 @@
         <pre>      project = Project.new</pre>
       </td>
       <td class="hits">
-        0
+        2
       </td>
     </tr>
   
@@ -845,7 +845,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="2">
       <td class="line_number">
         <pre>14</pre>
       </td>
@@ -853,7 +853,7 @@
         <pre>    project_info = params[:project]</pre>
       </td>
       <td class="hits">
-        0
+        2
       </td>
     </tr>
   
@@ -897,7 +897,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="8">
       <td class="line_number">
         <pre>18</pre>
       </td>
@@ -905,12 +905,12 @@
         <pre>      next if not email</pre>
       </td>
       <td class="hits">
-        0
+        8
       </td>
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="8">
       <td class="line_number">
         <pre>19</pre>
       </td>
@@ -918,12 +918,12 @@
         <pre>      collab = User.find_by_email(email)</pre>
       </td>
       <td class="hits">
-        0
+        8
       </td>
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="8">
       <td class="line_number">
         <pre>20</pre>
       </td>
@@ -931,12 +931,12 @@
         <pre>      project.users &lt;&lt; collab if collab</pre>
       </td>
       <td class="hits">
-        0
+        8
       </td>
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="2">
       <td class="line_number">
         <pre>21</pre>
       </td>
@@ -944,7 +944,7 @@
         <pre>    end if project_info[:collaborator]</pre>
       </td>
       <td class="hits">
-        0
+        2
       </td>
     </tr>
   
@@ -962,7 +962,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="2">
       <td class="line_number">
         <pre>23</pre>
       </td>
@@ -970,12 +970,12 @@
         <pre>    project.title = project_info[:title]</pre>
       </td>
       <td class="hits">
-        0
+        2
       </td>
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="2">
       <td class="line_number">
         <pre>24</pre>
       </td>
@@ -983,7 +983,7 @@
         <pre>    project.description = project_info[:description]</pre>
       </td>
       <td class="hits">
-        0
+        2
       </td>
     </tr>
   
@@ -1040,7 +1040,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="2">
       <td class="line_number">
         <pre>29</pre>
       </td>
@@ -1048,12 +1048,12 @@
         <pre>    success = project.save</pre>
       </td>
       <td class="hits">
-        0
+        2
       </td>
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="2">
       <td class="line_number">
         <pre>30</pre>
       </td>
@@ -1061,7 +1061,7 @@
         <pre>    redirect_to project_path(project.id) and return if success</pre>
       </td>
       <td class="hits">
-        0
+        2
       </td>
     </tr>
   
@@ -1079,7 +1079,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>32</pre>
       </td>
@@ -1087,7 +1087,7 @@
         <pre>    if params[:pid]</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
@@ -1131,7 +1131,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>36</pre>
       </td>
@@ -1139,12 +1139,12 @@
         <pre>      flash[:error] = &quot;Sorry, something went wrong with creating a new project.&quot;</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>37</pre>
       </td>
@@ -1152,7 +1152,7 @@
         <pre>      redirect_to new_project_path</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
@@ -1209,7 +1209,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="5">
       <td class="line_number">
         <pre>42</pre>
       </td>
@@ -1217,7 +1217,7 @@
         <pre>    if params[:project]</pre>
       </td>
       <td class="hits">
-        0
+        5
       </td>
     </tr>
   
@@ -1235,7 +1235,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="2">
       <td class="line_number">
         <pre>44</pre>
       </td>
@@ -1243,7 +1243,7 @@
         <pre>      new_or_edit and return</pre>
       </td>
       <td class="hits">
-        0
+        2
       </td>
     </tr>
   
@@ -1404,7 +1404,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>57</pre>
       </td>
@@ -1412,7 +1412,7 @@
         <pre>    @project = Project.find_by_id(params[:pid])</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
