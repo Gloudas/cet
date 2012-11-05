@@ -215,25 +215,23 @@ Cucumber Features:
     - !!null 
     - 1
     - !!null 
-    - 0
-    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - 0
     - 0
     - 0
     - !!null 
-    - !!null 
-    - !!null 
-    - 0
-    - 0
-    - 0
-    - 0
-    - !!null 
-    - 0
     - 0
     - !!null 
     - !!null 
     - !!null 
-  :created_at: 2012-11-05 00:23:06.878611890 -08:00
+  :created_at: 2012-11-05 01:05:10.793590666 -08:00
 RSpec:
   :original_result:
     /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/application_controller.rb:
@@ -343,7 +341,7 @@ RSpec:
     - 1
     - !!null 
     - 1
-    - 0
+    - 1
     - !!null 
     - !!null 
     /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/schools_controller.rb:
@@ -450,22 +448,20 @@ RSpec:
     - !!null 
     - 1
     - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - 2
-    - 0
-    - 0
-    - 0
-    - 0
+    - 2
+    - 1
+    - !!null 
+    - 2
     - !!null 
     - !!null 
     - !!null 
-    - 0
-    - 0
-    - 0
-    - 0
-    - !!null 
-    - 0
-    - 0
-    - !!null 
-    - !!null 
-    - !!null 
-  :created_at: 2012-11-05 00:17:18.007311629 -08:00
+  :created_at: 2012-11-05 01:12:15.640351991 -08:00
