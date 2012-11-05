@@ -146,7 +146,19 @@ Cucumber Features:
     - !!null 
     /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/sessions_controller.rb:
     - 1
-
+    - !!null 
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
     - !!null 
     - !!null 
     - 1
@@ -198,9 +210,30 @@ Cucumber Features:
     - !!null 
     - 1
     - 1
-    
     - !!null 
-  :created_at: 2012-11-04 23:54:51.820339144 -08:00
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    - 0
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+  :created_at: 2012-11-05 00:23:06.878611890 -08:00
 RSpec:
   :original_result:
     /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/application_controller.rb:
@@ -209,7 +242,22 @@ RSpec:
     - !!null 
     - 1
     - !!null 
-    - 
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/helpers/application_helper.rb:
+    - 1
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/helpers/home_helper.rb:
+    - 1
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/home_controller.rb:
+    - 1
+    - !!null 
+    - 1
+    - !!null 
     - !!null 
     - !!null 
     /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/projects_controller.rb:
@@ -420,4 +468,4 @@ RSpec:
     - !!null 
     - !!null 
     - !!null 
-  :created_at: 2012-11-04 23:52:28.659822849 -08:00
+  :created_at: 2012-11-05 00:17:18.007311629 -08:00

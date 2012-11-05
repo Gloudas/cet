@@ -1,8 +1,10 @@
+@wip
 Feature: Editing Projects in ai2
 
 	As a Cal Student
 	So that I can change the direction of my project
 	I want to edit my project on the ai2 site
+
 
 Background: Student is logged into ai2
   Given I am logged in
