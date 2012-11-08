@@ -27,7 +27,14 @@ class ProjectsController < ApplicationController
 
     # to do: validations on the project model
     success = project.save
-    redirect_to project_path(project.id) and return if success
+    if success
+      if params[:pid]
+        flash[:notice] = "Project successfully edited!"
+      else
+        flash[:notice] = "Project successfully created!"
+      end
+      redirect_to project_path(project.id) and return
+    end
     # if unsuccessful, flash an error
     if params[:pid]
       flash[:error] = "Sorry, something went wrong with editing this project."

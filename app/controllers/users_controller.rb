@@ -17,6 +17,7 @@ class UsersController < ApplicationController
 
       success = @user.save
       if success
+        flash[:notice] = "Your profile was successfully edited!"
         redirect_to profile_path(@user.id) and return
       else
         flash[:error] = "Sorry, something went wrong with editing your profile."

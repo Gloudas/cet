@@ -6,7 +6,10 @@
 </head>
 <body>
   <% if flash[:error] %>
-  <p class="notice"><%= flash[:error] %></p>
+    <p class="notice"><%= flash[:error] %></p>
+  <% end %>
+  <% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
   <% end %>
   <div class="navbar navbar-inverse">
     <div class="navbar-inner">
