@@ -39,37 +39,19 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>#</th>
                   <th>Project Name</th>
                   <th>Project Owner</th>
                   <th>Date Created</th>
                 </tr>
               </thead>
             <tbody>
+            <% @user.projects.each do |project| %>
               <tr>
-                <td>1</td>
-                <td>Saving Africa</td>
-                <td>Mani Zimbabo</td>
-                <td>4/23/2012</td>
+                <td><%= project.title %></td>
+                <td><%= project.creator.name %></td>
+                <td><%= project.created_at %></td>
               </tr>
-              <tr>
-                <td>2</td>
-                <td>Saving Africa</td>
-                <td>Mani Zimbabo</td>
-                <td>4/23/2012</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Saving Africa</td>
-                <td>Mani Zimbabo</td>
-                <td>4/23/2012</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Saving Africa</td>
-                <td>Mani Zimbabo</td>
-                <td>4/23/2012</td>
-              </tr>
+            <% end %>
             </tbody>
           </table>
         </div>

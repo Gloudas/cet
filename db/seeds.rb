@@ -9,6 +9,8 @@
 s = School.create(name: 'berkeley', location: 'Berkeley, CA')
 u = User.create(name: 'Stan Marsh', email: 'barrett_get_me_coffee@front_end_bitch.com')
 p = Project.create(title: 'cet', description: 'ai squared...', creator: u)
+u = User.create(name: 'Bro Bro', email: 'breh@back_end_brogrammer.com')
+p = Project.create(title: 'honk', description: 'im cool', creator: u)
 
 =begin
 s.projects << p

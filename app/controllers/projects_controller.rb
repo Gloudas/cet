@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
   # TODO: re-enable after the fucking bullshit cuke login shit works. piece of shit
-  #before_filter :set_current_user
+  before_filter :set_current_user
   # add filter for being able to edit other's projects/set permissions on who can edit
 
   def new_or_edit
@@ -13,17 +13,17 @@ class ProjectsController < ApplicationController
     end
     project_info = params[:project]
 
+    project.add_collaborator(@user)
     project_info[:collaborator].each do |email|
       # ignore nil values
       next if not email
-      collab = User.find_by_email(email)
-      project.users << collab if collab
+      project.add_collaborator_by_email(email)
     end if project_info[:collaborator]
 
     project.title = project_info[:title]
     project.description = project_info[:description]
     #TODO: reenable after cuke bullshit works again
-    #project.creator_id = @user.id
+    project.creator = @user
 
     # to do: validations on the project model
     success = project.save
