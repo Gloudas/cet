@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
     @user = User.find_by_uid(auth_hash[:uid])
     if @user.nil?
       #TODO: school should be set differently
-      @user = User.create(:uid => auth_hash[:uid], :name => auth_hash[:info][:name], :email => auth_hash[:info][:email], :school => School.find_by_name('berkeley'))
+      @user = User.create(:uid => auth_hash[:uid], :name => auth_hash[:info][:name], :email => auth_hash[:info][:email], :school => School.find_by_uri('berkeley'))
     end
     return @user
   end

@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-s = School.create(name: 'berkeley', location: 'Berkeley, CA')
+s = School.create(name: 'Berkeley', location: 'Berkeley, CA', uri: 'berkeley')
 u = User.create(name: 'Stan Marsh', email: 'barrett_get_me_coffee@front_end_bitch.com', school: s)
 p = Project.create(title: 'cet', description: 'ai squared...', creator: u)
 u = User.create(name: 'Bro Bro', email: 'breh@back_end_brogrammer.com', school: s)

@@ -17,8 +17,8 @@
        <%= image_tag("logo.png", :size => "100x50", :border => 0) %></a>
       <font size="4">
       <ul class="nav">
-        <li><a href="/berkeley">Berkeley Home</a></li>
-        <li><%= link_to "My Profile", profile_path(@user.id) if @user %></li>
+        <li><%= link_to @user.school.name, school_path(@user.school.id) %></li>
+        <li><%= link_to "Profile", profile_path(@user.id) if @user %></li>
         <li><%= link_to "New Project", new_project_path if @user %></li>
       </ul>
       </font> 
@@ -28,7 +28,7 @@
       </form>
       <font size="4">
       <ul class="nav pull-right">
-        <li><a href="/auth/logout">Logout</a></li>
+        <li><%= link_to "Logout", logout_path %></li>
       </ul>
       </font> 
       <!--<a class="pull-right" href= "/auth/developer" id = 'login'>Login</a>-->

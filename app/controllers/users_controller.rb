@@ -1,13 +1,17 @@
 class UsersController < ApplicationController
 
-  before_filter :set_current_user
+  before_filter :set_current_user, :set_is_mine
+
+  def set_is_mine
+    @is_mine = @user.id.to_s == params[:uid]
+  end
 
   def show
     @profile = User.find_by_id(params[:uid])
   end
 
   def edit
-    if @user.id.to_s != params[:uid]
+    if not @is_mine
       # this is not your profile
       redirect_to edit_profile_path and return
     end
@@ -18,8 +22,7 @@ class UsersController < ApplicationController
         @user[att] = value
       end
 
-      success = @user.save
-      if success
+      if @user.save
         flash[:notice] = "Your profile was successfully edited!"
         redirect_to profile_path(@user.id) and return
       else
