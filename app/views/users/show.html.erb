@@ -47,8 +47,8 @@
             <tbody>
             <% @user.projects.each do |project| %>
               <tr>
-                <td><%= project.title %></td>
-                <td><%= project.creator.name %></td>
+                <td><%= link_to project.title, project_path(project.id) %></td>
+                <td><%= link_to project.creator.name, profile_path(project.creator.id) %></td>
                 <td><%= project.created_at %></td>
               </tr>
             <% end %>
