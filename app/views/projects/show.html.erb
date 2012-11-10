@@ -43,7 +43,7 @@
     <h4>Collaborators</h4>
     <% @project.users.each do |user| %>
       <% # you have to make it so your own name doesn't appear on this list %>
-      <p><%= user.name %></p>
+      <p><%= link_to user.name, profile_path(user.id) %></p>
     <% end %>
       </div>
   </div>

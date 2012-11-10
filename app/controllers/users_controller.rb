@@ -7,7 +7,10 @@ class UsersController < ApplicationController
   end
 
   def edit
-    # user is set in the filter
+    if @user.id.to_s != params[:uid]
+      # this is not your profile
+      redirect_to edit_profile_path and return
+    end
     if params[:profile]
       # the form has been submitted
       # update all the fields
