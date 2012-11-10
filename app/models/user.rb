@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+  attr_accessible :uid, :name, :email, :school, :major, :gradyear, :aboutme
+
   validates :email, :presence => true, :uniqueness => true
   validates :school, :presence => true
 
@@ -19,7 +21,8 @@ class User < ActiveRecord::Base
     # create a new user or retreive the user if he already exists
     @user = User.find_by_uid(auth_hash[:uid])
     if @user.nil?
-      @user = User.create(:uid => auth_hash[:uid], :name => auth_hash[:info][:name], :email => auth_hash[:info][:email])
+      #TODO: school should be set differently
+      @user = User.create(:uid => auth_hash[:uid], :name => auth_hash[:info][:name], :email => auth_hash[:info][:email], :school => School.find_by_name('berkeley'))
     end
     return @user
   end

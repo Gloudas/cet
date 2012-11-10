@@ -1,5 +1,8 @@
 class Project < ActiveRecord::Base
 
+  # mass assignment
+  attr_accessible :title, :description, :creator
+
   validates :title, :presence => true
   validates :description, :presence => true
 
