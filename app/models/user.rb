@@ -1,10 +1,11 @@
 class User < ActiveRecord::Base
 
+  validates :email, :presence => true, :uniqueness => true
+  validates :school, :presence => true
+
   belongs_to :school
   has_and_belongs_to_many :projects
   has_many :created_projects, :class_name => 'Project', :foreign_key => "creator_id"
-
-  attr_accessible :uid, :name, :email, :school, :projects
 
   def self.find_or_create_from_auth_hash(auth_hash)
     #print out the auth_hash
