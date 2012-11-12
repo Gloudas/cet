@@ -6,8 +6,8 @@ Feature: Viewing upcoming events
 
 Background: the student is logged into ai2
 
-  Given that I am logged in
+  Given I am logged in as "test@berkeley.edu"
 
 Scenario: View my profile information
-  Given that I am on the Berkeley page
-  I should see "Upcoming Events"
+  Given I am on the Berkeley page
+  Then I should see "Upcoming Events"
