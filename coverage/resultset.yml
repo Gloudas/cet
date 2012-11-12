@@ -1,7 +1,7 @@
 ---
 Cucumber Features:
   :original_result:
-    C:/Users/Steven/Documents/GitHub/cet/app/controllers/application_controller.rb:
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/application_controller.rb:
     - 1
     - 1
     - 
@@ -12,126 +12,23 @@ Cucumber Features:
     - 
     - 
     - 
-    C:/Users/Steven/Documents/GitHub/cet/app/helpers/application_helper.rb:
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/helpers/application_helper.rb:
     - 1
     - 
-    C:/Users/Steven/Documents/GitHub/cet/app/helpers/home_helper.rb:
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/helpers/home_helper.rb:
     - 1
     - 
-    C:/Users/Steven/Documents/GitHub/cet/app/controllers/home_controller.rb:
-    - 1
-    - 
-    - 1
-    - 
-    - 
-    - 
-    C:/Users/Steven/Documents/GitHub/cet/app/controllers/projects_controller.rb:
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/home_controller.rb:
     - 1
     - 
     - 1
+    - 
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/projects_controller.rb:
     - 1
     - 
     - 1
-    - 0
-    - 0
-    - 
-    - 
-    - 1
-    - 
-    - 0
-    - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 
-    - 
-    - 0
-    - 0
-    - 0
-    - 
-    - 0
-    - 0
-    - 0
-    - 
-    - 
-    - 0
-    - 0
-    - 0
-    - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 
-    - 
-    - 0
-    - 0
-    - 0
-    - 
-    - 0
-    - 0
-    - 
-    - 
-    - 
-    - 1
-    - 0
-    - 
-    - 0
-    - 
-    - 
-    - 
-    - 1
-    - 0
-    - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 
-    - 
-    - 1
-    - 0
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 0
-    - 0
-    - 
-    - 
-    - 
-    C:/Users/Steven/Documents/GitHub/cet/app/models/project.rb:
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 1
-    - 1
-    - 
-    - 1
-    - 1
-    - 1
-    - 
-    - 1
-    - 0
-    - 
-    - 
-    - 1
-    - 0
-    - 0
-    - 
-    - 
-    C:/Users/Steven/Documents/GitHub/cet/app/controllers/schools_controller.rb:
-    - 1
-    - 
     - 1
     - 
     - 1
@@ -140,6 +37,60 @@ Cucumber Features:
     - 
     - 
     - 1
+    - 
+    - 0
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
     - 0
     - 
     - 
@@ -151,13 +102,62 @@ Cucumber Features:
     - 
     - 
     - 1
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/models/project.rb:
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 1
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/schools_controller.rb:
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
     - 
     - 
     - 1
     - 
     - 
     - 
-    C:/Users/Steven/Documents/GitHub/cet/app/models/school.rb:
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/models/school.rb:
     - 1
     - 
     - 1
@@ -170,7 +170,7 @@ Cucumber Features:
     - 1
     - 
     - 
-    C:/Users/Steven/Documents/GitHub/cet/app/controllers/sessions_controller.rb:
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/sessions_controller.rb:
     - 1
     - 
     - 1
@@ -202,7 +202,7 @@ Cucumber Features:
     - 
     - 
     - 
-    C:/Users/Steven/Documents/GitHub/cet/app/controllers/users_controller.rb:
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/users_controller.rb:
     - 1
     - 
     - 1
@@ -238,7 +238,7 @@ Cucumber Features:
     - 
     - 
     - 
-    C:/Users/Steven/Documents/GitHub/cet/app/models/user.rb:
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/models/user.rb:
     - 1
     - 
     - 1
@@ -269,10 +269,14 @@ Cucumber Features:
     - 
     - 
     - 
+<<<<<<< HEAD
   :created_at: 2012-11-11 21:56:39.287103000 -08:00
+=======
+  :created_at: 2012-11-11 21:00:27.173059000 -08:00
+>>>>>>> 6ef0e09262351f0bc53a1679ab965d7825769a6f
 RSpec:
   :original_result:
-    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/application_controller.rb:
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/application_controller.rb:
     - 1
     - 1
     - 
@@ -283,24 +287,28 @@ RSpec:
     - 
     - 
     - 
-    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/helpers/application_helper.rb:
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/helpers/application_helper.rb:
     - 1
     - 
-    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/helpers/home_helper.rb:
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/helpers/home_helper.rb:
     - 1
     - 
-    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/home_controller.rb:
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/home_controller.rb:
     - 1
     - 
-    - 1
-    - 
-    - 
-    - 
-    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/projects_controller.rb:
     - 1
     - 
     - 
     - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/projects_controller.rb:
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 1
+    - 0
+    - 0
     - 
     - 
     - 1
@@ -312,6 +320,16 @@ RSpec:
     - 
     - 0
     - 
+    - 0
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 0
     - 
     - 
     - 0
@@ -320,148 +338,7 @@ RSpec:
     - 0
     - 
     - 0
-    - 0
     - 
-    - 
-    - 
-    - 
-    - 0
-    - 0
-    - 
-    - 0
-    - 0
-    - 0
-    - 
-    - 0
-    - 0
-    - 
-    - 
-    - 
-    - 1
-    - 0
-    - 
-    - 0
-    - 
-    - 
-    - 
-    - 1
-    - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 
-    - 
-    - 1
-    - 0
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 0
-    - 0
-    - 
-    - 
-    - 
-    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/models/project.rb:
-    - 1
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 1
-    - 1
-    - 
-    - 1
-    - 1
-    - 
-    - 1
-    - 1
-    - 
-    - 
-    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/schools_controller.rb:
-    - 1
-    - 
-    - 1
-    - 
-    - 1
-    - 0
-    - 
-    - 
-    - 1
-    - 0
-    - 0
-    - 0
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 
-    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/models/school.rb:
-    - 1
-    - 1
-    - 
-    - 1
-    - 1
-    - 
-    - 
-    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/sessions_controller.rb:
-    - 1
-    - 
-    - 1
-    - 
-    - 1
-    - 
-    - 0
-    - 
-    - 
-    - 1
-    - 1
-    - 1
-    - 1
-    - 1
-    - 
-    - 
-    - 1
-    - 0
-    - 
-    - 
-    - 1
-    - 0
-    - 0
-    - 0
-    - 
-    - 
-    - 1
-    - 1
-    - 
-    - 
-    - 
-    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/users_controller.rb:
-    - 1
-    - 
-    - 1
-    - 
-    - 1
-    - 0
-    - 
-    - 
-    - 1
-    - 
-    - 0
-    - 
-    - 
-    - 0
     - 0
     - 
     - 
@@ -474,14 +351,178 @@ RSpec:
     - 
     - 
     - 
+    - 1
+    - 0
+    - 
+    - 0
     - 
     - 
-    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/models/user.rb:
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/models/project.rb:
+    - 1
+    - 
+    - 
     - 1
     - 
     - 1
     - 1
     - 
+    - 1
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/schools_controller.rb:
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/models/school.rb:
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/sessions_controller.rb:
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 
+    - 0
+    - 
+    - 
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 1
+    - 
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/users_controller.rb:
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/models/user.rb:
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
     - 1
     - 
     - 1
@@ -496,10 +537,11 @@ RSpec:
     - 
     - 2
     - 2
+    - 
     - 1
     - 
     - 2
     - 
     - 
     - 
-  :created_at: 2012-11-05 11:41:35.013638192 -08:00
+  :created_at: 2012-11-11 21:00:42.292085000 -08:00

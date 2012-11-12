@@ -6,11 +6,16 @@ Feature: Add collaborators to a project
 
 Background: User is logged in and has projects
   Given I am logged in as "bro@berkeley.edu"
-  And I have the following projects in the database:
-  | title      | description    | creator           |
-  | Project 1  | p1             | bro@berkeley.edu  |
-  | Project 2  | p2             | bro@berkeley.edu  |
-  And I have the following users in the database:
+  And the following schools exist:
+  | name       | uri      |
+  | Berkeley   | berkeley |
+
+  And the following projects exist:
+  | title      | description    | creator           | collaborators |
+  | Project 1  | p1             | bro@berkeley.edu  |               |
+  | Project 2  | p2             | bro@berkeley.edu  |               |
+
+  And the following users exist:
   | name       | email             | school    |
   | Bruh       | bruh@berkeley.edu | berkeley  |
   | Breh       | breh@berkeley.edu | berkeley  |

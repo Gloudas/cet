@@ -5,11 +5,16 @@ Feature: View all my current projects
   I want to see all my current projects on the profile page
 
 Background: logged in user
-  Given that I am logged in as "bro@berkeley.edu"
+  Given I am logged in as "bro@berkeley.edu"
   And I am on my profile page
+  Given the following schools exist:
+  | name      | uri      |
+  | Berkeley  | berkeley |
+
   And the following users exist:
   | name      | email             | school   |
   | Breh      | breh@berkeley.edu | berkeley |
+
   And the following projects exist:
   | title     | description | creator           | collaborators      |
   | Project 1 | p1          | bro@berkeley.edu  |                    |
