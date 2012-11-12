@@ -41,11 +41,15 @@ Given /the following projects exist/ do |projects_table|
 end
 
 Given /^I am logged in as "(.*)"$/ do |email|
-  step %Q{Given I am on the login page}
-  step %Q{When I fill in "name" with "admin"}
-  step %Q{And I fill in "email" with email}
-  step %Q{And I click "Sign In"}
+  step %Q{I am on the login page}
+  step %Q{I fill in "name" with "admin"}
+  step %Q{I fill in "email" with "#{email}"}
+  step %Q{I click "Sign In"}
 end
+
+
+#################
+##################
 
 # for selecting login
 Capybara.add_selector(:element) do
@@ -72,3 +76,6 @@ When /^I click "(.*)"$/ do |locator|
   #locate(:xpath, Capybara::XPath.element(locator), msg).click
   find(:xpath, XPath::HTML.content(locator)).click
 end    
+
+
+
