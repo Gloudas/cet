@@ -270,3 +270,274 @@ Cucumber Features:
     - 
     - 
   :created_at: 2012-11-11 22:14:05.074387000 -08:00
+RSpec:
+  :original_result:
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/application_controller.rb:
+    - 1
+    - 1
+    - 
+    - 1
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/helpers/application_helper.rb:
+    - 1
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/helpers/home_helper.rb:
+    - 1
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/home_controller.rb:
+    - 1
+    - 
+    - 1
+    - 
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/projects_controller.rb:
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 
+    - 0
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/models/project.rb:
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/schools_controller.rb:
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/models/school.rb:
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/sessions_controller.rb:
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 
+    - 0
+    - 
+    - 
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 1
+    - 
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/controllers/users_controller.rb:
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 
+    /Users/sjanpanah/Documents/Homework/cs169/cet/app/models/user.rb:
+    - 1
+    - 
+    - 1
+    - 
+    - 1
+    - 1
+    - 
+    - 1
+    - 1
+    - 1
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 2
+    - 2
+    - 
+    - 1
+    - 
+    - 2
+    - 
+    - 
+    - 
+  :created_at: 2012-11-11 22:14:42.026373000 -08:00
