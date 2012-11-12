@@ -6,7 +6,7 @@ Feature: Viewing upcoming events
 
 Background: the student is logged into ai2
 
-  Given I am logged in
+  Given I am logged in as "test@berkeley.edu"
 
 Scenario: View my profile information
   Given I am on the Berkeley page
