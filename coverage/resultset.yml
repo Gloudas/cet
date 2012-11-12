@@ -1,543 +1,543 @@
 ---
 Cucumber Features:
   :original_result:
-    C:/Users/Steven/Documents/GitHub/cet/app/controllers/application_controller.rb:
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/application_controller.rb:
     - 1
     - 1
-    - 
+    - !!null 
     - 1
-    - 
+    - !!null 
     - 5
     - 5
-    - 
-    - 
-    - 
-    C:/Users/Steven/Documents/GitHub/cet/app/helpers/application_helper.rb:
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/helpers/application_helper.rb:
     - 1
-    - 
-    C:/Users/Steven/Documents/GitHub/cet/app/helpers/home_helper.rb:
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/helpers/home_helper.rb:
     - 1
-    - 
-    C:/Users/Steven/Documents/GitHub/cet/app/controllers/home_controller.rb:
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/home_controller.rb:
     - 1
-    - 
+    - !!null 
     - 1
-    - 
-    - 
-    - 
-    C:/Users/Steven/Documents/GitHub/cet/app/controllers/projects_controller.rb:
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/projects_controller.rb:
     - 1
-    - 
+    - !!null 
     - 1
     - 1
-    - 
-    - 1
-    - 0
-    - 0
-    - 
-    - 
-    - 1
-    - 
-    - 0
-    - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 
-    - 
-    - 0
-    - 0
-    - 0
-    - 
-    - 0
-    - 0
-    - 0
-    - 
-    - 
-    - 0
-    - 0
-    - 0
-    - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 
-    - 
-    - 0
-    - 0
-    - 0
-    - 
-    - 0
-    - 0
-    - 
-    - 
-    - 
-    - 1
-    - 0
-    - 
-    - 0
-    - 
-    - 
-    - 
+    - !!null 
     - 1
     - 0
     - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 
-    - 
+    - !!null 
+    - !!null 
     - 1
-    - 0
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
+    - !!null 
     - 0
     - 0
-    - 
-    - 
-    - 
-    C:/Users/Steven/Documents/GitHub/cet/app/models/project.rb:
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 1
-    - 1
-    - 
-    - 1
-    - 1
-    - 1
-    - 
-    - 1
+    - !!null 
     - 0
-    - 
-    - 
-    - 1
+    - !!null 
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
     - 0
     - 0
-    - 
-    - 
-    C:/Users/Steven/Documents/GitHub/cet/app/controllers/schools_controller.rb:
-    - 1
-    - 
-    - 1
-    - 
-    - 1
+    - 0
+    - !!null 
     - 0
     - 0
-    - 
-    - 
-    - 1
     - 0
-    - 
-    - 
-    - 1
-    - 0
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 1
-    - 
-    - 
-    - 
-    C:/Users/Steven/Documents/GitHub/cet/app/models/school.rb:
-    - 1
-    - 
-    - 1
-    - 
-    - 1
-    - 1
-    - 1
-    - 
-    - 1
-    - 1
-    - 
-    - 
-    C:/Users/Steven/Documents/GitHub/cet/app/controllers/sessions_controller.rb:
-    - 1
-    - 
-    - 1
-    - 
-    - 1
-    - 
-    - 1
-    - 
-    - 
-    - 1
+    - !!null 
+    - !!null 
     - 0
     - 0
     - 0
     - 0
-    - 
-    - 
+    - !!null 
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
     - 1
     - 0
-    - 
-    - 
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - !!null 
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/models/project.rb:
+    - 1
+    - !!null 
+    - !!null 
+    - 1
+    - !!null 
+    - 1
+    - 1
+    - !!null 
+    - 1
+    - 1
+    - 1
+    - !!null 
+    - 1
+    - 0
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/schools_controller.rb:
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - 1
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - !!null 
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/models/school.rb:
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - 1
+    - 1
+    - 1
+    - !!null 
+    - 1
+    - 1
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/sessions_controller.rb:
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
     - 1
     - 0
     - 0
     - 0
-    - 
-    - 
+    - 0
+    - !!null 
+    - !!null 
     - 1
     - 0
-    - 
-    - 
-    - 
-    C:/Users/Steven/Documents/GitHub/cet/app/controllers/users_controller.rb:
-    - 1
-    - 
-    - 1
-    - 
+    - !!null 
+    - !!null 
     - 1
     - 0
-    - 
-    - 
+    - 0
+    - 0
+    - !!null 
+    - !!null 
     - 1
     - 0
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/controllers/users_controller.rb:
+    - 1
+    - !!null 
+    - 1
+    - !!null 
     - 1
     - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 
-    - 
-    - 0
-    - 0
-    - 
-    - 
-    - 0
-    - 0
-    - 0
-    - 
-    - 0
-    - 0
-    - 
-    - 
-    - 
-    - 
-    - 
-    C:/Users/Steven/Documents/GitHub/cet/app/models/user.rb:
+    - !!null 
+    - !!null 
     - 1
-    - 
+    - 0
+    - !!null 
+    - !!null 
     - 1
-    - 
-    - 1
-    - 1
-    - 
-    - 1
-    - 1
-    - 1
-    - 
-    - 1
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
     - 0
     - 0
-    - 
+    - !!null 
+    - !!null 
     - 0
-    - 
     - 0
-    - 
-    - 
-    - 
-  :created_at: 2012-11-11 23:07:01.532602000 -08:00
+    - 0
+    - !!null 
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    /home/barrett/Dropbox/Fall12/cs169/CET/cet/app/models/user.rb:
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - 1
+    - 1
+    - !!null 
+    - 1
+    - 1
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+  :created_at: 2012-11-12 15:48:38.250183829 -08:00
 RSpec:
   :original_result:
     C:/Users/Steven/Documents/GitHub/cet/app/controllers/application_controller.rb:
     - 1
     - 1
-    - 
+    - !!null 
     - 1
-    - 
+    - !!null 
     - 0
     - 0
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - !!null 
     C:/Users/Steven/Documents/GitHub/cet/app/helpers/application_helper.rb:
     - 1
-    - 
+    - !!null 
     C:/Users/Steven/Documents/GitHub/cet/app/helpers/home_helper.rb:
     - 1
-    - 
+    - !!null 
     C:/Users/Steven/Documents/GitHub/cet/app/controllers/home_controller.rb:
     - 1
-    - 
+    - !!null 
     - 1
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - !!null 
     C:/Users/Steven/Documents/GitHub/cet/app/controllers/projects_controller.rb:
     - 1
-    - 
+    - !!null 
     - 1
     - 1
-    - 
-    - 1
-    - 0
-    - 0
-    - 
-    - 
-    - 1
-    - 
-    - 0
-    - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 
-    - 
-    - 0
-    - 0
-    - 0
-    - 
-    - 0
-    - 0
-    - 0
-    - 
-    - 
-    - 0
-    - 0
-    - 0
-    - 0
-    - 
-    - 0
-    - 
-    - 0
-    - 
-    - 
-    - 0
-    - 0
-    - 0
-    - 
-    - 0
-    - 0
-    - 
-    - 
-    - 
-    - 1
-    - 0
-    - 
-    - 0
-    - 
-    - 
-    - 
+    - !!null 
     - 1
     - 0
     - 0
-    - 
+    - !!null 
+    - !!null 
+    - 1
+    - !!null 
     - 0
-    - 
     - 0
-    - 
+    - !!null 
     - 0
-    - 
-    - 
+    - !!null 
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - 0
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
     - 1
     - 0
-    - 
-    - 
-    - 1
-    - 
-    - 
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
     - 1
     - 0
     - 0
-    - 
-    - 
-    - 
+    - !!null 
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - 0
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - !!null 
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
     C:/Users/Steven/Documents/GitHub/cet/app/models/project.rb:
     - 1
-    - 
-    - 
+    - !!null 
+    - !!null 
     - 1
-    - 
-    - 1
-    - 1
-    - 
+    - !!null 
     - 1
     - 1
+    - !!null 
     - 1
-    - 
     - 1
     - 1
-    - 
-    - 
+    - !!null 
+    - 1
+    - 1
+    - !!null 
+    - !!null 
     - 1
     - 0
     - 0
-    - 
-    - 
+    - !!null 
+    - !!null 
     C:/Users/Steven/Documents/GitHub/cet/app/controllers/schools_controller.rb:
     - 1
-    - 
+    - !!null 
     - 1
-    - 
-    - 1
-    - 0
-    - 0
-    - 
-    - 
+    - !!null 
     - 1
     - 0
-    - 
-    - 
+    - 0
+    - !!null 
+    - !!null 
     - 1
     - 0
-    - 
-    - 
+    - !!null 
+    - !!null 
     - 1
-    - 
-    - 
+    - 0
+    - !!null 
+    - !!null 
     - 1
-    - 
-    - 
+    - !!null 
+    - !!null 
     - 1
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - !!null 
     C:/Users/Steven/Documents/GitHub/cet/app/models/school.rb:
     - 1
-    - 
+    - !!null 
     - 1
-    - 
-    - 1
-    - 1
-    - 1
-    - 
+    - !!null 
     - 1
     - 1
-    - 
-    - 
+    - 1
+    - !!null 
+    - 1
+    - 1
+    - !!null 
+    - !!null 
     C:/Users/Steven/Documents/GitHub/cet/app/controllers/sessions_controller.rb:
     - 1
-    - 
+    - !!null 
     - 1
-    - 
+    - !!null 
     - 1
-    - 
+    - !!null 
     - 0
-    - 
-    - 
+    - !!null 
+    - !!null 
     - 1
     - 1
     - 1
     - 1
     - 1
-    - 
-    - 
-    - 1
-    - 0
-    - 
-    - 
+    - !!null 
+    - !!null 
     - 1
     - 0
+    - !!null 
+    - !!null 
+    - 1
     - 0
     - 0
-    - 
-    - 
+    - 0
+    - !!null 
+    - !!null 
     - 1
     - 1
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - !!null 
     C:/Users/Steven/Documents/GitHub/cet/app/controllers/users_controller.rb:
     - 1
-    - 
+    - !!null 
     - 1
-    - 
-    - 1
-    - 0
-    - 
-    - 
+    - !!null 
     - 1
     - 0
-    - 
-    - 
+    - !!null 
+    - !!null 
     - 1
     - 0
-    - 
+    - !!null 
+    - !!null 
+    - 1
     - 0
-    - 
+    - !!null 
     - 0
-    - 
-    - 
+    - !!null 
     - 0
-    - 0
-    - 
-    - 
-    - 0
-    - 0
-    - 0
-    - 
+    - !!null 
+    - !!null 
     - 0
     - 0
-    - 
-    - 
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     C:/Users/Steven/Documents/GitHub/cet/app/models/user.rb:
     - 1
-    - 
+    - !!null 
     - 1
-    - 
-    - 1
-    - 1
-    - 
+    - !!null 
     - 1
     - 1
+    - !!null 
     - 1
-    - 
     - 1
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    - 1
+    - !!null 
+    - 1
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
     - 2
     - 2
-    - 
+    - !!null 
     - 1
-    - 
+    - !!null 
     - 2
-    - 
-    - 
-    - 
+    - !!null 
+    - !!null 
+    - !!null 
   :created_at: 2012-11-11 23:47:14.206599000 -08:00
