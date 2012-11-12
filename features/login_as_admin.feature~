@@ -6,7 +6,7 @@ Feature: Logging in as an admin
 
 Background: the user is logged in as an admin
 
-  Given I am logged in as "admin"
+  Given I am logged in as admin
 
 Scenario: Logging in as admin
   Given I am on the Berkeley page
