@@ -4,11 +4,16 @@ Feature: add a file to a project
   So that I can collaborate on files with other students
   I want to upload files to a project
 
-@wip
+
+Background:
+	Given I am logged in
+	Given I have an active project "projA"
+	Given I am a collaborator for "projA"
+
 Scenario: add a file to an existing project
-  When I go to the project page for "ProjA"
-  Then I should not see "TestFile.doc"
-  When I press "Upload File
-  When I upload my file named "TestFile.doc"
+  When I am on the edit project page for "projA"
+  And I press "Add File"
+  And fill in "filename" with "text.txt"
+  And I press "Upload"
   Then I should be on the project page for "ProjA"
-  And  I should see "TestFile.doc"
+  And I should see "test.txt"
