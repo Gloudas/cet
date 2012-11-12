@@ -5,7 +5,7 @@ Feature: View all my current projects
   I want to see all my current projects on the profile page
 
 Background: logged in user
-  Given that I am logged in as "bro@berkeley.edu"
+  Given I am logged in as "bro@berkeley.edu"
   And I am on my profile page
   Given the following schools exist:
   | name      | uri      |

@@ -7,10 +7,10 @@ Feature: Editing Profile Page on ai2
 
 Background: the student is logged into ai2
 
-  Given that I am logged in
+  Given I am logged in
 
 Scenario: View my profile information
-  Given that I am on the Berkeley page
+  Given I am on the Berkeley page
   When I follow "Profile"
   Then I should be on the profile page
   And I should see "Name"
@@ -22,7 +22,7 @@ Scenario: View my profile information
 #And I should see "Active Projects"
 
 Scenario: Edit my profile information (happy path)
-  Given that I am on my profile page
+  Given I am on my profile page
   When I follow "Edit my profile"
   Then I should be on the edit profile page
   When I fill in "About Me" with "I'm pretty chill"
