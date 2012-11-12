@@ -1,8 +1,12 @@
 class ProjectsController < ApplicationController
 
-  # TODO: re-enable after the fucking bullshit cuke login shit works. piece of shit
   before_filter :set_current_user
-  # add filter for being able to edit other's projects/set permissions on who can edit
+  before_filter :set_can_edit, :except => :new
+
+  def set_can_edit
+    @project = Project.find_by_id(params[:pid])
+    @can_edit = @project.users.include? @user
+  end
 
   def new_or_edit
     # see if we are creating a new project or just editing an existing one
@@ -22,7 +26,6 @@ class ProjectsController < ApplicationController
 
     project.title = project_info[:title]
     project.description = project_info[:description]
-    #TODO: reenable after cuke bullshit works again
     project.creator = @user
 
     # to do: validations on the project model
@@ -53,6 +56,9 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    if not @can_edit
+      redirect_to school_path(@user.school.id) and return
+    end
     if params[:project]
       # process the form
       new_or_edit and return
