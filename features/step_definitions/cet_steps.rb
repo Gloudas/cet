@@ -1,30 +1,45 @@
 # Step definitions for CET
 
-# Setup bullshit
+# Setup
 require 'uri'
 require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "selectors"))
 
-Given /the following project exists:/ do |fields|
-  fields.rows_hash.each do |title, collaborators, description|
-    Given /I am on the new project page/ do
-      And %{I fill in "title" with "title"}
-      And %{I fill in "description" with "description"}
-      And /I press "Create Project"/
-    end
+Given /the following schools exist/ do |schools_table|
+  schools_table.hashes.each do |school|
+    s = School.new
+    s.name = school[:name]
+    s.location = "test"
+    s.uri = school[:uri]
+    s.save!
   end
 end
 
-# this doesnt work because of the new project page and login page... doesn't see paths? i dunno
-Given /^I created a project$/ do
-  step %Q{Given I am on the new project page}
-  step %Q{When I fill in "title" with "MOOHAHA"}
-  step %Q{And I fill in "description" with "teyats"}
-  step %Q{And I press "Create Project"}
+Given /the following users exist/ do |users_table|
+  users_table.hashes.each do |user|
+    u = User.new
+    u.name = user[:name]
+    u.email = user[:email]
+    u.school = School.find_by_uri(user[:school])
+    u.save!
+  end
 end
 
-# Noel adding this for login
+Given /the following projects exist/ do |projects_table|
+  projects_table.hashes.each do |project|
+    p = Project.new
+    p.title = project[:title]
+    p.description = project[:description]
+    p.creator = User.find_by_email(project[:creator])
+    p.users << User.find_by_email(project[:creator])
+    project[:collaborators].split.each do |collaborator|
+      p.users << User.find_by_email(collaborator)
+    end
+    p.save!
+  end
+end
+
 Given /^I am logged in as "(.*)"$/ do |email|
   step %Q{Given I am on the login page}
   step %Q{When I fill in "name" with "admin"}
