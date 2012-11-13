@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20121113000321) do
     t.text     "description"
     t.time     "time"
     t.date     "date"
+    t.integer  "school_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

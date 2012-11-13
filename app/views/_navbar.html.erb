@@ -20,6 +20,7 @@
         <li><%= link_to @user.school.name, school_path(@user.school.uri) %></li>
         <li><%= link_to "Profile", profile_path(@user.id) if @user %></li>
         <li><%= link_to "New Project", new_project_path if @user %></li>
+	<li><%= link_to "Manage Events", events_path if @user.admin %></li>
       </ul>
       </font> 
       <form class="navbar-search pull-right">

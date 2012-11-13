@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Applied Innovations Institute &middot; </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le styles -->
+
+    <%= stylesheet_link_tag "bootstrap" %>
+    <%= stylesheet_link_tag "bootstrap-responsive" %>
+
+  </head>
+
+<body>
+  
+  <%= render "/navbar"%>
+
+  <div class = "row">
+    <div align = "center">
+      <h2>< Upcoming Events ></h2>
+    </div>
+  </div>
+  
+  <hr class="featurette-divider">
+  
+
+  <div class = "row">
+    <div align = "center">
+          <h4>Description</h4>
+    <p><%= @project.description %>
+    </div>
+  </div>
+
+
+  <div class = "row">
+    <div align = "center">
+    <h4>Collaborators</h4>
+    <% @project.users.each do |user| %>
+      <% # you have to make it so your own name doesn't appear on this list %>
+      <p><%= link_to user.name, profile_path(user.id) %></p>
+    <% end %>
+      </div>
+  </div>
+  
+</body>
+</html>
