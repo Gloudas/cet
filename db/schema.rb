@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121105041135) do
+ActiveRecord::Schema.define(:version => 20121113004820) do
+
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.time     "time"
+    t.date     "date"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "projects", :force => true do |t|
     t.string   "title"
@@ -19,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20121105041135) do
     t.integer  "creator_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "school_id"
   end
 
   create_table "projects_users", :force => true do |t|
@@ -44,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20121105041135) do
     t.string   "aboutme"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.boolean  "admin"
   end
 
 end
