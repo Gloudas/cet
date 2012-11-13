@@ -82,28 +82,60 @@
     <hr class="featurette-divider">
       <!-- START THE FEATURETTES -->
       <div class="row">
-        <div class = "span6 offset3">
+        <div class = "span6">
           <h3><%= "Newest Projects by #{@name} students" %></h3>
             <table class="table table-striped">
               <thead>
                 <tr>
+                  <th>#</th>
+                  <th>Project Name</th>
+                  <th>Project Owner</th>
+                  <th>Date Created</th>
+                </tr>
+              </thead>
+
+
+          </table>
+        </div>
+        <div class = "span6">
+          <h3>Popular Projects</h3>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
                   <th>Project Name</th>
                   <th>Project Owner</th>
                   <th>Date Created</th>
                 </tr>
               </thead>
             <tbody>
-              <% @school.projects.each do |project| %>
               <tr>
-                <td><%= link_to project.title, project_path(project.id) %></td>
-                <td><%= link_to project.creator.name, profile_path(project.creator.id) %></td>
-                <td><%= project.created_at %></td>
+                <td>1</td>
+                <td>Saving Africa</td>
+                <td>Mani Zimbabo</td>
+                <td>4/23/2012</td>
               </tr>
-            <% end %>
+              <tr>
+                <td>2</td>
+                <td>Saving Africa</td>
+                <td>Mani Zimbabo</td>
+                <td>4/23/2012</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Saving Africa</td>
+                <td>Mani Zimbabo</td>
+                <td>4/23/2012</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Saving Africa</td>
+                <td>Mani Zimbabo</td>
+                <td>4/23/2012</td>
+              </tr>
             </tbody>
           </table>
         </div>
-      </div>
 
 
       <!-- FOOTER -->
