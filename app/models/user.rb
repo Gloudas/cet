@@ -21,6 +21,7 @@ class User < ActiveRecord::Base
     # create a new user or retreive the user if he already exists
     @user = User.find_by_uid(auth_hash[:uid])
     if @user.nil?
+      puts "user is nil***********************************************************************************"
       #TODO: admin status will be determined differently
       if auth_hash[:info][:name].eql? 'admin'
         @user = User.create(:uid => auth_hash[:uid], :name => auth_hash[:info][:name], :email => auth_hash[:info][:email], :school => School.find_by_uri('berkeley'), :admin => true)
