@@ -1,5 +1,16 @@
 require 'spec_helper'
 
 describe Event do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  describe 'create a new event' do
+    before :each do
+      info = {:name => "steven", :email => "a@gamil.com"}
+      auth_hash = {:uid => 1, :info => info} 
+      @user = User.find_or_create_from_auth_hash(auth_hash)
+      @user.admin = true
+    end
+    
+
+  end
+
 end

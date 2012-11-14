@@ -6,8 +6,8 @@ Feature: Logging in as an admin
 
 Background: the user is logged in as an admin
 
-  Given I am logged in as "admin"
+  Given I log in as an admin
 
 Scenario: Logging in as admin
   Given I am on the Berkeley page
-  Then I should see "Edit Upcoming Events"
+  Then I should see "Manage Events"
