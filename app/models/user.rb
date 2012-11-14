@@ -19,7 +19,6 @@ class User < ActiveRecord::Base
 #   end
 
     # create a new user or retreive the user if he already exists
-    puts "user is nil***********************************************************************************"
     @user = User.find_by_uid(auth_hash[:uid])
     if @user.nil?
       #TODO: admin status will be determined differently
