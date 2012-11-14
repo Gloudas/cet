@@ -23,15 +23,34 @@
   </div>
   
   <hr class="featurette-divider">
-  
 
   <div class = "row">
-    <div align = "center">
-    <% @events.each do |event| %>
-      <p><%= event.name %></p>
-    <% end %>
-      </div>
-  </div>
+
+  <%= form_tag new_event_path do %>
   
+  <%= label :event, :name, "Name:" %>
+  <%= text_field :event, 'name' %>
+  
+  <%= label :event, :description, "Enter a short description:" %>
+  <textarea class="field span6" id="description" name="project[description]" rows="6"></textarea>
+
+  <%= label :project, :date, "Date:" %>
+  <%= text_field :event, 'date' %>
+  <%= label :event, :time, "Time:" %>
+  <%= text_field :event, 'time' %>
+
+  <br>
+  <%= submit_tag "Create Event" %>
+  <% end %>
+    
+  <div class = "row">
+    <div align = "center">
+      <% @events.each do |event| %>
+      <p><%= event.name %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
