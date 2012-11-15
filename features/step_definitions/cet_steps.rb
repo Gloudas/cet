@@ -21,7 +21,9 @@ Given /the following users exist/ do |users_table|
     u = User.new
     u.name = user[:name]
     u.email = user[:email]
+    u.uid = user[:email]
     u.school = School.find_by_uri(user[:school])
+		u.admin = user[:admin]
     u.save!
   end
 end
@@ -40,18 +42,12 @@ Given /the following projects exist/ do |projects_table|
   end
 end
 
+# Make sure that this user has been created in the cucumber Background!
 Given /^I am logged in as "(.*)"$/ do |email|
   step %Q{I am on the login page}
   step %Q{I fill in "name" with "name"}
   step %Q{I fill in "email" with "#{email}"}
-  step %Q{I click "Sign In"}
-end
-
-Given /^I log in as an admin/ do 
-  step %Q{I am on the login page}
-  step %Q{I fill in "name" with "admin"}
-  step %Q{I fill in "email" with "a@gmail.com"}
-  step %Q{I click "Sign In"}
+  step %Q{I press "Sign In"}
 end
 
 #################

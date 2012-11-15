@@ -5,15 +5,14 @@ Feature: View all my current projects
   I want to see all my current projects on the profile page
 
 Background: logged in user
-  Given I am logged in as "bro@berkeley.edu"
-  And I am on my profile page
   Given the following schools exist:
   | name      | uri      |
   | Berkeley  | berkeley |
 
   And the following users exist:
-  | name      | email             | school   |
-  | Breh      | breh@berkeley.edu | berkeley |
+  | name      | email             | school   | admin 	|
+  | Breh      | breh@berkeley.edu | berkeley | false	|
+	| name			| bro@berkeley.edu	|	berkeley | false	|
 
   And the following projects exist:
   | title     | description | creator           | collaborators      |
@@ -21,6 +20,8 @@ Background: logged in user
   | Project 2 | p2          | breh@berkeley.edu | bro@berkeley.edu   |
   | Project 3 | p3          | breh@berkeley.edu |                    |
   | Project 4 | p4          | bro@berkeley.edu  | breh@berkeley.edu  |
+  
+	Given I am logged in as "bro@berkeley.edu"
 
 Scenario: I should see all my active projects
   Then I should see "Project 1"

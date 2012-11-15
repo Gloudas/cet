@@ -24,17 +24,16 @@
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="span6 offset3">
-          <h2><%= "Welcome #{@user.name}!" %><%= link_to "Edit", edit_profile_path(@user.id) if @is_mine %></h2>
+        <div class="span12">
+          <h2 style="font-size: 50pt"><%= "Welcome #{@user.name}!" %></h2>
         </div>
       </div><!-- /.row -->
     
     <hr class="featurette-divider">
-
-    <hr class="featurette-divider">
       <!-- START THE FEATURETTES -->
+      <br>
       <div class="row">
-        <div class = "span7">
+        <div class = "span6">
           <h3><%= "Active Projects" %></h3>
             <table class="table table-striped">
               <thead>
@@ -55,8 +54,9 @@
             </tbody>
           </table>
         </div>
-        <div class = "span5">
-          <h3>My Information</h3>
+        <div class = "span4 offset2">
+          <h3>My Profile Information</h3>
+            <%= link_to "Edit Profile", edit_profile_path(@user.id) if @is_mine %>
             <table class="table table-striped">
             <thead>
               <tr>
@@ -93,11 +93,9 @@
           </table>
         </div>
 
-
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2012 CET &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2012 Semen Janbanana, Stove Fanborove, Bart Glooey, Null Moldy, Dog Wonton &middot; </p>
       </footer>
 
 <!-- /.container -->

@@ -12,15 +12,14 @@ Background:
 	| Berkeley	| berkeley	|
 	
 	Given the following users exist:
-	| name	| email				| school	|
-	| test	| test@berkeley.edu	| berkeley	|
-	| b		| b@berkeley.edu	| berkeley	|
+	| name	| email				| school	| admin  |
+	| test	| test@berkeley.edu	| berkeley	|  false |
+	| b		| b@berkeley.edu	| berkeley	| false |
 	
 	Given the following projects exist:
 	|title	| description	| creator			| collaborators		|
 	|projA	| blahblah		| test@berkeley.edu	|					|
 	|projB	| blahblah2		| b@berkeley.edu	| test@berkeley.edu |
-
 	
 	And I am logged in as "test@berkeley.edu"
 
