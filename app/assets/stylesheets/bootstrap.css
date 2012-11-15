@@ -653,7 +653,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+h0 {
   margin: 10px 0;
   font-family: inherit;
   font-weight: bold;
@@ -661,6 +662,9 @@ h6 {
   color: inherit;
   text-rendering: optimizelegibility;
 }
+
+h0 {font-size: 45px;
+    border-bottom: 3px solid black}
 
 h1 small,
 h2 small,
@@ -675,7 +679,8 @@ h6 small {
 
 h1,
 h2,
-h3 {
+h3,
+h0 {
   line-height: 40px;
 }
 
