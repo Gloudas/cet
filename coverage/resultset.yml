@@ -324,20 +324,14 @@ Cucumber Features:
     - !!null 
     - 14
     - 14
-    - 1
     - !!null 
     - 1
-    - 0
-    - !!null 
-    - !!null 
-    - 1
-    - !!null 
     - !!null 
     - 14
     - !!null 
     - !!null 
     - !!null 
-  :created_at: 2012-11-15 15:14:31.174332148 -08:00
+  :created_at: 2012-11-15 15:23:38.121376418 -08:00
 RSpec:
   :original_result:
     C:/Users/Steven/Documents/GitHub/cet/app/controllers/application_controller.rb:

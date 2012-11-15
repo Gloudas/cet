@@ -21,21 +21,21 @@
       <img src="./assets/0.4.5/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-11-15T15:14:31-08:00">2012-11-15T15:14:31-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-11-15T15:23:38-08:00">2012-11-15T15:23:38-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     All Files
-    (<span class="yellow">81.29%</span>)
+    (<span class="yellow">81.55%</span>)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>13</b> files in total.
-    <b>171</b> relevant lines. 
-    <span class="green"><b>139</b> lines covered</span> and
-    <span class="red"><b>32</b> lines missed </span>
+    <b>168</b> relevant lines. 
+    <span class="green"><b>137</b> lines covered</span> and
+    <span class="red"><b>31</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -160,11 +160,11 @@
       
       <tr>
         <td><a href="#4810dccdf7b82ff22a6de88609c492bc5f8c9d02" class="src_link" title="./app/models/user.rb">./app/models/user.rb</a></td>
-        <td class="green">93.33 %</td>
-        <td>28</td>
-        <td>15</td>
-        <td>14</td>
-        <td>1</td>
+        <td class="green">100.0 %</td>
+        <td>22</td>
+        <td>12</td>
+        <td>12</td>
+        <td>0</td>
       </tr>
       
     </tbody>
@@ -267,14 +267,14 @@
           <div class="file_list_container" id="Models">
   <h2>
     Models
-    (<span class="green">97.37%</span>)
+    (<span class="green">100.0%</span>)
   </h2>
   <a name="Models"></a>
   <div>
     <b>4</b> files in total.
-    <b>38</b> relevant lines. 
-    <span class="green"><b>37</b> lines covered</span> and
-    <span class="red"><b>1</b> lines missed </span>
+    <b>35</b> relevant lines. 
+    <span class="green"><b>35</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -318,11 +318,11 @@
       
       <tr>
         <td><a href="#4810dccdf7b82ff22a6de88609c492bc5f8c9d02" class="src_link" title="./app/models/user.rb">./app/models/user.rb</a></td>
-        <td class="green">93.33 %</td>
-        <td>28</td>
-        <td>15</td>
-        <td>14</td>
-        <td>1</td>
+        <td class="green">100.0 %</td>
+        <td>22</td>
+        <td>12</td>
+        <td>12</td>
+        <td>0</td>
       </tr>
       
     </tbody>
@@ -4537,7 +4537,7 @@
     <tr>
       <td colspan="3">
         <h3>./app/models/user.rb</h3>
-        <h4><span class="green">93.33 %</span> covered</h4>
+        <h4><span class="green">100.0 %</span> covered</h4>
       </td>
     </tr>
     <tr>
@@ -4744,74 +4744,9 @@
     </tr>
   
     
-    <tr class="hit" data-hits="1">
+    <tr class="never" >
       <td class="line_number">
         <pre>16</pre>
-      </td>
-      <td>
-        <pre>      puts &quot;user is nil**************************************************&quot;</pre>
-      </td>
-      <td class="hits">
-        1
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>17</pre>
-      </td>
-      <td>
-        <pre>      #TODO: admin status will be determined differently</pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="hit" data-hits="1">
-      <td class="line_number">
-        <pre>18</pre>
-      </td>
-      <td>
-        <pre>      if auth_hash[:info][:name].eql? 'admin'</pre>
-      </td>
-      <td class="hits">
-        1
-      </td>
-    </tr>
-  
-    
-    <tr class="miss" data-hits="0">
-      <td class="line_number">
-        <pre>19</pre>
-      </td>
-      <td>
-        <pre>        @user = User.create(:uid =&gt; auth_hash[:uid], :name =&gt; auth_hash[:info][:name], :email =&gt; auth_hash[:info][:email], :school =&gt; School.find_by_uri('berkeley'), :admin =&gt; true)</pre>
-      </td>
-      <td class="hits">
-        0
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>20</pre>
-      </td>
-      <td>
-        <pre>      else</pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>21</pre>
       </td>
       <td>
         <pre>      #TODO: school should be set differently</pre>
@@ -4824,10 +4759,10 @@
     
     <tr class="hit" data-hits="1">
       <td class="line_number">
-        <pre>22</pre>
+        <pre>17</pre>
       </td>
       <td>
-        <pre>        @user = User.create!(:uid =&gt; auth_hash[:uid], :name =&gt; auth_hash[:info][:name], :email =&gt; auth_hash[:info][:email], :school =&gt; School.find_by_uri('berkeley'), :admin =&gt; false)</pre>
+        <pre>      @user = User.create!(:uid =&gt; auth_hash[:uid], :name =&gt; auth_hash[:info][:name], :email =&gt; auth_hash[:info][:email], :school =&gt; School.find_by_uri('berkeley'), :admin =&gt; false)</pre>
       </td>
       <td class="hits">
         1
@@ -4837,20 +4772,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>23</pre>
-      </td>
-      <td>
-        <pre>      end</pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>24</pre>
+        <pre>18</pre>
       </td>
       <td>
         <pre>    end</pre>
@@ -4863,7 +4785,7 @@
     
     <tr class="hit" data-hits="14">
       <td class="line_number">
-        <pre>25</pre>
+        <pre>19</pre>
       </td>
       <td>
         <pre>    return @user</pre>
@@ -4876,7 +4798,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>26</pre>
+        <pre>20</pre>
       </td>
       <td>
         <pre>  end</pre>
@@ -4889,7 +4811,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>27</pre>
+        <pre>21</pre>
       </td>
       <td>
         <pre></pre>
@@ -4902,7 +4824,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>28</pre>
+        <pre>22</pre>
       </td>
       <td>
         <pre>end</pre>
