@@ -3,15 +3,26 @@ class SessionsController < ApplicationController
   @@current_user
 
   def login
-    #print "\n\n\n\n\n\n\n\n\n\n IT WORKED \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-    redirect_to '/auth/developer/'
+    # will use omniauth in the future - for now will use custom login-page
+    # redirect_to '/auth/developer/' 
   end
 
   def create
+		#print "\n\n\n\n\n\n\n\n\n\n"
+		#params[:login_hash].each do |key, value|
+		#	print "here is the key: #{key} \n"
+		#	print "here is the value: #{value} \n"
+		#end
+		#print "\n\n\n\n\n\n\n\n\n\n"
+		
+		# mimic the behavior of omniauth by converting login-info into an auth_hash
+		auth_hash[:uid] = params[:login_hash]['email']
+		auth_hash[:info][:email] = params[:login_hash]['email']
+		auth_hash[:info][:name] = params[:login_hash]['name']
     @user = User.find_or_create_from_auth_hash(auth_hash)
     @@current_user = @user
     session[:user_id] = @user.id
-    redirect_to '/berkeley'
+    redirect_to "/profile/#{@user.id}/edit"
   end
 
   def failure

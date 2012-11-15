@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title>Applied Innovations Institute</title>
+  <%= stylesheet_link_tag "bootstrap" %>
+</head>
+
+<body>
+
+  <br>
+  <hr class="featurette-divider">
+    <div class="row">
+        <%= image_tag("logoBlackText.png", :size => "250x150") %>
+    </div>
+    <div class="row">
+      <h3> Please sign in below. </h3>
+    </div>
+    <br>
+    <div class="row">	
+      <%= form_tag login_callback_path("developer") do %>
+      
+        <%= label :login_hash, :name, "Name:" %>
+        <%= text_field :login_hash, 'name', :id => 'name' %>
+
+        <%= label :login_hash, :email, "Email:" %>
+        <%= text_field :login_hash, 'email', :id => 'email' %>
+
+				<br>
+        <%= submit_tag "Login" %>
+
+      <% end %>
+    </div>
+  </hr>
+
+</body>
+</html>

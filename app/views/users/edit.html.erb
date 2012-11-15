@@ -16,28 +16,39 @@
 
     <%= render "/navbar"%>
 
-    <%= form_tag edit_profile_path(@user.id) do %>
+    <br><br>
+    <div class="row">
+      <div class="span6 offset6">
+        <p class="text-info" style="font-size: 40pt; color: 0x000000">Edit Profile</p>
+      </div>
+    </div>
+    <hr class="featurette-divider">
+      <div class="row">
+	
+        <%= form_tag edit_profile_path(@user.id) do %>
       
-      <%= label :profile, :name, "Name:" %>
-      <%= text_field :profile, 'name', :value => @user.name, :id => 'name' %>
+          <%= label :profile, :name, "Name:" %>
+          <%= text_field :profile, 'name', :value => @user.name, :id => 'name' %>
 
-      <%= label :profile, :major, "Major:" %>
-      <%= text_field :profile, 'major', :value => @user.major, :id => 'major' %>
+          <%= label :profile, :major, "Major:" %>
+          <%= text_field :profile, 'major', :value => @user.major, :id => 'major' %>
 
-      <%= label :profile, :gradyear, "Graduation Year:" %>
-      <%= text_field :profile, 'gradyear', :value => @user.gradyear, :id => 'gradyear' %>
+          <%= label :profile, :gradyear, "Graduation Year:" %>
+          <%= text_field :profile, 'gradyear', :value => @user.gradyear, :id => 'gradyear' %>
 
-      <%= label :profile, :aboutme, "About Me:" %>
-      <%= text_field :profile, 'aboutme', :value => @user.aboutme, :id => 'aboutme' %>
+          <%= label :profile, :aboutme, "About Me:" %>
+          <%= text_field :profile, 'aboutme', :value => @user.aboutme, :id => 'aboutme' %>
 
-      <%= submit_tag "Update Profile" %>
+	  <br>
+          <%= submit_tag "Update Profile" %>
 
-    <% end %>
+        <% end %>
+      </div>
+    </hr>
 
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2012 CET &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2012 CET &middot; </p>
       </footer>
 
 <!-- /.container -->
