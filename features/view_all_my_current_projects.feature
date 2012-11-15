@@ -10,9 +10,9 @@ Background: logged in user
   | Berkeley  | berkeley |
 
   And the following users exist:
-  | name      | email             | school   |
-  | Breh      | breh@berkeley.edu | berkeley |
-	| name			| bro@berkeley.edu	|	berkeley |
+  | name      | email             | school   | admin 	|
+  | Breh      | breh@berkeley.edu | berkeley | false	|
+	| name			| bro@berkeley.edu	|	berkeley | false	|
 
   And the following projects exist:
   | title     | description | creator           | collaborators      |

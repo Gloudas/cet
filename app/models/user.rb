@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   attr_accessible :uid, :name, :email, :school, :major, :gradyear, :aboutme, :admin
 
-  validates :email, :presence => true, :uniqueness => true
+  validates :email, :presence => true, :uniqueness => true, :email_format => {:message => "is not in a valid format!"}
   validates :school, :presence => true
 
   belongs_to :school

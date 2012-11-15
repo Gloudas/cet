@@ -7,7 +7,16 @@ Feature: Editing Profile Page on ai2
 
 Background: the student is logged into ai2
 
-  Given I am logged in
+  Given the following schools exist:
+  | name       | uri      |
+  | Berkeley   | berkeley |
+
+  And the following users exist:
+  | name       | email             		| school    | admin		|
+  | name       | bruh@berkeley.edu 		| berkeley  |	false 	|
+  | admin      | admin@berkeley.edu   | berkeley  |	true 		|
+  
+	Given I am logged in as "bruh@berkeley.edu"
 
 Scenario: View my profile information
   Given I am on the Berkeley page

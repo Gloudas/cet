@@ -6,7 +6,6 @@
 
 <body>
 
-  <br>
   <hr class="featurette-divider">
     <div class="row">
         <%= image_tag("logoBlackText.png", :size => "250x150") %>
@@ -23,6 +22,15 @@
 
         <%= label :login_hash, :email, "Email:" %>
         <%= text_field :login_hash, 'email', :id => 'email' %>
+
+				<div class="row">
+  				<% if flash[:error] %>
+  	  			<p class="text-error"><%= flash[:error] %></p>
+  				<% end %>
+  				<% if flash[:notice] %>
+  	  			<p class="notice"><%= flash[:notice] %></p>
+  				<% end %>
+				</div>
 
 				<br>
         <%= submit_tag "Sign In", :id => "Sign In" %>

@@ -6,7 +6,17 @@ Feature: Editing Projects in ai2
 
 
 Background: Student is logged into ai2
-#Given I am logged in
+  Given the following schools exist:
+  | name       | uri      |
+  | Berkeley   | berkeley |
+
+  And the following users exist:
+  | name       | email             		| school    | admin		|
+  | name       | bruh@berkeley.edu 		| berkeley  |	false 	|
+  | admin      | admin@berkeley.edu   | berkeley  |	true 		|
+  
+	Given I am logged in as "bruh@berkeley.edu"
+
 #Given I created a project--doesn't work when put in step definitions with the steps below
 #it says it can't find the path... not sure why, so I put the steps here for now
   Given I am on the new project page

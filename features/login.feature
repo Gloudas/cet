@@ -9,8 +9,8 @@ Background:
 	| name		| uri		|
 	| Berkeley	| berkeley	|
 	Given the following users exist:
-	| name	| email				| school	|
-	| test	| test@berkeley.edu	| berkeley	|
+	| name	| email				| school	| admin |
+	| test	| test@berkeley.edu	| berkeley	| false |
   Given I am on the home page
   Then I should see "Login"
   When I follow "Login"
@@ -35,4 +35,4 @@ Scenario: log in with an invalid email
 	And I fill in "email" with "invalid email"
 	And I press "Sign In"
 	Then I should be on the login page
-	And I should see "Invalid username or email"
+	And I should see "Please use a valid email address!"

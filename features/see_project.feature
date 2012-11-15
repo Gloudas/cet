@@ -11,9 +11,9 @@ Background: the student is logged into the berkeley site and a project created
   | Berkeley  | berkeley |
 
   And the following users exist:
-  | name      | email             | school   |
-  | Breh      | breh@berkeley.edu | berkeley |
-	| name			| bro@berkeley.edu	|	berkeley |
+  | name      | email             | school   | admin	|
+  | Breh      | breh@berkeley.edu | berkeley | false	|
+	| name			| bro@berkeley.edu	|	berkeley | true		|
 
 	Given I am logged in as "bro@berkeley.edu"
   And I am on the new project page

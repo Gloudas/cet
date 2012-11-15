@@ -16,10 +16,17 @@ class SessionsController < ApplicationController
 		#print "\n\n\n\n\n\n\n\n\n\n"
 		
 		# mimic the behavior of omniauth by converting login-info into an auth_hash
-		auth_hash[:uid] = params[:login_hash]['email']
-		auth_hash[:info][:email] = params[:login_hash]['email']
-		auth_hash[:info][:name] = params[:login_hash]['name']
-		
+		unless (params[:login_hash]).nil?
+			auth_hash[:uid] = params[:login_hash]['email']
+			auth_hash[:info][:email] = params[:login_hash]['email']
+			auth_hash[:info][:name] = params[:login_hash]['name']
+		end
+		# validate email format
+		results = ValidatesEmailFormatOf::validate_email_format(auth_hash[:uid], :message => "is not of a valid format!")
+		unless results.nil?
+			flash[:error] = "Please use a valid email address!"
+			redirect_to login_path and return
+		end
 		if User.find_by_uid(auth_hash[:uid]).nil?
 			@is_new_user = true
 			flash[:notice] = "Welcome new user! Please fill out your profile information."

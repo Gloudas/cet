@@ -11,9 +11,9 @@ Background: User is logged in and has projects
   | Berkeley   | berkeley |
 
   And the following users exist:
-  | name       | email             | school    |
-  | name       | bruh@berkeley.edu | berkeley  |
-  | name       | bro@berkeley.edu  | berkeley  |
+  | name       | email             | school    | admin	|
+  | name       | bruh@berkeley.edu | berkeley  | false	|
+  | name       | bro@berkeley.edu  | berkeley  | false	|
 
   And the following projects exist:
   | title      | description    | creator           | collaborators |

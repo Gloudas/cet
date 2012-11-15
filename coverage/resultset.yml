@@ -7,8 +7,8 @@ Cucumber Features:
     - !!null 
     - 1
     - !!null 
-    - 27
-    - 27
+    - 49
+    - 49
     - !!null 
     - !!null 
     - !!null 
@@ -24,6 +24,7 @@ Cucumber Features:
     - 1
     - 0
     - 0
+    - !!null 
     - 0
     - 0
     - !!null 
@@ -32,6 +33,22 @@ Cucumber Features:
     - 0
     - 0
     - !!null 
+    - !!null 
+    - 1
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - !!null 
+    - !!null 
+    - 0
+    - 0
     - !!null 
     - !!null 
     /home/gloudas/Desktop/CET/app/models/event.rb:
@@ -54,71 +71,71 @@ Cucumber Features:
     - 1
     - !!null 
     - 1
-    - 9
-    - 9
+    - 20
+    - 20
     - !!null 
     - !!null 
     - 1
     - !!null 
-    - 2
-    - 0
-    - !!null 
+    - 8
     - 2
     - !!null 
-    - 2
+    - 6
     - !!null 
-    - 2
+    - 8
+    - !!null 
+    - 8
+    - !!null 
+    - !!null 
+    - 24
+    - 24
+    - 8
+    - !!null 
+    - 8
+    - 8
+    - 8
+    - 8
     - !!null 
     - !!null 
     - 8
     - 8
-    - 2
-    - !!null 
-    - 2
-    - 2
-    - 2
-    - 2
-    - !!null 
-    - !!null 
-    - 2
-    - 2
-    - 2
-    - 0
-    - !!null 
-    - 2
-    - !!null 
-    - 2
-    - !!null 
-    - !!null 
-    - 0
-    - 0
-    - 0
-    - !!null 
-    - 0
-    - 0
-    - !!null 
-    - !!null 
-    - !!null 
+    - 6
     - 1
-    - 4
     - !!null 
-    - 2
-    - !!null 
-    - !!null 
-    - !!null 
-    - 1
-    - 4
-    - 0
-    - !!null 
-    - 4
-    - !!null 
-    - 0
-    - !!null 
-    - 4
-    - !!null 
-    - !!null 
-    - 1
     - 5
+    - !!null 
+    - 6
+    - !!null 
+    - !!null 
+    - 2
+    - 1
+    - 1
+    - !!null 
+    - 1
+    - 1
+    - !!null 
+    - !!null 
+    - !!null 
+    - 1
+    - 13
+    - !!null 
+    - 6
+    - !!null 
+    - !!null 
+    - !!null 
+    - 1
+    - 9
+    - 0
+    - !!null 
+    - 9
+    - !!null 
+    - 2
+    - !!null 
+    - 8
+    - !!null 
+    - !!null 
+    - 1
+    - 11
     - !!null 
     - !!null 
     - 1
@@ -144,12 +161,12 @@ Cucumber Features:
     - 1
     - !!null 
     - 1
-    - 2
+    - 8
     - !!null 
     - !!null 
     - 1
-    - 8
-    - 8
+    - 24
+    - 24
     - !!null 
     - !!null 
     /home/gloudas/Desktop/CET/app/controllers/schools_controller.rb:
@@ -158,8 +175,8 @@ Cucumber Features:
     - 1
     - !!null 
     - 1
-    - 1
-    - 1
+    - 2
+    - 2
     - !!null 
     - !!null 
     - 1
@@ -167,7 +184,7 @@ Cucumber Features:
     - !!null 
     - !!null 
     - 1
-    - 1
+    - 2
     - !!null 
     - !!null 
     - 1
@@ -213,23 +230,30 @@ Cucumber Features:
     - !!null 
     - !!null 
     - !!null 
-    - 11
-    - 11
-    - 11
+    - 15
+    - 15
+    - 15
+    - 15
     - !!null 
-    - 11
-    - 3
-    - 3
     - !!null 
-    - 8
+    - 15
+    - 15
+    - 1
+    - 1
     - !!null 
-    - 11
-    - 11
-    - 11
-    - 11
-    - 3
+    - 14
+    - 1
+    - 1
     - !!null 
-    - 8
+    - 13
+    - !!null 
+    - 14
+    - 14
+    - 14
+    - 14
+    - 1
+    - !!null 
+    - 13
     - !!null 
     - !!null 
     - !!null 
@@ -244,7 +268,7 @@ Cucumber Features:
     - !!null 
     - !!null 
     - 1
-    - 55
+    - 88
     - !!null 
     - !!null 
     - !!null 
@@ -254,19 +278,19 @@ Cucumber Features:
     - 1
     - !!null 
     - 1
-    - 10
+    - 14
     - !!null 
     - !!null 
     - 1
-    - 8
+    - 13
     - !!null 
     - !!null 
     - 1
-    - 2
+    - 1
     - !!null 
     - 0
     - !!null 
-    - 2
+    - 1
     - !!null 
     - !!null 
     - 0
@@ -298,22 +322,22 @@ Cucumber Features:
     - !!null 
     - 1
     - !!null 
-    - 11
-    - 11
-    - 3
+    - 14
+    - 14
+    - 1
     - !!null 
-    - 3
+    - 1
+    - 0
+    - !!null 
+    - !!null 
     - 1
     - !!null 
     - !!null 
-    - 2
-    - !!null 
-    - !!null 
-    - 11
+    - 14
     - !!null 
     - !!null 
     - !!null 
-  :created_at: 2012-11-14 23:36:06.581180744 -08:00
+  :created_at: 2012-11-15 15:14:31.174332148 -08:00
 RSpec:
   :original_result:
     C:/Users/Steven/Documents/GitHub/cet/app/controllers/application_controller.rb:
