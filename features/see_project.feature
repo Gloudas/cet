@@ -6,7 +6,16 @@ Feature: Viewing created projects
 
 Background: the student is logged into the berkeley site and a project created
   
-  Given I am logged in
+  Given the following schools exist:
+  | name      | uri      |
+  | Berkeley  | berkeley |
+
+  And the following users exist:
+  | name      | email             | school   |
+  | Breh      | breh@berkeley.edu | berkeley |
+	| name			| bro@berkeley.edu	|	berkeley |
+
+	Given I am logged in as "bro@berkeley.edu"
   And I am on the new project page
   When I fill in "title" with "My New Project"
   And I fill in "description" with "Here is the description for my project"
@@ -20,5 +29,4 @@ Scenario: see the project on the berkeley homepage
 
 Scenario: see the project on my profile page
 
-  Given I am on my profile page
   Then I should see "My New Project"

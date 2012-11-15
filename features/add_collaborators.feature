@@ -5,23 +5,24 @@ Feature: Add collaborators to a project
   I want to add collaborators to a project
 
 Background: User is logged in and has projects
-  Given I am logged in as "bro@berkeley.edu"
-  And the following schools exist:
+
+  Given the following schools exist:
   | name       | uri      |
   | Berkeley   | berkeley |
+
+  And the following users exist:
+  | name       | email             | school    |
+  | name       | bruh@berkeley.edu | berkeley  |
+  | name       | bro@berkeley.edu  | berkeley  |
 
   And the following projects exist:
   | title      | description    | creator           | collaborators |
   | Project 1  | p1             | bro@berkeley.edu  |               |
   | Project 2  | p2             | bro@berkeley.edu  |               |
 
-  And the following users exist:
-  | name       | email             | school    |
-  | Bruh       | bruh@berkeley.edu | berkeley  |
-  | Breh       | breh@berkeley.edu | berkeley  |
+  And I am logged in as "bro@berkeley.edu"
 
 Scenario: Successfully add collaborator to project 1
-  Given I am on my profile page
   When I follow "Project 1"
   And I follow "Edit"
   And I fill in "new_collaborator" with "bruh@berkeley.edu"
@@ -31,7 +32,6 @@ Scenario: Successfully add collaborator to project 1
   And I should see "bruh@berkeley.edu"
 
 Scenario: Fail to add inexistent collaborator to project 1
-  Given I am on my profile page
   When I follow "Project 1"
   And I follow "Edit"
   And I fill in "new_collaborator" with "idontexist@berkeley.edu"
@@ -40,7 +40,6 @@ Scenario: Fail to add inexistent collaborator to project 1
   And I should see "That e-mail doesn't exist!"
 
 Scenario: Fail to add duplicate collaborator to project 2
-  Given I am on my profile page
   When I follow "Project 2"
   And I follow "Edit"
   And I fill in "new_collaborator" with "bruh@berkeley.edu"

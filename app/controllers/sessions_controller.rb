@@ -10,8 +10,8 @@ class SessionsController < ApplicationController
   def create
 		#print "\n\n\n\n\n\n\n\n\n\n"
 		#params[:login_hash].each do |key, value|
-		#	print "here is the key: #{key} \n"
-		#	print "here is the value: #{value} \n"
+		#  print "here is the key: #{key} \n"
+	#		print "here is the value: #{value} \n"
 		#end
 		#print "\n\n\n\n\n\n\n\n\n\n"
 		
@@ -19,10 +19,21 @@ class SessionsController < ApplicationController
 		auth_hash[:uid] = params[:login_hash]['email']
 		auth_hash[:info][:email] = params[:login_hash]['email']
 		auth_hash[:info][:name] = params[:login_hash]['name']
+		
+		if User.find_by_uid(auth_hash[:uid]).nil?
+			@is_new_user = true
+			flash[:notice] = "Welcome new user! Please fill out your profile information."
+		else
+			@is_new_user = false
+		end
     @user = User.find_or_create_from_auth_hash(auth_hash)
     @@current_user = @user
     session[:user_id] = @user.id
-    redirect_to "/profile/#{@user.id}/edit"
+		if @is_new_user
+			redirect_to edit_profile_path(@user.id)
+		else
+			redirect_to profile_path(@user.id)
+		end
   end
 
   def failure

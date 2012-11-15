@@ -17,7 +17,7 @@ module NavigationHelpers
       home_path
 
     when /^the login page$/
-      '/auth/developer/'
+      login_path
 
     when /^the Berkeley page$/
       school_path('berkeley')
