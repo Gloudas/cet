@@ -264,7 +264,6 @@ Cucumber Features:
     - 1
     - 0
     - 0
-    - 0
     - !!null 
     - !!null 
     - 1
@@ -331,7 +330,7 @@ Cucumber Features:
     - !!null 
     - !!null 
     - !!null 
-  :created_at: 2012-11-15 16:25:36.852913690 -08:00
+  :created_at: 2012-11-15 16:53:21.799111126 -08:00
 RSpec:
   :original_result:
     C:/Users/Steven/Documents/GitHub/cet/app/controllers/application_controller.rb:
