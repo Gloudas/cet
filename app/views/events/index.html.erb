@@ -51,22 +51,22 @@
 
   <div class = "row">
 
-  <%= form_tag new_event_path do %>
+  <%= form_for @event, :url => new_event_path() do |f| %>
   
-  <%= label :event, :name, "Name:" %>
-  <textarea class="field span6" id="name" name="event[name]" rows="1" columns="150"></textarea>
+  <%= f.label :name, "Name:" %>
+  <%= f.text_area :name, :class => 'field span6', :id => 'name', :rows => 1 %>
   
-  <%= label :event, :description, "Enter a short description:" %>
-  <textarea class="field span6" id="description" name="event[description]" rows="6"></textarea>
+  <%= f.label :description, "Enter a short description:" %>
+  <%= f.text_area :description, :class => 'field span6', :id => 'description', :rows => 6 %>
 
-  <%= label :event, :date, "Date:" %>
-  <%= date_select :event, :date %>
+  <%= f.label :date, "Date:" %>
+  <%= f.date_select :date %>
 
-  <%= label :event, :time, "Time:" %>
-  <%= time_select :event, :time, :prompt => {:hour => 'Choose Hour', :minute => 'Choose Minute'}, :ampm => true, :minute_step => 15 %>
+  <%= f.label :time, "Time:" %>
+  <%= f.time_select :time, :prompt => {:hour => 'Choose Hour', :minute => 'Choose Minute'}, :ampm => true, :minute_step => 15 %>
 
   <br>
-  <%= submit_tag "Create Event" %>
+  <%= f.submit "Create Event" %>
   <% end %>
 </div>
 
