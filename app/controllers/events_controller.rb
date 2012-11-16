@@ -29,4 +29,10 @@ class EventsController < ApplicationController
     event.save
     redirect_to :action => 'index'
   end
+
+  def delete
+    event = Event.find(params[:event_id])
+    event.destroy
+    redirect_to :action => 'index'
+  end
 end

@@ -34,6 +34,7 @@
       <p><%= event.date %></p>
       <p><%= event.time %></p>
       <li><%= link_to "Edit", edit_event_path(event.id) %></li>
+      <%= button_to "Delete", delete_event_path(event.id) %>
       <br>
       <% end %>
     </div>
