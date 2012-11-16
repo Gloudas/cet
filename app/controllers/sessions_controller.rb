@@ -50,7 +50,6 @@ class SessionsController < ApplicationController
   def destroy
     @@current_user = nil
     session[:user_id] = nil 
-    render :text => "You've logged out!"
   end
 
   def auth_hash
