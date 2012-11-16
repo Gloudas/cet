@@ -376,13 +376,13 @@ Cucumber Features:
     - 15
     - 15
     - !!null 
+    - 15
     - !!null 
-    - 15
-    - 15
+    - 2
+    - 2
     - 1
     - 1
     - !!null 
-    - 14
     - 1
     - 1
     - !!null 
@@ -411,6 +411,7 @@ Cucumber Features:
     - 
     - 1
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 0
     - 
     - 
@@ -418,6 +419,9 @@ Cucumber Features:
     C:/Users/Steven/Documents/GitHub/cet/app/controllers/users_controller.rb:
 =======
     - 88
+=======
+    - 76
+>>>>>>> c0f1069da77c8939191bbe1f5ceb47d8dc065d89
     - !!null 
     - !!null 
     - !!null 
@@ -526,8 +530,12 @@ Cucumber Features:
     - !!null 
     - !!null 
     - !!null 
+<<<<<<< HEAD
   :created_at: 2012-11-15 15:23:38.121376418 -08:00
 >>>>>>> ef531e61d53334bb0f01ba5d8fe849392155568b
+=======
+  :created_at: 2012-11-15 16:25:36.852913690 -08:00
+>>>>>>> c0f1069da77c8939191bbe1f5ceb47d8dc065d89
 RSpec:
   :original_result:
     C:/Users/Steven/Documents/GitHub/cet/app/controllers/application_controller.rb:

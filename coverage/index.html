@@ -22,10 +22,14 @@
     </div>
     <div id="wrapper" style="display:none;">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div class="timestamp">Generated <abbr class="timeago" title="2012-11-14T19:01:28-08:00">2012-11-14T19:01:28-08:00</abbr></div>
 =======
       <div class="timestamp">Generated <abbr class="timeago" title="2012-11-15T15:23:38-08:00">2012-11-15T15:23:38-08:00</abbr></div>
 >>>>>>> ef531e61d53334bb0f01ba5d8fe849392155568b
+=======
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-11-15T16:25:36-08:00">2012-11-15T16:25:36-08:00</abbr></div>
+>>>>>>> c0f1069da77c8939191bbe1f5ceb47d8dc065d89
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -3268,12 +3272,25 @@
     </tr>
   
     
-    <tr class="never" >
+    <tr class="hit" data-hits="15">
       <td class="line_number">
         <pre>24</pre>
       </td>
       <td>
-        <pre>		# validate email format</pre>
+        <pre>		if User.find_by_uid(auth_hash[:uid]).nil?</pre>
+      </td>
+      <td class="hits">
+        15
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>25</pre>
+      </td>
+      <td>
+        <pre>			# validate email format</pre>
       </td>
       <td class="hits">
         
@@ -3281,40 +3298,28 @@
     </tr>
   
     
-    <tr class="hit" data-hits="15">
-      <td class="line_number">
-        <pre>25</pre>
-      </td>
-      <td>
-        <pre>		results = ValidatesEmailFormatOf::validate_email_format(auth_hash[:uid], :message =&gt; &quot;is not of a valid format!&quot;)</pre>
-      </td>
-      <td class="hits">
-        15
-      </td>
-    </tr>
-  
-    
-    <tr class="hit" data-hits="15">
+    <tr class="hit" data-hits="2">
       <td class="line_number">
         <pre>26</pre>
       </td>
       <td>
-        <pre>		unless results.nil?</pre>
+        <pre>			results = ValidatesEmailFormatOf::validate_email_format(auth_hash[:uid], :message =&gt; &quot;is not of a valid format!&quot;)</pre>
       </td>
       <td class="hits">
-        15
+        2
       </td>
     </tr>
   
     
-    <tr class="hit" data-hits="1">
+    <tr class="hit" data-hits="2">
       <td class="line_number">
         <pre>27</pre>
       </td>
       <td>
-        <pre>			flash[:error] = &quot;Please use a valid email address!&quot;</pre>
+        <pre>			unless results.nil?</pre>
       </td>
       <td class="hits">
+<<<<<<< HEAD
 <<<<<<< HEAD
         
       </td>
@@ -3334,6 +3339,9 @@
 =======
         1
 >>>>>>> ef531e61d53334bb0f01ba5d8fe849392155568b
+=======
+        2
+>>>>>>> c0f1069da77c8939191bbe1f5ceb47d8dc065d89
       </td>
     </tr>
   
@@ -3343,7 +3351,20 @@
         <pre>28</pre>
       </td>
       <td>
-        <pre>			redirect_to login_path and return</pre>
+        <pre>				flash[:error] = &quot;Please use a valid email address!&quot;</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="1">
+      <td class="line_number">
+        <pre>29</pre>
+      </td>
+      <td>
+        <pre>				redirect_to login_path and return</pre>
       </td>
       <td class="hits">
         1
@@ -3353,26 +3374,13 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>29</pre>
-      </td>
-      <td>
-        <pre>		end</pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="hit" data-hits="14">
-      <td class="line_number">
         <pre>30</pre>
       </td>
       <td>
-        <pre>		if User.find_by_uid(auth_hash[:uid]).nil?</pre>
+        <pre>			end</pre>
       </td>
       <td class="hits">
-        14
+        
       </td>
     </tr>
   
@@ -3715,7 +3723,7 @@
     </tr>
   
     
-    <tr class="hit" data-hits="88">
+    <tr class="hit" data-hits="76">
       <td class="line_number">
         <pre>57</pre>
       </td>
@@ -3723,7 +3731,7 @@
         <pre>    request.env['omniauth.auth']</pre>
       </td>
       <td class="hits">
-        88
+        76
       </td>
     </tr>
   
