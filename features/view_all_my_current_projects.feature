@@ -16,15 +16,17 @@ Background: logged in user
 
   And the following projects exist:
   | title     | description | creator           | collaborators      |
-  | Project 1 | p1          | bro@berkeley.edu  |                    |
-  | Project 2 | p2          | breh@berkeley.edu | bro@berkeley.edu   |
-  | Project 3 | p3          | breh@berkeley.edu |                    |
-  | Project 4 | p4          | bro@berkeley.edu  | breh@berkeley.edu  |
+  | Project A | p1          | bro@berkeley.edu  |                    |
+  | Project B | p2          | breh@berkeley.edu | bro@berkeley.edu   |
+  | Project C | p3          | breh@berkeley.edu |                    |
+  | Project D | p4          | bro@berkeley.edu  | breh@berkeley.edu  |
   
 	Given I am logged in as "bro@berkeley.edu"
 
 Scenario: I should see all my active projects
-  Then I should see "Project 1"
-  And I should see "Project 2"
-  And I should not see "Project 3"
-  And I should see "Project 4"
+  Then I should see "Project A"
+  And I should see "Project B"
+  And I should not see "Project C"
+  And I should see "Project D"
+  And I should see "1"
+  And I should see "2"

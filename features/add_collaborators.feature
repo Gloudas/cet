@@ -16,9 +16,10 @@ Background: User is logged in and has projects
   | Bro        | bro@berkeley.edu  | berkeley  | false	|
 
   And the following projects exist:
-  | title      | description    | creator           | collaborators |
-  | Project 1  | p1             | bro@berkeley.edu  |               |
-  | Project 2  | p2             | bro@berkeley.edu  |               |
+  | title      | description    | creator           | collaborators     |
+  | Project 1  | p1             | bro@berkeley.edu  |                   |
+  | Project 2  | p2             | bro@berkeley.edu  |                   |
+  | Project 3  | p3             | bro@berkeley.edu  | bruh@berkeley.edu |
 
   And I am logged in as "bro@berkeley.edu"
 
@@ -29,7 +30,7 @@ Scenario: Successfully add collaborator to project 1
   And I press "Add Collaborator"
   Then I should be on the edit collaborators page for "Project 1"
   And I should see "Collaborator added!"
-  And I should see "Bruh"
+  And I should see "bruh@berkeley.edu"
 
 Scenario: Fail to add inexistent collaborator to project 1
   When I follow "Project 1"
@@ -49,3 +50,11 @@ Scenario: Fail to add duplicate collaborator to project 2
   And I press "Add Collaborator"
   Then I should be on the edit collaborators page for "Project 2"
   And I should see "Invalid collaborator!"
+
+Scenario: Delete collaborator
+  When I follow "Project 3"
+  And I follow "Edit Collaborators"
+  And I press delete collaborator "bruh@berkeley.edu"
+  Then I should be on the edit collaborators page for "Project 3"
+  And I should see "Collaborator deleted!"
+  And I should not see "bruh@berkeley.edu"

@@ -40,6 +40,20 @@
     </div>
   </div>
 
+  <div class = "row">
+    <div align = "center">
+      <h4>Last Updated</h4>
+      <p><%= time_ago_in_words(@project.updated_at) %></p>
+    </div>
+  </div>
+
+  <div class = "row">
+    <div align = "center">
+      <h4>Created</h4>
+      <p><%= @project.created_at.to_formatted_s(:long) %></p>
+    </div>
+  </div>
+
 
   <div class = "row">
     <div align = "center">

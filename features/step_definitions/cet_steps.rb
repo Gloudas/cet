@@ -42,6 +42,10 @@ Given /the following projects exist/ do |projects_table|
   end
 end
 
+When /^I press delete collaborator "(.*)"$/ do |email|
+  step %Q{I press "delete_#{User.find_by_email(email).id}"}
+end
+
 # Make sure that this user has been created in the cucumber Background!
 Given /^I am logged in as "(.*)"$/ do |email|
   step %Q{I am on the login page}

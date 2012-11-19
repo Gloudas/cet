@@ -97,7 +97,7 @@
               <tr>
                 <td><%= link_to project.title, project_path(project.id) %></td>
                 <td><%= link_to project.creator.name, profile_path(project.creator.id) %></td>
-                <td><%= project.created_at %></td>
+                <td><%= time_ago_in_words(project.created_at) %></td>
               </tr>
             <% end %>
             </tbody>
@@ -108,7 +108,6 @@
 
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
         <p>&copy; 2012 CET &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
 

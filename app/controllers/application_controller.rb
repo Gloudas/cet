@@ -7,4 +7,7 @@ class ApplicationController < ActionController::Base
     redirect_to home_path and return unless @user 
   end
   
+  def time_ago(timestamp)
+    return time_ago_in_words(timestamp) + " ago"
+  end
 end

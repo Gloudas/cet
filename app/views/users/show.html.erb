@@ -24,32 +24,12 @@
           <h2 style="font-size: 50pt"><%= "Welcome #{@user.name}!" %></h2>
         </div>
       </div><!-- /.row -->
-    
+
     <hr class="featurette-divider">
       <!-- START THE FEATURETTES -->
       <br>
       <div class="row">
-        <div class = "span6">
-          <h3><%= "Active Projects" %></h3>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Project Name</th>
-                  <th>Project Owner</th>
-                  <th>Date Created</th>
-                </tr>
-              </thead>
-            <tbody>
-            <% @user.projects.each do |project| %>
-              <tr>
-                <td><%= link_to project.title, project_path(project.id) %></td>
-                <td><%= link_to project.creator.name, profile_path(project.creator.id) %></td>
-                <td><%= project.created_at %></td>
-              </tr>
-            <% end %>
-            </tbody>
-          </table>
-        </div>
+
         <div class = "span4 offset2">
           <h3>My Profile Information</h3>
             <%= link_to "Edit Profile", edit_profile_path(@user.id) if @is_mine %>
@@ -89,6 +69,31 @@
           </table>
         </div>
 
+        <div class = "span6">
+          <h3><%= "Active Projects" %></h3>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Owner</th>
+                  <th>Collaborators</th>
+                  <th>Last Updated</th>
+                </tr>
+              </thead>
+            <tbody>
+            <% @user.projects.each do |project| %>
+              <tr>
+                <td><%= link_to project.title, project_path(project.id) %></td>
+                <td><%= link_to project.creator.name, profile_path(project.creator.id) %></td>
+                <td><%= project.users.length %>
+                <td><%= time_ago_in_words(project.updated_at) %></td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
       <!-- FOOTER -->
       <footer>
         <p>&copy; 2012 Semen Janbanana, Stove Fanborove, Bart Glooey, Null Moldy, Dog Wonton &middot; </p>
