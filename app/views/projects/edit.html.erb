@@ -14,16 +14,10 @@
   <%= form_tag edit_project_path do %>
 
     <%= label :project, :title, "Title:" %>
-    <%= text_field :project, 'title', :value => @project.title, :id => 'title' %>
+    <%= text_field :project, :title, :value => @project.title, %>
 
     <%= label :project, :description, "Enter a short description:" %>
-    <textarea class="field span12" id="description" name="project[description]" rows="6"><%= @project.description %></textarea>
-    
-    <br> Collaborators
-    <% @project.users.each do |user| %>
-      <% # you have to make it so your own name doesn't appear on this list %>
-      <%= user.name %>
-    <% end %>
+    <textarea class="field span12" id="project_description" name="project[description]" rows="6"><%= @project.description %></textarea>
 
   <br><br> <%= submit_tag "Update Project" %>
 

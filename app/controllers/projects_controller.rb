@@ -74,9 +74,22 @@ class ProjectsController < ApplicationController
   def destroy
   end
 
+  def edit_collaborators
+  end
+
   def add_collaborator
-    @collaborator = User.find(params[:userID])
-    Project.add_collaborator(@collaborator)
+    email = params[:collaborator]
+    success = @project.add_collaborator_by_email(email)
+    if success
+      flash[:notice] = "Collaborator added!"
+    else
+      flash[:error] = "Invalid collaborator!"
+    end
+    redirect_to edit_collaborators_path
+  end
+
+  def destroy_collaborator
+    redirect_to edit_collaborators_path
   end
 
 end

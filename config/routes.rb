@@ -27,9 +27,12 @@ Cet::Application.routes.draw do
   match '/profile/:uid' => 'users#show', :as => 'profile'
   match '/profile/:uid/edit' => 'users#edit', :as => 'edit_profile'
   # Projects
+  match '/project/:pid' => 'projects#show', :as => 'project'
   match '/project/new' => 'projects#new', :as => 'new_project'
   match '/project/:pid/edit' => 'projects#edit', :as => 'edit_project'
-  match '/project/:pid' => 'projects#show', :as => 'project'
+  match '/project/:pid/edit/collaborators' => 'projects#edit_collaborators', :via => :get, :as => 'edit_collaborators'
+  match '/project/:pid/edit/collaborators' => 'projects#add_collaborator', :via => :post, :as => 'add_collaborator'
+  match '/project/:pid/edit/collaborators/:cid' => 'projects#destroy_collaborator', :via => :post, :as => 'destroy_collaborator'
   # Events
   match '/events/new' => 'events#new', :as => 'new_event'
   match '/events/all' => 'events#index', :as => 'events' 
