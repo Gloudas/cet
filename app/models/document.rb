@@ -13,4 +13,5 @@ class Document < ActiveRecord::Base
   #paperclip
   has_attached_file :avatar
   
+  
 end
