@@ -4,6 +4,7 @@ gem 'rails', '3.2.8'
 gem 'omniauth'
 gem 'omniauth-cas'
 gem 'validates_email_format_of'
+gem 'paperclip'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

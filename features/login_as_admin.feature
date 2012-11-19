@@ -15,8 +15,14 @@ Background: the user is logged in as an admin
   | name       | bruh@berkeley.edu 		| berkeley  |	false 	|
   | admin      | admin@berkeley.edu   | berkeley  |	true 		|
   
-	Given I am logged in as "admin@berkeley.edu"
+	
 
-Scenario: Logging in as admin 
-  Given I am on the Berkeley page
-  Then I should see "Manage Events"
+Scenario: Logging in as admin ( Happy )
+	  Given I am logged in as "admin@berkeley.edu"
+  	  Given I am on the Berkeley page
+  	  Then I should see "Manage Events"
+
+Scenario: Logging in as admin ( Sad )
+	  Given I am logged in as "bruh@berkeley.edu"
+  	  Given I am on the Berkeley page
+  	  Then I should not see "Manage Events"

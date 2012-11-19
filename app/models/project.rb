@@ -9,6 +9,7 @@ class Project < ActiveRecord::Base
   has_and_belongs_to_many :users, :uniq => true
   belongs_to :school
   belongs_to :creator, :class_name => "User", :foreign_key => "creator_id"
+  has_many :documents
   
   def add_collaborator(user)
     self.users << user
