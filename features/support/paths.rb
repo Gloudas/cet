@@ -36,6 +36,9 @@ module NavigationHelpers
       p = Project.find_by_title(ans[:name])
       edit_collaborators_path(p.id)
 
+    when /^"(.*)"$/
+      page_name
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
