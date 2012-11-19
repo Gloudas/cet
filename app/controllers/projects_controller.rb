@@ -88,6 +88,7 @@ class ProjectsController < ApplicationController
     if collaborator == @user
       # can't delete yourself
       redirect_to edit_collaborators_path and return
+    end
     success = @project.users.delete(collaborator)
     if success
       flash[:notice] = "Collaborator deleted!"
