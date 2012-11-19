@@ -30,7 +30,13 @@ Cet::Application.routes.draw do
   match '/project/new' => 'projects#new', :as => 'new_project'
   match '/project/:pid/edit' => 'projects#edit', :as => 'edit_project'
   match '/project/:pid' => 'projects#show', :as => 'project'
-
+  # Events
+  match '/events/new' => 'events#new', :as => 'new_event'
+  match '/events/all' => 'events#index', :as => 'events' 
+  match '/events/:event_id/edit' => 'events#edit', :as => 'edit_event'  
+  match '/events/:event_id/update' => 'events#update', :as => 'update_event' 
+  match '/events/:event_id/delete' => 'events#delete', :as => 'delete_event' 
+  
 
   # Sample resource route with options:
   #   resources :products do

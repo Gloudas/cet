@@ -5,13 +5,34 @@ Feature: login to the site
   I want to login to the site with my student credentials
 
 Background:
+	Given the following schools exist:
+	| name		| uri		|
+	| Berkeley	| berkeley	|
+	Given the following users exist:
+	| name	| email				| school	| admin |
+	| test	| test@berkeley.edu	| berkeley	| false |
   Given I am on the home page
   Then I should see "Login"
   When I follow "Login"
   Then I should be on the login page
 
-Scenario: log in with a Berkeley ID
+Scenario: log in as new user
   When I fill in "name" with "Noeleo"
   And I fill in "email" with "noelmoldvai@berkeley.edu"
-  And I click "Sign In"
-  Then I should see "Name"
+  And I press "Sign In"
+  Then I should see "Edit Profile"
+  And I should see "Name"
+
+Scenario: log in as existing user
+  When I fill in "name" with "test"
+  And I fill in "email" with "test@berkeley.edu"
+	And I press "Sign In"
+	Then I should see "Welcome test!"
+	And I should see "My Profile Information"
+
+Scenario: log in with an invalid email
+	When I fill in "name" with "Doug"
+	And I fill in "email" with "invalid email"
+	And I press "Sign In"
+	Then I should be on the login page
+	And I should see "Please use a valid email address!"
