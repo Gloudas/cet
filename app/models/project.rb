@@ -16,10 +16,10 @@ class Project < ActiveRecord::Base
 
   def add_collaborator_by_email(email)
     user = User.find_by_email(email)
-    success = False
+    success = false
     begin
       self.users << user
-      succes = True
+      success = true
     rescue
     end if user
     return success

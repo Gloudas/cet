@@ -18,11 +18,6 @@ class ProjectsController < ApplicationController
     project_info = params[:project]
 
     project.add_collaborator(@user)
-    project_info[:collaborator].each do |email|
-      # ignore nil values
-      next if not email
-      project.add_collaborator_by_email(email)
-    end if project_info[:collaborator]
 
     project.title = project_info[:title]
     project.description = project_info[:description]
@@ -89,6 +84,13 @@ class ProjectsController < ApplicationController
   end
 
   def destroy_collaborator
+    collaborator = User.find_by_id(params[:cid])
+    success = @project.users.delete(collaborator)
+    if success
+      flash[:notice] = "Collaborator deleted!"
+    else
+      flash[:error] = "Oops! Something went wrong."
+    end
     redirect_to edit_collaborators_path
   end
 
