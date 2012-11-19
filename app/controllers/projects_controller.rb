@@ -87,7 +87,7 @@ class ProjectsController < ApplicationController
     collaborator = User.find_by_id(params[:cid])
     if collaborator == @user
       # can't delete yourself
-      redirect_to edit_collaborators_path and return
+      redirect_to edit_collaborators_path(@project.id) and return
     end
     success = @project.users.delete(collaborator)
     if success
@@ -95,7 +95,7 @@ class ProjectsController < ApplicationController
     else
       flash[:error] = "Oops! Something went wrong."
     end
-    redirect_to edit_collaborators_path
+    redirect_to edit_collaborators_path(@project.id)
   end
 
 end

@@ -11,7 +11,7 @@
   
   <h1><%= @project.title %></h1>
 
-  <%= link_to "Edit Collaborators", edit_collaborators_path %>
+  <%= link_to "Edit Collaborators", edit_collaborators_path(@project.id) %>
 
   <%= form_tag edit_project_path do %>
 
