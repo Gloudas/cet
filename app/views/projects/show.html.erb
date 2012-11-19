@@ -45,7 +45,7 @@
     <h4>Collaborators</h4>
     <% @project.users.each do |user| %>
       <% if user != @user %>
-        <p><%= link_to user.name, profile_path(user.id) %></p>
+        <p><%= link_to user.email, profile_path(user.id) %></p>
       <% end %>
     <% end %>
       </div>

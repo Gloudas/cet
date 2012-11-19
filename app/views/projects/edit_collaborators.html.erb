@@ -15,7 +15,7 @@
   <% @project.users.each do |user| %>
     <% # you have to make it so your own name doesn't appear on this list %>
     <% if user != @user %>
-      <%= user.name %>
+      <%= user.email %>
       <%= button_to "Delete", destroy_collaborator_path(@project.id, user.id) %>
     <% end %>
   <% end %>

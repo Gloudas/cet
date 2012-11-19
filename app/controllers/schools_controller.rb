@@ -3,7 +3,10 @@ class SchoolsController < ApplicationController
   before_filter :set_current_user, :set_school
 
   def set_school
-    @school = School.find_by_uri(params[:school].downcase)
+    if params[:school] != params[:school].downcase
+      redirect_to school_path(params[:school].downcase) and return
+    end
+    @school = School.find_by_uri(params[:school])
     redirect_to home_path and return if not @school
   end
 
