@@ -53,7 +53,7 @@ class ProjectsController < ApplicationController
 
   def edit
     if not @can_edit
-      redirect_to school_path(@user.school.id) and return
+      redirect_to project_path(@project.id) and return
     end
     if params[:project]
       # process the form
@@ -85,6 +85,9 @@ class ProjectsController < ApplicationController
 
   def destroy_collaborator
     collaborator = User.find_by_id(params[:cid])
+    if collaborator == @user
+      # can't delete yourself
+      redirect_to edit_collaborators_path and return
     success = @project.users.delete(collaborator)
     if success
       flash[:notice] = "Collaborator deleted!"

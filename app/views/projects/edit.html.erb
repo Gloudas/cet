@@ -11,6 +11,8 @@
   
   <h1><%= @project.title %></h1>
 
+  <%= link_to "Edit Collaborators", edit_collaborators_path %>
+
   <%= form_tag edit_project_path do %>
 
     <%= label :project, :title, "Title:" %>
