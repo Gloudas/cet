@@ -1,6 +1,6 @@
 class Document < ActiveRecord::Base
   # attr_accessible :title, :body
-  attr_accessible :avatar, :uploader, #:description
+  attr_accessible :avatar, :uploader#, :description
   
   #validations
   #validates :field, :presence => true
