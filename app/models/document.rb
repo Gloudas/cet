@@ -4,7 +4,7 @@ class Document < ActiveRecord::Base
   
   #validations
   #validates :field, :presence => true
-  validates :avatar, :attachment_presence => true
+  #validates :avatar, :attachment_presence => true
   
   #associations
   belongs_to :school
