@@ -4,6 +4,7 @@ class CreateProjectsUsers < ActiveRecord::Migration
       t.references :project
       t.references :user
     end
+    add_index(:projects_users, [:project_id, :user_id], :unique => true)
   end
 
   def down

@@ -6,7 +6,7 @@ class Project < ActiveRecord::Base
   validates :title, :presence => true
   validates :description, :presence => true
 
-  has_and_belongs_to_many :users
+  has_and_belongs_to_many :users, :uniq => true
   belongs_to :school
   belongs_to :creator, :class_name => "User", :foreign_key => "creator_id"
   has_many :documents
@@ -17,6 +17,12 @@ class Project < ActiveRecord::Base
 
   def add_collaborator_by_email(email)
     user = User.find_by_email(email)
-    self.users << user if user
+    success = false
+    begin
+      self.users << user
+      success = true
+    rescue
+    end if user
+    return success
   end
 end

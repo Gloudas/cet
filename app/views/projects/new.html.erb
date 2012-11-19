@@ -39,14 +39,6 @@
     <%= label :project, :description, "Enter a short description:" %>
     <textarea class="field span6" id="description" name="project[description]" rows="6"></textarea>
 
-      <%= label :project, :collab1, "Collaborator 1:" %>
-      <%= text_field :project, 'collaborator[0]' %>
-      <%= label :project, :collab2, "Collaborator 2:" %>
-      <%= text_field :project, 'collaborator[1]' %>
-      <%= label :project, :collab3, "Collaborator 3:" %>
-      <%= text_field :project, 'collaborator[2]' %>
-      <%= label :project, :collab4, "Collaborator 4:" %>
-      <%= text_field :project, 'collaborator[3]' %>
       <br>
       <%= submit_tag "Create Project" %>
   <% end %>

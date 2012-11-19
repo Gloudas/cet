@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(:version => 20121119072745) do
     t.integer "user_id"
   end
 
+  add_index "projects_users", ["project_id", "user_id"], :name => "index_projects_users_on_project_id_and_user_id", :unique => true
+
   create_table "schools", :force => true do |t|
     t.string   "name"
     t.string   "location"

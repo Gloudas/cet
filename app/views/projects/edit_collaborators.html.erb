@@ -1,0 +1,29 @@
+<html>
+<head>
+  <%= image_tag("logo.png") %>
+  <title>Applied Innovations Institute</title>
+  <%= stylesheet_link_tag "bootstrap" %>
+</head>
+
+<body>
+
+  <%= render "/navbar"%>
+  
+  <h1><%= @project.title %></h1>
+
+  <br> Collaborators
+  <% @project.users.each do |user| %>
+    <% # you have to make it so your own name doesn't appear on this list %>
+    <% if user == @user %>
+      <%= user.name %>
+      <%= button_to "Delete", destroy_collaborator_path(@project.id, user.id) %>
+    <% end %>
+  <% end %>
+
+  <%= form_tag add_collaborator_path do %>
+    <%= text_field_tag :collaborator %>
+    <%= submit_tag "Add Collaborator" %>
+  <% end %>
+
+</body>
+</html>
