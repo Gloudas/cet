@@ -1,7 +1,5 @@
 <html>
 <head>
-  <%= image_tag("logo.png") %>
-  <title>Applied Innovations Institute</title>
   <%= stylesheet_link_tag "bootstrap" %>
 </head>
 
@@ -9,7 +7,7 @@
 
   <%= render "/navbar"%>
   
-  <h1><%= @project.title %></h1>
+  <h1><%= link_to @project.title, project_path(@project.id) %></h1>
 
   <%= link_to "Edit Collaborators", edit_collaborators_path(@project.id) %>
 

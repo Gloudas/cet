@@ -1,7 +1,5 @@
 <html>
 <head>
-  <%= image_tag("logo.png") %>
-  <title>Applied Innovations Institute</title>
   <%= stylesheet_link_tag "bootstrap" %>
 </head>
 
@@ -9,13 +7,15 @@
 
   <%= render "/navbar"%>
   
-  <h1><%= @project.title %></h1>
+  <h1><%= link_to @project.title, project_path(@project.id) %></h1>
 
-  <br> Collaborators
+  <h2>Collaborators</h2>
+  <br>
+
   <% @project.users.each do |user| %>
     <% # you have to make it so your own name doesn't appear on this list %>
     <% if user != @user %>
-      <%= user.email %>
+      <p><%= user.email %></p>
       <%= button_to "Delete", destroy_collaborator_path(@project.id, user.id) %>
     <% end %>
   <% end %>
