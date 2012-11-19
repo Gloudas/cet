@@ -14,11 +14,10 @@ class ProjectsController < ApplicationController
       project = Project.find_by_id(params[:pid])
     else
       project = Project.new
+      project.add_collaborator(@user)
     end
+
     project_info = params[:project]
-
-    project.add_collaborator(@user)
-
     project.title = project_info[:title]
     project.description = project_info[:description]
     project.creator = @user

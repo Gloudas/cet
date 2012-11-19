@@ -30,9 +30,11 @@ module NavigationHelpers
 
     when /^my project's edit page$/
       edit_project_path(1)
-        
-    #when /^the edit project page for "(.*)"$/ |proj|
-      #edit_project_path(Project.find_by_name(proj).id)
+
+    when /^the edit collaborators page/
+      ans = /^the edit collaborators page for "(?<name>.*)"$/.match(page_name)
+      p = Project.find_by_title(ans[:name])
+      edit_collaborators_path(p.id)
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

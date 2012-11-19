@@ -12,8 +12,8 @@ Background: User is logged in and has projects
 
   And the following users exist:
   | name       | email             | school    | admin	|
-  | name       | bruh@berkeley.edu | berkeley  | false	|
-  | name       | bro@berkeley.edu  | berkeley  | false	|
+  | Bruh       | bruh@berkeley.edu | berkeley  | false	|
+  | Bro        | bro@berkeley.edu  | berkeley  | false	|
 
   And the following projects exist:
   | title      | description    | creator           | collaborators |
@@ -24,28 +24,28 @@ Background: User is logged in and has projects
 
 Scenario: Successfully add collaborator to project 1
   When I follow "Project 1"
-  And I follow "Edit"
-  And I fill in "new_collaborator" with "bruh@berkeley.edu"
+  And I follow "Edit Collaborators"
+  And I fill in "collaborator" with "bruh@berkeley.edu"
   And I press "Add Collaborator"
-  Then I should be on the edit project page for "Project 1"
-  And I should see "Added bruh@berkeley.edu"
-  And I should see "bruh@berkeley.edu"
+  Then I should be on the edit collaborators page for "Project 1"
+  And I should see "Collaborator added!"
+  And I should see "Bruh"
 
 Scenario: Fail to add inexistent collaborator to project 1
   When I follow "Project 1"
-  And I follow "Edit"
-  And I fill in "new_collaborator" with "idontexist@berkeley.edu"
+  And I follow "Edit Collaborators"
+  And I fill in "collaborator" with "idontexist@berkeley.edu"
   And I press "Add Collaborator"
-  Then I should be on the edit project page for "Project 1"
-  And I should see "That e-mail doesn't exist!"
+  Then I should be on the edit collaborators page for "Project 1"
+  And I should see "Invalid collaborator!"
 
 Scenario: Fail to add duplicate collaborator to project 2
   When I follow "Project 2"
-  And I follow "Edit"
-  And I fill in "new_collaborator" with "bruh@berkeley.edu"
+  And I follow "Edit Collaborators"
+  And I fill in "collaborator" with "bruh@berkeley.edu"
   And I press "Add Collaborator"
-  Then I should be on the edit project page for "Project 2"
-  When I fill in "new_collaborator" with "bruh@berkeley.edu"
+  Then I should be on the edit collaborators page for "Project 2"
+  When I fill in "collaborator" with "bruh@berkeley.edu"
   And I press "Add Collaborator"
-  Then I should be on the edit project page for "Project 2"
-  And I should see "That user is already a collaborator!"
+  Then I should be on the edit collaborators page for "Project 2"
+  And I should see "Invalid collaborator!"

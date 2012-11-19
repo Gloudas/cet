@@ -28,16 +28,16 @@ Background: Student is logged into ai2
   Then I should be on my project's edit page
 
 Scenario: Successfully edit my project
-	When I fill in "title" with "Changed Project Name"
-	And I fill in "description" with "My new description is chill."
+	When I fill in "project_title" with "Changed Project Name"
+	And I fill in "project_description" with "My new description is chill."
   And I press "Update Project"
   Then I should be on my project's page
   And I should see "Changed Project Name"
   And I should see "My new description is chill."
 
 Scenario: Unsuccessfully edit my project
-  When I fill in "title" with ""
-	And I fill in "description" with "Here is the description for my project"
+  When I fill in "project_title" with ""
+	And I fill in "project_description" with "Here is the description for my project"
   And I press "Update Project"
   Then I should be on my project's edit page
   And I should see "Sorry, something went wrong with editing this project."
