@@ -38,7 +38,11 @@ Cet::Application.routes.draw do
   match '/events/all' => 'events#index', :as => 'events' 
   match '/events/:event_id/edit' => 'events#edit', :as => 'edit_event'  
   match '/events/:event_id/update' => 'events#update', :as => 'update_event' 
-  match '/events/:event_id/delete' => 'events#delete', :as => 'delete_event' 
+  match '/events/:event_id/delete' => 'events#delete', :as => 'delete_event'
+  
+  #Documents
+  match '/project/:pid/docs/:did' => 'documents#edit', :as => 'edit_doc'
+  match '/project/:pid/docs/new' => 'documents#new', :as => 'new_doc'
   
 
   # Sample resource route with options:

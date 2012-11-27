@@ -1,0 +1,32 @@
+<html>
+<head>
+  <%= stylesheet_link_tag "bootstrap" %>
+</head>
+
+<body>
+  <%= render "/navbar"%>
+
+  <div class = "row">
+    <div align = "center">
+      <h2>Edit Document</h2>
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class = "row">
+
+  <%= form_for @document, :html => { :multipart => true } do |form| %>
+
+    <%= label :document, :file, "Add File:" %>
+    <%= form.file_field :avatar %>
+
+    <%= label :document, :description, "Short description:" %>
+    <textarea class="field span6" id="description" name="project[description]" rows="6"></textarea>
+
+    <br>
+    <%= submit_tag "Create Document" %>
+  <% end %>
+  
+</body>
+</html>
