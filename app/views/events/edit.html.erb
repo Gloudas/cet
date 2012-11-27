@@ -26,19 +26,20 @@
  
   <br>
 
-  <%= form_tag update_event_path(@eid) do %>
+  <%= form_for @event, :url => update_event_path(@eid) do |f| %>
 
-  <%= label :event, :name, "Name:" %>
-  <textarea class="field span12" id="name" name="event[name]" rows="1" columns="150"><%= @event.name %></textarea>
+  <%= f.label :name, "Name:" %>
+  <%= f.text_area :name, :class => 'field span6', :id => 'name', :rows => 1, :value => @event.name %>
 
-  <%= label :event, :description, "Enter a short description:" %>
-  <textarea class="field span12" id="description" name="event[description]" rows="6"><%= @event.description %></textarea>
-    
-  <!-- TODO figure out how to display date and time -->
+  <%= f.label :description, "Enter a short description:" %>
+  <%= f.text_area :description, :class => 'field span6', :id => 'description', :rows => 6, :value => @event.description %>
+  
+  <br>
 
-  <%= datetime_select :time, :prompt => {:hour => @event.time.hour, :minute => @event.time.min}, :ampm => true, :minute_step => 15 %>
+  <%= f.datetime_select :time, :prompt => {:hour => @event.time.hour, :minute => @event.time.min}, :ampm => true, :minute_step => 15 %>
 
-  <br><br> <%= submit_tag "Update Event" %>
+  <br><br> 
+  <%= f.submit "Update Event" %>
   
   <% end %>
 

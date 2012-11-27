@@ -26,8 +26,8 @@ class EventsController < ApplicationController
     event = Event.find(params[:event_id])
     event.name  = event_info[:name]
     event.description = event_info[:description]
-    # TODO Date and time proccessing
-    
+    datetime = DateTime.new(event_info['time(1i)'].to_i, event_info['time(2i)'].to_i, event_info['time(3i)'].to_i, event_info['time(4i)'].to_i, event_info['time(5i)'].to_i)
+    event.time = datetime
     event.save
     redirect_to :action => 'index'
   end

@@ -13,7 +13,7 @@
   </head>
 
 <body>
-  
+
   <%= render "/navbar"%>
 
   <div class = "row">
@@ -29,9 +29,9 @@
   <div class = "row">
     <div align = "center">
       <% @events.each do |event| %>
-      <p><%= event.name %></p>
-      <p><%= event.description %></p>
-      <p><%= event.time %></p>
+      <h3><%= event.name %></h3>
+      <p> About: <%= event.description %></p>
+      <p> <%= event.time.strftime("%B %d, %Y at %I:%M %p") %></p>
       <li><%= link_to "Edit", edit_event_path(event.id) %></li>
       <%= button_to "Delete", delete_event_path(event.id) %>
       <br>
