@@ -42,7 +42,7 @@ Cet::Application.routes.draw do
   
   #Documents
   match '/project/:pid/docs/:did' => 'documents#edit', :as => 'edit_doc'
-  match '/project/:pid/docs/new' => 'documents#new', :as => 'new_doc'
+  match '/project/:pid/docs/new_doc' => 'documents#new', :as => 'new_doc'
   
 
   # Sample resource route with options:
