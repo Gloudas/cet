@@ -21,7 +21,7 @@ class ProjectsController < ApplicationController
     project.title = project_info[:title]
     project.description = project_info[:description]
     project.creator = @user
-    project.school_id = @user.school
+    project.school_id = @user.school #HOW DOES THIS WORK!?!?
 
     # to do: validations on the project model
     success = project.save
