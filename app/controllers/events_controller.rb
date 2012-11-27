@@ -3,10 +3,9 @@ class EventsController < ApplicationController
   def new
     @user = User.find(session[:user_id])
     event = params[:event]
-    date =  Date.new(event['date(1i)'].to_i, event['date(2i)'].to_i, event['date(3i)'].to_i)
-    #time = Time.new(event['time(3i)'].to_i, event['time(4i)'].to_i)
-    
-    Event.create(:name => event[:name], :description => event[:description], :date => date)
+    datetime = DateTime.new(event['time(1i)'].to_i, event['time(2i)'].to_i, event['time(3i)'].to_i, event['time(4i)'].to_i, event['time(5i)'].to_i)
+
+    Event.create(:name => event[:name], :description => event[:description], :time => datetime)
     redirect_to :action => 'index'
   end
 
