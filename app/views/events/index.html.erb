@@ -30,7 +30,7 @@
     <div align = "center">
       <% @events.each do |event| %>
       <h3><%= event.name %></h3>
-      <p> About: <%= event.description %></p>
+      <p class="ex"> About: <%= event.description %></p>
       <p> <%= event.location %></p>
       <p> Begins on <%= event.startTime.strftime("%B %d, %Y at %I:%M %p") %></p>
       <p> And ends on <%= event.endTime.strftime("%B %d, %Y at %I:%M %p") %></p>

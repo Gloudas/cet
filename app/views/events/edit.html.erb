@@ -25,28 +25,31 @@
   <hr class="featurette-divider">
  
   <br>
+  <div class = "row">
+    <div align = "center">
+      <%= form_for @event, :url => update_event_path(@eid) do |f| %>
+      
+      <%= f.label :name, "Name:" %>
+      <%= f.text_area :name, :class => 'field span6', :id => 'name', :rows => 1, :value => @event.name %>
+      
+      <%= f.label :description, "Enter a short description:" %>
+      <%= f.text_area :description, :class => 'field span6', :id => 'description', :rows => 6, :value => @event.description %>
 
-  <%= form_for @event, :url => update_event_path(@eid) do |f| %>
-
-  <%= f.label :name, "Name:" %>
-  <%= f.text_area :name, :class => 'field span6', :id => 'name', :rows => 1, :value => @event.name %>
-
-  <%= f.label :description, "Enter a short description:" %>
-  <%= f.text_area :description, :class => 'field span6', :id => 'description', :rows => 6, :value => @event.description %>
-
-  <%= f.label :location, "Location:" %>
-  <%= f.text_area :location, :class => 'field span6', :id => 'location', :rows => 1, :value => @event.location %>
+      <%= f.label :location, "Location:" %>
+      <%= f.text_area :location, :class => 'field span6', :id => 'location', :rows => 1, :value => @event.location %>
   
-  <br><br>
-  From: <%= f.datetime_select :startTime, :prompt => {:hour => @event.startTime.hour, :minute => @event.startTime.min}, :ampm => true, :minute_step => 15 %>
-
-  <br>
-  Until: <%= f.datetime_select :endTime, :prompt => {:hour => @event.endTime.hour, :minute => @event.endTime.min}, :ampm => true, :minute_step => 15 %>
-
-  <br><br> 
-  <%= f.submit "Update Event" %>
+      <br><br>
+      From: <%= f.datetime_select :startTime, :prompt => {:hour => @event.startTime.hour, :minute => @event.startTime.min}, :ampm => true, :minute_step => 15 %>
+      
+      <br>
+      Until: <%= f.datetime_select :endTime, :prompt => {:hour => @event.endTime.hour, :minute => @event.endTime.min}, :ampm => true, :minute_step => 15 %>
+      
+      <br><br> 
+      <%= f.submit "Update Event" %>
   
-  <% end %>
+      <% end %>
+    </div>
+  </div>
 
 </body>
 </html>
