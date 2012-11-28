@@ -14,30 +14,38 @@
 
   <body>
 
+
     <%= render "/navbar"%>
 
-    <div class="container marketing">
+      <div class = "span1 offset11">
+        <%= link_to "Edit Profile", edit_profile_path(@user.id) if @is_mine %>
+      </div>
 
-    <hr class="featurette-divider">
-      <!-- START THE FEATURETTES -->
-      <br>
       <div class="row">
+        <div class = "span3 offset2">
+          <img src = "http://4.bp.blogspot.com/-j9Asko9E7aE/UIVEYaYRMkI/AAAAAAAAEP8/hKxOgYfwWHc/s1600/smiley+face_full.jpg">
+        </div>
 
-        <div class = "span4 offset2">
-          <h3>My Profile Information</h3>
-            <%= link_to "Edit Profile", edit_profile_path(@user.id) if @is_mine %>
-            <table class="table table-striped">
-            <thead>
+        <div class = "span4">
+          <table>
+            <thead align = "left">
               <tr>
-                <th>Category</th>
-                <th>Your Info</th>
+                <th><h2><%= @profile.name %></h2></th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Name</td>
-                <td><%= @profile.name %></td>
+              <tr align = "left">
+                <td> About Me: <%= @profile.aboutme %></td>
               </tr>
+            </tbody>
+          </table>
+          <br>
+
+
+            <table class="table table-striped">
+            <thead>
+            </thead>
+            <tbody>
               <tr>
                 <td>Email</td>
                 <td><%= @profile.email %></td>
@@ -54,15 +62,15 @@
                 <td>Graduation Year</td>
                 <td><%= @profile.gradyear %></td>
               </tr>
-              <tr>
-                <td>About Me</td>
-                <td><%= @profile.aboutme %></td>
-              </tr>
             </tbody>
           </table>
-        </div>
 
-        <div class = "span6">
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class = "row">
+        <div class = "span6 offset3">
           <h3><%= "Active Projects" %></h3>
             <table class="table table-striped">
               <thead>
@@ -88,6 +96,8 @@
 
       </div>
       <!-- FOOTER -->
+      <br>
+      <br>
       <footer>
         <p>&copy; 2012 Group 23 &middot; </p>
       </footer>

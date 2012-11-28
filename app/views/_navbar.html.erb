@@ -13,7 +13,7 @@
   <% end %>
   <div class="navbar navbar-inverse">
     <div class="navbar-inner">
-      <a class="brand pull-left" href = "<%= @user.school.uri %>">
+      <a class="brand pull-left" href = "<%= school_path(@user.school.uri) %>">
        <%=image_tag("logo.png", :size => "100x50", :border => 0) %>
 
      </a>
