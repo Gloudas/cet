@@ -31,7 +31,9 @@
       <% @events.each do |event| %>
       <h3><%= event.name %></h3>
       <p> About: <%= event.description %></p>
-      <p> <%= event.time.strftime("%B %d, %Y at %I:%M %p") %></p>
+      <p> <%= event.location %></p>
+      <p> Begins on <%= event.startTime.strftime("%B %d, %Y at %I:%M %p") %></p>
+      <p> And ends on <%= event.endTime.strftime("%B %d, %Y at %I:%M %p") %></p>
       <li><%= link_to "Edit", edit_event_path(event.id) %></li>
       <%= button_to "Delete", delete_event_path(event.id) %>
       <br>
@@ -58,8 +60,14 @@
   <%= f.label :description, "Enter a short description:" %>
   <%= f.text_area :description, :class => 'field span6', :id => 'description', :rows => 6 %>
 
-  <%= f.label :time, "Date and Time:" %>
-  <%= f.datetime_select :time, :prompt => {:hour => 'Choose Hour', :minute => 'Choose Minute'}, :ampm => true, :minute_step => 15 %>
+  <%= f.label :startTime, "Start Date and Time:" %>
+  <%= f.datetime_select :startTime, :prompt => {:hour => 'Choose Hour', :minute => 'Choose Minute'}, :ampm => true, :minute_step => 15 %>
+
+  <%= f.label :endTime, "End Date and Time:" %>
+  <%= f.datetime_select :endTime, :prompt => {:hour => 'Choose Hour', :minute => 'Choose Minute'}, :ampm => true, :minute_step => 15 %>
+
+  <%= f.label :location, "Location:" %>
+  <%= f.text_area :location, :class => 'field span6', :id => 'location', :rows => 1 %>
 
   <br>
   <%= f.submit "Create Event" %>

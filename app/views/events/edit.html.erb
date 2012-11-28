@@ -33,10 +33,15 @@
 
   <%= f.label :description, "Enter a short description:" %>
   <%= f.text_area :description, :class => 'field span6', :id => 'description', :rows => 6, :value => @event.description %>
-  
-  <br>
 
-  <%= f.datetime_select :time, :prompt => {:hour => @event.time.hour, :minute => @event.time.min}, :ampm => true, :minute_step => 15 %>
+  <%= f.label :location, "Location:" %>
+  <%= f.text_area :location, :class => 'field span6', :id => 'location', :rows => 1, :value => @event.location %>
+  
+  <br><br>
+  From: <%= f.datetime_select :startTime, :prompt => {:hour => @event.startTime.hour, :minute => @event.startTime.min}, :ampm => true, :minute_step => 15 %>
+
+  <br>
+  Until: <%= f.datetime_select :endTime, :prompt => {:hour => @event.endTime.hour, :minute => @event.endTime.min}, :ampm => true, :minute_step => 15 %>
 
   <br><br> 
   <%= f.submit "Update Event" %>
