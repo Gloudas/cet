@@ -5,7 +5,7 @@ class EventsController < ApplicationController
     event = params[:event]
     datetime = DateTime.new(event['time(1i)'].to_i, event['time(2i)'].to_i, event['time(3i)'].to_i, event['time(4i)'].to_i, event['time(5i)'].to_i)
 
-    Event.create(:name => event[:name], :description => event[:description], :time => datetime)
+    Event.create!(:name => event[:name], :description => event[:description], :time => datetime, :school_id => @user.school)
     redirect_to :action => 'index'
   end
 

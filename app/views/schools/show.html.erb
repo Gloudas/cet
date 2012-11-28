@@ -48,36 +48,14 @@
       </div>
       <br>
       <div class="row">
-        <div class="span4">
-          <p>
-            <strong>CSUA Hackathon, November 11th</strong>
-            <br>
-            <small>Click here for signups!</small>
-          </p>
-          <%= image_tag("csua.png", :size => "500x200") %>
-          <p class="text-info">
-            Signup deadline: 11/8/2012
-            <br>
-            Teams of up to 4 allowed. Prizes for winners. Event sponsored by Oracle
-          </p>
-        </div>
-        <div class="span4">
-          <p>
-            <strong>Google Tech Talk</strong>
-            <br>
-            <small>8pm Wozniak Lounge, 12/4/2012</small>
-          </p>
-          <%= image_tag("googleLogo.png", :size => "220x200") %>
-          <p class="text-info">Food provided by Bongo Burger. Prizes will be raffled off. Resumes accepted.</p>
-        </div>
-        <div class="span4">
-          <p>
-            <small>3rd Annual</small> <br>
-            <h2><strong>University Mobile Challenge</strong></h2>
-          </p>
-          <p class="text-info">Barcelona | 25-28 February 2013</p>
-        </div>
-      </div><!-- /.row -->
+	<div class="span4">
+	  <% @events.each do |event| %>
+	  <h3><%= event.name %></h3>
+	  <p> About: <%= event.description %></p>
+	  <p> <%= event.time.strftime("%B %d, %Y at %I:%M %p") %></p>
+	  <% end %>
+	</div>
+      </div>
 
     <hr class="featurette-divider">
       <!-- START THE FEATURETTES -->

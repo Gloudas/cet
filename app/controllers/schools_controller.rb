@@ -14,6 +14,7 @@ class SchoolsController < ApplicationController
 
   def show
     @projects = @school.projects
+    @events = @school.events
   end
 
   def new
