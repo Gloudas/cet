@@ -32,7 +32,7 @@ Scenario: Edit my profile information (happy path)
   Given I am on the profile page for "bruh@berkeley.edu"
   When I follow "Edit Profile"
   Then I should be on the edit profile page for "bruh@berkeley.edu"
-  When I fill in "About Me" with "I'm pretty chill"
+  When I fill in "aboutme" with "I'm pretty chill"
   And I press "Update Profile"
   Then I should be on the profile page for "bruh@berkeley.edu"
   And I should see "I'm pretty chill"
