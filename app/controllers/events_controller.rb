@@ -6,7 +6,7 @@ class EventsController < ApplicationController
     startTime = DateTime.new(event['startTime(1i)'].to_i, event['startTime(2i)'].to_i, event['startTime(3i)'].to_i, event['startTime(4i)'].to_i, event['startTime(5i)'].to_i)
     endTime = DateTime.new(event['endTime(1i)'].to_i, event['endTime(2i)'].to_i, event['endTime(3i)'].to_i, event['endTime(4i)'].to_i, event['endTime(5i)'].to_i)
     
-    Event.create!(:name => event[:name], :description => event[:description], :location => event[:location], :startTime => startTime, :endTime => endTime, :school_id => @user.school)
+    Event.create(:name => event[:name], :description => event[:description], :location => event[:location], :startTime => startTime, :endTime => endTime, :school_id => @user.school)
     redirect_to :action => 'index'
   end
 

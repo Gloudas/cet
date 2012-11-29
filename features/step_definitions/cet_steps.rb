@@ -42,6 +42,18 @@ Given /the following projects exist/ do |projects_table|
   end
 end
 
+Given /the following events exist/ do |events_table|
+  events_table.hashes.each do |event|
+    e = Event.new
+    e.name = event[:name]
+    e.description = event[:description]
+    e.startTime = DateTime.now
+    e.endTime = DateTime.now + 2.hours
+    e.school_id = 1
+    e.save!
+  end
+end
+
 When /^I press delete collaborator "(.*)"$/ do |email|
   step %Q{I press "delete_#{User.find_by_email(email).id}"}
 end

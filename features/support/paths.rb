@@ -22,6 +22,9 @@ module NavigationHelpers
     when /^the Berkeley page$/
       school_path('berkeley')
 
+    when /^the Events page$/
+      events_path('berkeley')
+
     when /^the new project page$/
       new_project_path
 
