@@ -66,6 +66,10 @@ Given /^I am logged in as "(.*)"$/ do |email|
   step %Q{I press "Sign In"}
 end
 
+Then /^I should see "(.*)" before "(.*)"$/ do |e1, e2|
+  page.body.should =~ /#{e1}.*#{e2}/m
+end
+
 #################
 ##################
 

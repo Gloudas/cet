@@ -21,19 +21,19 @@ Background: user is logged in
 	Given I am logged in as "bro@berkeley.edu"
 
 Scenario: add a comment
-  Given I am on the project page for "Project A"
+  Given I am on the project page for "Project 1"
   When I fill in "new_comment" with "This is a new comment."
   And I press "Comment"
-  Then I should be on the project page for "Project A"
+  Then I should be on the project page for "Project 1"
   And I should see "This is a new comment."
 
 Scenario: see comments in reverse chronological order
-  Given I am on the project page for "Project A"
+  Given I am on the project page for "Project 1"
   When I fill in "new_comment" with "Comment one"
   And I press "Comment"
-  Then I should be on the project page for "Project A"
+  Then I should be on the project page for "Project 1"
   When I fill in "new_comment" with "Comment two"
   And I press "Comment"
-  Then I should be on the project page for "Project A"
+  Then I should be on the project page for "Project 1"
   And I should see "Comment two" before "Comment one"
 
