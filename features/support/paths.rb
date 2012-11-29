@@ -35,9 +35,24 @@ module NavigationHelpers
       edit_project_path(1)
 
     when /^the edit collaborators page/
-      ans = /^the edit collaborators page for "(?<name>.*)"$/.match(page_name)
-      p = Project.find_by_title(ans[:name])
+      ans = /^the edit collaborators page for "(?<title>.*)"$/.match(page_name)
+      p = Project.find_by_title(ans[:title])
       edit_collaborators_path(p.id)
+    
+    when /^the profile page for/
+      ans = /^the profile page for "(?<email>.*)"$/.match(page_name)
+      u = User.find_by_email(ans[:email])
+      profile_path(u.id)
+
+    when /^the project page for/
+      ans = /^the project page for "(?<title>.*)"$/.match(page_name)
+      p = Project.find_by_title(ans[:title])
+      project_path(p.id)
+
+    when /^the messages page/
+      ans = /^the messages page for "(?<email>.*)"$/.match(page_name)
+      u = User.find_by_email(ans[:email])
+      messages_path(u.id)
 
     when /^"(.*)"$/
       page_name
