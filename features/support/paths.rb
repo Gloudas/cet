@@ -28,12 +28,6 @@ module NavigationHelpers
     when /^the new project page$/
       new_project_path
 
-    when /^my project's page$/
-      project_path(1)
-
-    when /^my project's edit page$/
-      edit_project_path(1)
-
     when /^the edit collaborators page/
       ans = /^the edit collaborators page for "(?<title>.*)"$/.match(page_name)
       p = Project.find_by_title(ans[:title])
@@ -48,6 +42,11 @@ module NavigationHelpers
       ans = /^the project page for "(?<title>.*)"$/.match(page_name)
       p = Project.find_by_title(ans[:title])
       project_path(p.id)
+
+    when /^the edit project page for/
+      ans = /^the edit project page for "(?<title>.*)"$/.match(page_name)
+      p = Project.find_by_title(ans[:title])
+      edit_project_path(p.id)
 
     when /^the messages page/
       ans = /^the messages page for "(?<email>.*)"$/.match(page_name)

@@ -23,15 +23,15 @@ Background: Student is logged into ai2
   When I fill in "title" with "new proj"
   And I fill in "description" with "its pretty chill"
   And I press "Create Project"
-	Given I am on my project's page
+  Given I am on the project page for "new proj"
   And I follow "Edit"
-  Then I should be on my project's edit page
+  Then I should be on the edit project page for "new proj"
 
 Scenario: Successfully edit my project
 	When I fill in "project_title" with "Changed Project Name"
 	And I fill in "project_description" with "My new description is chill."
   And I press "Update Project"
-  Then I should be on my project's page
+  Then I should be on the project page for "Changed Project Name"
   And I should see "Changed Project Name"
   And I should see "My new description is chill."
 
@@ -39,5 +39,5 @@ Scenario: Unsuccessfully edit my project
   When I fill in "project_title" with ""
 	And I fill in "project_description" with "Here is the description for my project"
   And I press "Update Project"
-  Then I should be on my project's edit page
+  Then I should be on the edit project page for "new proj"
   And I should see "Sorry, something went wrong with editing this project."
