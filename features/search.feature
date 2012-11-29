@@ -12,7 +12,7 @@ Background: student is logged into ai2
   And the following users exist:
   | name      | email             | school   | admin	|
   | Breh      | breh@berkeley.edu | berkeley | false	|
-  | name	  | bro@berkeley.edu  |	berkeley | true		|
+  | Bro 	    | bro@berkeley.edu  |	berkeley | false	|
 
   Given I am logged in as "bro@berkeley.edu"
   And I am on the new project page
@@ -29,6 +29,6 @@ Scenario: Search for a project
 
 Scenario: Search for a user
   Given I am on the Berkeley page
-  When I fill in "searchbar" with "Breg"
+  When I fill in "searchbar" with "Breh"
   And I press "Search"
   Then I should see "breh@berkeley.edu"
