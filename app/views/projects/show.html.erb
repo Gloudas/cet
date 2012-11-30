@@ -1,113 +1,127 @@
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
     <title>Applied Innovations Institute &middot; </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Le styles -->
-
     <%= stylesheet_link_tag "bootstrap" %>
     <%= stylesheet_link_tag "bootstrap-responsive" %>
-
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
   </head>
 
-<body>
-  
-  <%= render "/navbar"%>
+  <body>
+    <div id="wrapper">
 
-  <div class = "row">
-    <div align = "center">
-      <h2><%= @project.title %></h2>
-      <h5><%= link_to "Edit Project", edit_project_path(@project.id) if @can_edit %></h5>
-    </div>
-  </div>
-  
-  
-
-  <hr class="featurette-divider">
-  
-
-  <div class = "row">
-    <div align = "center">
-          <h4>Description</h4>
-    <p><%= @project.description %>
-    </div>
-  </div>
-
-  <div class = "row">
-    <div align = "center">
-      <h4>Last Updated</h4>
-      <p><%= time_ago_in_words(@project.updated_at) %> ago</p>
-    </div>
-  </div>
-
-  <div class = "row">
-    <div align = "center">
-      <h4>Created</h4>
-      <p><%= @project.created_at.to_formatted_s(:long) %></p>
-    </div>
-  </div>
-
-
-  <div class = "row">
-    <div align = "center">
-    <h4>Collaborators</h4>
-    <% @project.users.each do |user| %>
-      <% if user != @user %>
-        <p><%= link_to user.email, profile_path(user.id) %></p>
-      <% end %>
-    <% end %>
-    <h5> <%= link_to "Edit Collaborators", edit_collaborators_path(@project.id) %> </h5>
+      <div id="header"> 
+	<%= render "/navbar"%>
       </div>
-  </div>
-  
-  <div class = "row">
-  <div class = "span10">
-    <h3><%= "Project Documents" %></h3>
-    <%= link_to "Add a File", new_doc_path%>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>File</th>
-            <th>File Type</th>
-            <th>Description</th>
-            <th>Size</th>
-            <th>Last Updated By</th>
-            <th>Last Updated At</th>
-            <th><th>
-          </tr>
-        </thead>
-      <tbody>
-      <% @project.documents.each do |doc| %>
-        <tr>
-          <td><%= link_to doc.avatar_file_name, doc.avatar.url %></td>
-          <td><%= doc.avatar_content_type %></td>
-          <td><%= doc.description %></td>
-          <td><%= doc.avatar_file_size %></td>
-          <td><%= link_to doc.updater.name, profile_path(doc.updater.id) %></td>          
-          <td><%= doc.avatar_updated_at %></td>
-          <td><%= link_to "Update", edit_doc_path(@project.id, doc.id) %></td>
-        </tr>
-      <% end %>
-      </tbody>
-    </table>
-  </div>
-  </div>
 
-  <div class="row">
-  <div align="span4">
-  <%= form_tag create_comment_path do %>
-    <%= text_field :comment, :text, :id => 'new_comment' %>
-    <%= submit_tag "Comment" %>
-  <% end %>
-  </div>
-  </div>
+      <div id="content">
+	<div class = "row">
+	  <div align = "center">
+	    <h1><%= @project.title %></h1>
+	    <h5><%= link_to "Edit Project", edit_project_path(@project.id) if @can_edit %></h5>
+	  </div>
+	</div>
+	<hr class="featurette-divider">
+  
+	<div class = "row">
+	  <div align = "center">
+            <h4>Description</h4>
+	    <p><%= @project.description %>
+	  </div>
+	</div>
+
+	<div class = "row">
+	  <div align = "center">
+	    <h4>Last Updated</h4>
+	    <p><%= time_ago_in_words(@project.updated_at) %> ago</p>
+	  </div>
+	</div>
+	
+	<div class = "row">
+	  <div align = "center">
+	    <h4>Created</h4>
+	    <p><%= @project.created_at.to_formatted_s(:long) %></p>
+	  </div>
+	</div>
+	
+	<div class = "row">
+	  <div align = "center">
+	    <h4>Collaborators</h4>
+	    <% @project.users.each do |user| %>
+	    <% if user != @user %>
+            <p><%= link_to user.email, profile_path(user.id) %></p>
+	    <% end %>
+	    <% end %>
+	    <h5> <%= link_to "Edit Collaborators", edit_collaborators_path(@project.id) %> </h5>
+	  </div>
+	</div>
+  
+	<div class = "row">
+	  <div class = "span10">
+	    <h3><%= "Project Documents" %></h3>
+	    <%= link_to "Add a File", new_doc_path%>
+	    <table class="table table-striped">
+              <thead>
+		<tr>
+		  <th>File</th>
+		  <th>File Type</th>
+		  <th>Description</th>
+		  <th>Size</th>
+		  <th>Last Updated By</th>
+		  <th>Last Updated At</th>
+		  <th><th>
+		</tr>
+              </thead>
+	      <tbody>
+		<% @project.documents.each do |doc| %>
+		<tr>
+		  <td><%= link_to doc.avatar_file_name, doc.avatar.url %></td>
+		  <td><%= doc.avatar_content_type %></td>
+		  <td><%= doc.description %></td>
+		  <td><%= doc.avatar_file_size %></td>
+		  <td><%= link_to doc.updater.name, profile_path(doc.updater.id) %></td>          
+		  <td><%= doc.avatar_updated_at %></td>
+		  <td><%= link_to "Update", edit_doc_path(@project.id, doc.id) %></td>
+		</tr>
+		<% end %>
+	      </tbody>
+	    </table>
+	  </div>
+	</div>
+	
+	<div class="row">
+	  <div align="span4">
+	    <%= form_tag create_comment_path do %>
+	    <%= text_field :comment, :text, :id => 'new_comment' %>
+	    <%= submit_tag "Comment" %>
+	    <% end %>
+	  </div>
+	</div>
+	
+	<div class="row">
+	  <div class="span10">
+	    <table class="table table-striped">
+	      <tbody>
+		<% @comments.each do |comment| %>
+		<tr>
+		  <td><%= link_to comment.user.name, profile_path(comment.user.id) %></td>
+		  <td><%= comment.text %></td>
+		  <td><%= time_ago_in_words(comment.created_at) %> ago</td>
+		  <td><%= button_to "Delete", destroy_comment_path(@project.id, comment.id) %></td>
+		</tr>
+		<% end %>
+	      </tbody>
+	    </table>
+	  </div>
+	</div>
+      </div>
 
   <div class="row">
   <div class="span10">
@@ -129,5 +143,6 @@
   </div>
   <%= render "/footer"%>
 
-</body>
+    </div>
+  </body>
 </html>

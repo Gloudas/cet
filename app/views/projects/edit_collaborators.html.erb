@@ -4,28 +4,35 @@
 </head>
 
 <body>
+  <div id="wrapper">
 
-  <%= render "/navbar"%>
-  
-  <h1><%= link_to @project.title, project_path(@project.id) %></h1>
+    <div id="header"> 
+      <%= render "/navbar"%>
+    </div>
 
-  <h2>Collaborators</h2>
-  <br>
+    <div id="content">
+      <h1><%= link_to @project.title, project_path(@project.id) %></h1>
+      <h2>Collaborators</h2>
+      <br>
 
   <% @project.users.each do |user| %>
     <% # you have to make it so your own name and creator doesn't appear on this list %>
     <% if @user != user and user != @project.creator %>
       <p><%= user.email %></p>
       <%= button_to "Delete", destroy_collaborator_path(@project.id, user.id), :id => 'delete_' + user.id.to_s %>
-    <% end %>
-  <% end %>
+      <% end %>
+      <% end %>
+      
+      <%= form_tag add_collaborator_path do %>
+      <%= text_field_tag :collaborator %>
+      <%= submit_tag "Add Collaborator" %>
+      <% end %>
+    </div>
 
-  <%= form_tag add_collaborator_path do %>
-    <%= text_field_tag :collaborator %>
-    <%= submit_tag "Add Collaborator" %>
-  <% end %>
+    <div id="footer">
+      <%= render "/footer"%>
+    </div>
 
-    <%= render "/footer"%>
-
+  </div>
 </body>
 </html>

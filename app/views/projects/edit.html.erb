@@ -5,8 +5,13 @@
 
 <body>
 
-  <%= render "/navbar"%>
-  
+<div id="wrapper">
+  <div id="header">
+    <%= render "/navbar"%>
+  </div>
+
+  <div id="content">
+
   <h1><%= link_to @project.title, project_path(@project.id) %></h1>
 
   <%= button_to "Delete Project", destroy_project_path(@project.id) if @can_delete %>
@@ -24,8 +29,14 @@
   <br><br> <%= submit_tag "Update Project" %>
 
   <% end %>
-  
-  <%= render "/footer"%>
+</div>
+</div>
+
+    <div id="footer">
+      <%= render "/footer"%>
+    </div>
+
+  </div>
 
 </body>
 </html>

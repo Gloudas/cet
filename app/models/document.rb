@@ -12,6 +12,9 @@ class Document < ActiveRecord::Base
   #tbelongs_to :uploader, :class_name => "User", :foreign_key => "uploader_id"
 
   #paperclip
-  has_attached_file :avatar
+  has_attached_file :avatar,
+    :storage => :s3,
+    :s3_credentials => "#{Rails.root}/config/s3.yml",
+    :bucket => "cet-aii"
   
 end
