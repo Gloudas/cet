@@ -269,6 +269,9 @@ a:hover {
 
 .span5 {
   width: 380px;
+  font-size: 1000%;
+  position: relative;
+  top: 80px;
 }
 
 .span4 {
