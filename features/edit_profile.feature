@@ -1,4 +1,3 @@
-@wip
 Feature: Editing Profile Page on ai2
 
   As a Cal Student
@@ -21,20 +20,19 @@ Background: the student is logged into ai2
 Scenario: View my profile information
   Given I am on the Berkeley page
   When I follow "Profile"
-  Then I should be on the profile page
+  Then I should be on the profile page for "bruh@berkeley.edu"
   And I should see "Name"
-  And I should see "E-mail"
+  And I should see "Email"
   And I should see "School"
   And I should see "Major"
   And I should see "About Me"
   And I should see "Graduation Year"
-#And I should see "Active Projects"
 
 Scenario: Edit my profile information (happy path)
-  Given I am on my profile page
-  When I follow "Edit my profile"
-  Then I should be on the edit profile page
-  When I fill in "About Me" with "I'm pretty chill"
-  And I press "Change"
-  Then I should be on my profile page
+  Given I am on the profile page for "bruh@berkeley.edu"
+  When I follow "Edit Profile"
+  Then I should be on the edit profile page for "bruh@berkeley.edu"
+  When I fill in "aboutme" with "I'm pretty chill"
+  And I press "Update Profile"
+  Then I should be on the profile page for "bruh@berkeley.edu"
   And I should see "I'm pretty chill"

@@ -28,7 +28,7 @@ Scenario: log in as existing user
   And I fill in "email" with "test@berkeley.edu"
 	And I press "Sign In"
 	Then I should see "test"
-	And I should see "My Profile Information"
+	And I should see "test@berkeley.edu"
 
 Scenario: log in with an invalid email
 	When I fill in "name" with "Doug"
