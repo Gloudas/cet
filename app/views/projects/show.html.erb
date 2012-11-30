@@ -67,7 +67,7 @@
       </div>
   </div>
   
-  
+  <div class = "row">
   <div class = "span6">
     <h3><%= "Project Documents" %></h3>
     <%= link_to "Add a File", new_doc_path%>
@@ -90,13 +90,14 @@
           <td><%= doc.avatar_content_type %></td>
           <td><%= doc.description %></td>
           <td><%= doc.avatar_file_size %></td>
-          <td><!-- #link_to doc.updater.name, profile_path(doc.updater.creator.id) --></td>          
+          <td><%= link_to doc.updater.name, profile_path(doc.updater.id) %></td>          
           <td><%= doc.avatar_updated_at %></td>
-          <td><!-- #link_to "update", edit_doc_path(doc.id)--></td>
+          <td><%= link_to "Update", edit_doc_path(@project.id, doc.id) %></td>
         </tr>
       <% end %>
       </tbody>
     </table>
+  </div>
   </div>
   
     <%= render "/footer"%>

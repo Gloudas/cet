@@ -22,7 +22,7 @@
     <%= form.file_field :avatar %>
 
     <%= label :document, :description, "Short description:" %>
-    <textarea class="field span6" id="description" name="document[description]" rows="6"></textarea>
+    <textarea class="field span6" id="description" name="document[description]" rows="6"><%= @document.description %></textarea>
 
     <br>
     <%= submit_tag "Create Document" %>
