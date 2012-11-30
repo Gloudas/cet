@@ -41,6 +41,14 @@ class DocumentsController < ApplicationController
       
     end
   end
+  
+  def destroy
+    doc = Document.find_by_id(params[:did])
+    doc.avatar.destroy
+    doc.destroy
+    flash[:notice] = "Document deleted."
+    redirect_to project_path(@project.id)
+  end
 
 
 end
