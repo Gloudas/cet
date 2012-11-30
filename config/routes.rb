@@ -33,6 +33,8 @@ Cet::Application.routes.draw do
   match '/project/:pid/edit/collaborators' => 'projects#edit_collaborators', :via => :get, :as => 'edit_collaborators'
   match '/project/:pid/edit/collaborators' => 'projects#add_collaborator', :via => :post, :as => 'add_collaborator'
   match '/project/:pid/edit/collaborators/:cid' => 'projects#destroy_collaborator', :via => :post, :as => 'destroy_collaborator'
+  match '/project/:pid/comments' => 'comments#create', :via => :post, :as => 'create_comment'
+  match '/project/:pid/comments/:comid' => 'comments#destroy', :via => :post, :as => 'destroy_comment'
   # Events
   match '/events/new' => 'events#new', :as => 'new_event'
   match '/events/all' => 'events#index', :as => 'events' 

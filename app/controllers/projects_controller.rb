@@ -3,11 +3,6 @@ class ProjectsController < ApplicationController
   before_filter :set_current_user
   before_filter :set_can_edit, :except => :new
 
-  def set_can_edit
-    @project = Project.find_by_id(params[:pid])
-    @can_edit = @project.users.include? @user
-  end
-
   def new_or_edit
     # see if we are creating a new project or just editing an existing one
     if params[:pid]
@@ -63,6 +58,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find_by_id(params[:pid])
+    @comments = @project.comments.order("created_at DESC")
   end
 
   def destroy

@@ -10,7 +10,12 @@ class ApplicationController < ActionController::Base
       redirect_to home_path and return
     end
   end
-  
+
+  def set_can_edit
+    @project = Project.find_by_id(params[:pid])
+    @can_edit = @project.users.include? @user
+  end
+
   def time_ago(timestamp)
     return time_ago_in_words(timestamp) + " ago"
   end

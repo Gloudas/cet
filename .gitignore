@@ -19,3 +19,6 @@
 
 # Ignore all local files
 /public/system
+
+# Ignore all mac filesystem nonsense
+*.DS_Store
