@@ -10,7 +10,7 @@
 
       <a class="brand pull-left" href = "<%= school_path(@user.school.uri) %>">
        <%=image_tag("logo.png", :size => "100x50", :border => 0) %>
-     </a>
+      </a>
 
       <font size="4">
 	      <ul class="nav">
@@ -27,19 +27,18 @@
             <%= text_field_tag :search, params[:search], {:placeholder=>"Search"}  %>                
         <% end %>
 
-
       </form>
 
       <font size="4">
     	  <ul class="nav pull-right">
-        	<li><%= link_to "Logout", logout_path %></li>
+            <li><%= link_to "Logout", logout_path %></li>
       	  </ul>
-      </font> 
-      <!--<a class="pull-right" href= "/auth/developer" id = 'login'>Login</a>-->
-
+	</font> 
+	<!--<a class="pull-right" href= "/auth/developer" id = 'login'>Login</a>-->
+	
     </div>
   </div>
-
+  
   <% if flash[:error] %>
   <p class="flash_error"><%= flash[:error] %></p>
   <% end %>

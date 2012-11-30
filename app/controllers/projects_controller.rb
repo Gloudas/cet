@@ -3,11 +3,6 @@ class ProjectsController < ApplicationController
   before_filter :set_current_user
   before_filter :set_can_edit, :except => :new
 
-  def set_can_edit
-    @project = Project.find_by_id(params[:pid])
-    @can_edit = @project.users.include? @user
-  end
-
   def new_or_edit
     # see if we are creating a new project or just editing an existing one
     if params[:pid]
@@ -59,13 +54,29 @@ class ProjectsController < ApplicationController
       new_or_edit and return
     end
     @project = Project.find_by_id(params[:pid])
+    @can_delete = false
+    @can_delete = true if @project.creator == @user
   end
 
   def show
     @project = Project.find_by_id(params[:pid])
+    @comments = @project.comments.order("created_at DESC")
   end
 
   def destroy
+    @project = Project.find_by_id(params[:pid])
+    # can only destroy if you are creator
+    if @project.creator == @user
+      if @project.destroy
+        flash[:notice] = "Successfully deleted " + @project.title
+        redirect_to school_path(@user.school.uri) and return
+      else
+        flash[:error] = "Oops, something went wrong with deleting " + @project.title
+      end
+    else
+      flash[:error] = "You can't delete this project!"
+    end
+    redirect_to project_path(@project.id)
   end
 
   def edit_collaborators
@@ -84,8 +95,9 @@ class ProjectsController < ApplicationController
 
   def destroy_collaborator
     collaborator = User.find_by_id(params[:cid])
-    if collaborator == @user
-      # can't delete yourself
+    if collaborator == @user or collaborator == @project.creator
+      # can't delete yourself or creator
+      flash[:error] = "Oops, you can't do that!"
       redirect_to edit_collaborators_path(@project.id) and return
     end
     success = @project.users.delete(collaborator)

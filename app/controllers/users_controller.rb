@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @profile = User.find_by_id(params[:uid])
+    @projects = @user.projects.order("updated_at DESC")
   end
 
   def edit

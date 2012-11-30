@@ -6,6 +6,7 @@ class School < ActiveRecord::Base
   validates :location, :presence => true
   validates :uri, :presence => true, :uniqueness => true, :format => { :with => /^[a-z]+$/ }
 
+  # :dependent => :destroy on these? not sure
   has_many :users
   has_many :projects
   has_many :events
