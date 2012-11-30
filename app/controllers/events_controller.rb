@@ -2,6 +2,11 @@ class EventsController < ApplicationController
 
   def new
     @user = User.find(session[:user_id])
+    if not @user.admin
+      redirect_to school_path(@user.school.uri)
+      return
+    end
+
     event = params[:event]
     newEvent = Event.new
 
@@ -28,17 +33,33 @@ class EventsController < ApplicationController
 
   def index
     @user = User.find(session[:user_id])
+    if not @user.admin
+      redirect_to school_path(@user.school.uri)
+      return
+    end
+
     @events = Event.all
     @event = Event.new
   end
 
   def edit
     @user = User.find(session[:user_id])
+    if not @user.admin
+      redirect_to school_path(@user.school.uri)
+      return
+    end
+
     @event = Event.find(params[:event_id])
     @eid = params[:event_id]
   end
 
   def update
+    @user = User.find(session[:user_id])
+    if not @user.admin
+      redirect_to school_path(@user.school.uri)
+      return
+    end
+
     event_info = params[:event]
     event = Event.find(params[:event_id])
     event.name  = event_info[:name]
@@ -60,6 +81,12 @@ class EventsController < ApplicationController
   end
 
   def delete
+    @user = User.find(session[:user_id])
+    if not @user.admin
+      redirect_to school_path(@user.school.uri)
+      return
+    end
+
     event = Event.find(params[:event_id])
     event.destroy
     redirect_to :action => 'index'
