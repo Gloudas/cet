@@ -10,31 +10,31 @@
 
       <a class="brand pull-left" href = "<%= school_path(@user.school.uri) %>">
        <%=image_tag("logo.png", :size => "100x50", :border => 0) %>
-     </a>
+      </a>
 
       <font size="4">
-	      <ul class="nav">
-        	<li><%= link_to @user.school.name, school_path(@user.school.uri) %></li>
-        	<li><%= link_to "Profile", profile_path(@user.id) if @user %></li>
-        	<li><%= link_to "New Project", new_project_path if @user %></li>
-			<li><%= link_to "Manage Events", events_path if @user.admin %></li>
-      	  </ul>
+	<ul class="nav">
+          <li><%= link_to @user.school.name, school_path(@user.school.uri) %></li>
+          <li><%= link_to "Profile", profile_path(@user.id) if @user %></li>
+          <li><%= link_to "New Project", new_project_path if @user %></li>
+	  <li><%= link_to "Manage Events", events_path if @user.admin %></li>
+      	</ul>
       </font> 
       
 	<form class="navbar-search pull-right">
-        <span class="add-on"><i class="icon-search"></i></span>
-        <input type="text" class="search-query" placeholder="Search">
-      </form>
-      <font size="4">
+          <span class="add-on"><i class="icon-search"></i></span>
+          <input type="text" class="search-query" placeholder="Search">
+	</form>
+	<font size="4">
     	  <ul class="nav pull-right">
-        	<li><%= link_to "Logout", logout_path %></li>
+            <li><%= link_to "Logout", logout_path %></li>
       	  </ul>
-      </font> 
-      <!--<a class="pull-right" href= "/auth/developer" id = 'login'>Login</a>-->
-
+	</font> 
+	<!--<a class="pull-right" href= "/auth/developer" id = 'login'>Login</a>-->
+	
     </div>
   </div>
-
+  
   <% if flash[:error] %>
   <p class="flash_error"><%= flash[:error] %></p>
   <% end %>
