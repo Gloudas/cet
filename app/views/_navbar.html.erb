@@ -5,12 +5,6 @@
   <%= stylesheet_link_tag "bootstrap-responsive" %>
 </head>
 <body>
-  <% if flash[:error] %>
-    <p class="notice"><%= flash[:error] %></p>
-  <% end %>
-  <% if flash[:notice] %>
-    <p class="notice"><%= flash[:notice] %></p>
-  <% end %>
   <div class="navbar navbar-inverse">
     <div class="navbar-inner">
 
@@ -40,6 +34,13 @@
 
     </div>
   </div>
+
+  <% if flash[:error] %>
+  <p class="flash_error"><%= flash[:error] %></p>
+  <% end %>
+  <% if flash[:notice] %>
+  <p class="flash_notice"><%= flash[:notice] %></p>
+  <% end %>
 
 </body>
 </html>

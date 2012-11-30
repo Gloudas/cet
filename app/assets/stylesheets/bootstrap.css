@@ -8,6 +8,16 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+.flash_error {
+    color: red;
+    font-size: large;
+}
+
+.flash_notice {
+    color: green;
+    font-size: large;
+}
+
 article,
 aside,
 details,

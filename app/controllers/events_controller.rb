@@ -3,11 +3,26 @@ class EventsController < ApplicationController
   def new
     @user = User.find(session[:user_id])
     event = params[:event]
+    newEvent = Event.new
+
     startTime = DateTime.new(event['startTime(1i)'].to_i, event['startTime(2i)'].to_i, event['startTime(3i)'].to_i, event['startTime(4i)'].to_i, event['startTime(5i)'].to_i)
     endTime = DateTime.new(event['endTime(1i)'].to_i, event['endTime(2i)'].to_i, event['endTime(3i)'].to_i, event['endTime(4i)'].to_i, event['endTime(5i)'].to_i)
     
-    Event.create(:name => event[:name], :description => event[:description], :location => event[:location], :startTime => startTime, :endTime => endTime, :school_id => @user.school)
+    newEvent.name = event[:name]
+    newEvent.description = event[:description]
+    newEvent.location = event[:location]
+    newEvent.startTime = startTime
+    newEvent.endTime = endTime
+    
+    success = newEvent.save
+    
+    if success
+      flash[:notice] = "Event successfully created!"
+    else
+      flash[:error] = "One or more fields were left blank, please try again."
+    end
     redirect_to :action => 'index'
+      
   end
 
   def index
@@ -32,7 +47,14 @@ class EventsController < ApplicationController
     endTime = DateTime.new(event_info['endTime(1i)'].to_i, event_info['endTime(2i)'].to_i, event_info['endTime(3i)'].to_i, event_info['endTime(4i)'].to_i, event_info['endTime(5i)'].to_i)
     event.startTime = startTime
     event.endTime = endTime
-    event.save
+
+    success = event.save
+
+    if success
+      flash[:notice] = "Event successfully updated!"
+    else
+      flash[:error] = "One or more fields were left blank, please try again."
+    end
     redirect_to :action => 'index'
   end
 
