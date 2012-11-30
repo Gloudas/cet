@@ -48,7 +48,7 @@
       </div>
       <br>
       <div class="row">
-	<% @events.each do |event| %>
+	<% @events.take(3).each do |event| %>
 	<div class="span4">
 	  <h3><%= event.name %></h3>
 	  <p> <B>About:</B> <%= event.description %></p>

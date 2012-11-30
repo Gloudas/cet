@@ -14,7 +14,7 @@ class SchoolsController < ApplicationController
 
   def show
     @projects = @school.projects
-    @events = @school.events
+    @events = @school.events.sort_by &:startTime
   end
 
   def new
