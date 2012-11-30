@@ -36,7 +36,9 @@ class DocumentsController < ApplicationController
     if @document
       @document.updater = @user
     else
-      @document = Document.create
+      #THIS SHOULD NEVER HAPPEN, BUT I GUESS IT DOES
+      #@document = Document.create(params[:document])
+      new
     end
   end
 

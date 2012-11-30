@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     # find_by_id(nil) returns nil
     @user ||= User.find_by_id(session[:user_id])
     #redirect_to home_path and return unless @user
-    if not @user:
+    if not @user
       flash[:error] = "Permission Denied...."
       redirect_to home_path and return
     end
