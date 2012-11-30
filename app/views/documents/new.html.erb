@@ -16,7 +16,7 @@
   
   <div class = "row">
 
-  <%= form_for @document, :url => new_doc_path, :html => { :multipart => true } do |form| %>
+  <%= form_for @document, :url => create_doc_path, :html => { :multipart => true } do |form| %>
 
     <%= label :document, :file, "Add File:" %>
     <%= form.file_field :avatar %>
