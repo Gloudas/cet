@@ -7,12 +7,13 @@
   <%= render "/navbar"%>
 
   <div class = "row">
-    <div align = "left">
+    <div align = "center">
       <h2>New Document</h2>
     </div>
   </div>
 
   <hr class="featurette-divider">
+  
   <div class = "row">
 
   <%= form_for @document, :url => new_doc_path, :html => { :multipart => true } do |form| %>
@@ -21,13 +22,13 @@
     <%= form.file_field :avatar %>
 
     <%= label :document, :description, "Short description:" %>
-    <textarea class="field span6" id="description" name="project[description]" rows="6"></textarea>
+    <textarea class="field span6" id="description" name="document[description]" rows="6"></textarea>
 
     <br>
     <%= submit_tag "Create Document" %>
   <% end %>
-</div>
-
+  
+  </div>
 
 </body>
 </html>
