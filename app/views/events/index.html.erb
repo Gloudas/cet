@@ -36,6 +36,7 @@
       <p> And ends on <%= event.endTime.strftime("%B %d, %Y at %I:%M %p") %></p>
       <li><%= link_to "Edit", edit_event_path(event.id) %></li>
       <%= button_to "Delete", delete_event_path(event.id) %>
+      <hr>
       <br>
       <% end %>
     </div>

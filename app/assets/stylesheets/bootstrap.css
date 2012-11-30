@@ -824,6 +824,13 @@ hr {
   border-bottom: 1px solid #ffffff;
 }
 
+hr_event {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
