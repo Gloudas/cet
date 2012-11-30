@@ -24,7 +24,7 @@ Background: Student is logged into ai2
   And I fill in "description" with "its pretty chill"
   And I press "Create Project"
   Given I am on the project page for "new proj"
-  And I follow "Edit"
+  And I follow "Edit Project"
   Then I should be on the edit project page for "new proj"
 
 Scenario: Successfully edit my project
