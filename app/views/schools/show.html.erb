@@ -22,11 +22,11 @@
 
     <%= render "/navbar"%>
 
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
     <div class="container marketing">
+
+              <%= form_tag '/search/new', :method => 'get' do %>
+            <%= text_field_tag :search, params[:search], {:placeholder=>"Search"}  %>                
+        <% end %>
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
@@ -48,6 +48,7 @@
       </div>
       <br>
       <div class="row">
+
 	<% @events.take(3).each do |event| %>
 	<div class="span4">
 	  <h3><%= event.name %></h3>
