@@ -12,6 +12,12 @@ class EventsController < ApplicationController
 
     startTime = DateTime.new(event['startTime(1i)'].to_i, event['startTime(2i)'].to_i, event['startTime(3i)'].to_i, event['startTime(4i)'].to_i, event['startTime(5i)'].to_i)
     endTime = DateTime.new(event['endTime(1i)'].to_i, event['endTime(2i)'].to_i, event['endTime(3i)'].to_i, event['endTime(4i)'].to_i, event['endTime(5i)'].to_i)
+
+    if startTime > endTime
+      flash[:error] = "The start date and time must come before the end date and time."
+      redirect_to :action => 'index'
+      return
+    end
     
     newEvent.name = event[:name]
     newEvent.description = event[:description]
@@ -67,6 +73,13 @@ class EventsController < ApplicationController
     event.location = event_info[:location]
     startTime = DateTime.new(event_info['startTime(1i)'].to_i, event_info['startTime(2i)'].to_i, event_info['startTime(3i)'].to_i, event_info['startTime(4i)'].to_i, event_info['startTime(5i)'].to_i)
     endTime = DateTime.new(event_info['endTime(1i)'].to_i, event_info['endTime(2i)'].to_i, event_info['endTime(3i)'].to_i, event_info['endTime(4i)'].to_i, event_info['endTime(5i)'].to_i)
+    
+    if startTime > endTime
+      flash[:error] = "The start date and time must come before the end date and time."
+      redirect_to edit_event_path(params[:event_id])
+      return
+    end
+
     event.startTime = startTime
     event.endTime = endTime
 
