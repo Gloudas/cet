@@ -54,6 +54,8 @@ class ProjectsController < ApplicationController
       new_or_edit and return
     end
     @project = Project.find_by_id(params[:pid])
+    @can_delete = false
+    @can_delete = true if @project.creator == @user
   end
 
   def show
@@ -62,6 +64,19 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
+    @project = Project.find_by_id(params[:pid])
+    # can only destroy if you are creator
+    if @project.creator == @user
+      if @project.destroy
+        flash[:notice] = "Successfully deleted " + @project.title
+        redirect_to school_path(@user.school.uri) and return
+      else
+        flash[:error] = "Oops, something went wrong with deleting " + @project.title
+      end
+    else
+      flash[:error] = "You can't delete this project!"
+    end
+    redirect_to project_path(@project.id)
   end
 
   def edit_collaborators

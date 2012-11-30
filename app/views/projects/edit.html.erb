@@ -9,6 +9,8 @@
   
   <h1><%= link_to @project.title, project_path(@project.id) %></h1>
 
+  <%= button_to "Delete Project", destroy_project_path(@project.id) if @can_delete %>
+
   <%= link_to "Edit Collaborators", edit_collaborators_path(@project.id) %>
 
   <%= form_tag edit_project_path do %>

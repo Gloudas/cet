@@ -12,20 +12,15 @@ Background: Student is logged into ai2
 
   And the following users exist:
   | name       | email             		| school    | admin		|
-  | name       | bruh@berkeley.edu 		| berkeley  |	false 	|
-  | admin      | admin@berkeley.edu   | berkeley  |	true 		|
+  | Bruh       | bruh@berkeley.edu 		| berkeley  |	false 	|
+  | Bro        | bro@berkeley.edu     | berkeley  |	false		|
+
+  And the following projects exist:
+  | title     | description | creator           | collaborators |
+  | Project 1 | p1          | bruh@berkeley.edu |               |
   
 	Given I am logged in as "bruh@berkeley.edu"
-
-#Given I created a project--doesn't work when put in step definitions with the steps below
-#it says it can't find the path... not sure why, so I put the steps here for now
-  Given I am on the new project page
-  When I fill in "title" with "new proj"
-  And I fill in "description" with "its pretty chill"
-  And I press "Create Project"
-  Given I am on the project page for "new proj"
-  And I follow "Edit Project"
-  Then I should be on the edit project page for "new proj"
+  And I am on the edit project page for "Project 1"
 
 Scenario: Successfully edit my project
 	When I fill in "project_title" with "Changed Project Name"
@@ -41,3 +36,10 @@ Scenario: Unsuccessfully edit my project
   And I press "Update Project"
   Then I should be on the edit project page for "new proj"
   And I should see "Sorry, something went wrong with editing this project."
+
+Scenario: Delete a project
+  When I press "Delete Project"
+  Then I should be on the Berkeley page
+  And I should see "Successfully deleted Project 1"
+  Given I am on the profile page for "bruh@berkeley.edu"
+  Then I should not see "Project 1"
