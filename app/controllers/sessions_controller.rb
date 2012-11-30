@@ -8,12 +8,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    print "\n\n\n\n\n\n\n\n\n\n"
-    params[:login_hash].each do |key, value|
-      print "here is the key: #{key} \n"
-    		print "here is the value: #{value} \n"
-    end
-    print "\n\n\n\n\n\n\n\n\n\n"
+    #print "\n\n\n\n\n\n\n\n\n\n"
+    #params[:login_hash].each do |key, value|
+    #  print "here is the key: #{key} \n"
+   # 		print "here is the value: #{value} \n"
+   # end
+   # print "\n\n\n\n\n\n\n\n\n\n"
     
     # mimic the behavior of omniauth by converting login-info into an auth_hash
     unless (params[:login_hash]).nil?
