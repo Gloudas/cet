@@ -26,4 +26,10 @@ class Project < ActiveRecord::Base
     end if user
     return success
   end
+
+  def self.search(search)
+    if search != nil
+      find(:all, :conditions => ['title LIKE ?', "%#{search}%"])
+    end
+  end
 end

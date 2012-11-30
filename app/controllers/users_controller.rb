@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_filter :set_current_user, :set_is_mine
+  before_filter :set_current_user, :set_is_mine, :except => :index
 
   def set_is_mine
     @is_mine = @user.id.to_s == params[:uid]

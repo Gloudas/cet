@@ -25,7 +25,10 @@
 	<%= render "/navbar"%>
       </div>
 
-      <div id="content">
+
+              <%= form_tag '/search/new', :method => 'get' do %>
+            <%= text_field_tag :search, params[:search], {:placeholder=>"Search"}  %>                
+        <% end %>
 
 	<div class="container marketing">
 	  <div class="row">

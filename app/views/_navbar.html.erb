@@ -13,19 +13,23 @@
       </a>
 
       <font size="4">
-	<ul class="nav">
-          <li><%= link_to @user.school.name, school_path(@user.school.uri) %></li>
-          <li><%= link_to "Profile", profile_path(@user.id) if @user %></li>
-          <li><%= link_to "New Project", new_project_path if @user %></li>
-	  <li><%= link_to "Manage Events", events_path if @user.admin %></li>
-      	</ul>
+	      <ul class="nav">
+        	<li><%= link_to @user.school.name, school_path(@user.school.uri) %></li>
+        	<li><%= link_to "Profile", profile_path(@user.id) if @user %></li>
+        	<li><%= link_to "New Project", new_project_path if @user %></li>
+          <li><%= link_to "Search", search_path if @user %></li>
+			    <li><%= link_to "Manage Events", events_path if @user.admin %></li>
+      	  </ul>
       </font> 
       
-	<form class="navbar-search pull-right">
-          <span class="add-on"><i class="icon-search"></i></span>
-          <input type="text" class="search-query" placeholder="Search">
-	</form>
-	<font size="4">
+      <form class="navbar-search pull-right">
+        <%= form_tag '/search/new', :method => 'get', :remote => true do %>
+            <%= text_field_tag :search, params[:search], {:placeholder=>"Search"}  %>                
+        <% end %>
+
+      </form>
+
+      <font size="4">
     	  <ul class="nav pull-right">
             <li><%= link_to "Logout", logout_path %></li>
       	  </ul>
