@@ -43,7 +43,7 @@
   <div class = "row">
     <div align = "center">
       <h4>Last Updated</h4>
-      <p><%= time_ago_in_words(@project.updated_at) %></p>
+      <p><%= time_ago_in_words(@project.updated_at) %> ago</p>
     </div>
   </div>
 
@@ -68,7 +68,7 @@
   </div>
   
   <div class = "row">
-  <div class = "span6">
+  <div class = "span10">
     <h3><%= "Project Documents" %></h3>
     <%= link_to "Add a File", new_doc_path%>
       <table class="table table-striped">
@@ -99,8 +99,33 @@
     </table>
   </div>
   </div>
-  
-    <%= render "/footer"%>
+
+  <div class="row">
+  <div align="span4">
+  <%= form_tag create_comment_path do %>
+    <%= text_field :comment, :text, :id => 'new_comment' %>
+    <%= submit_tag "Comment" %>
+  <% end %>
+  </div>
+  </div>
+
+  <div class="row">
+  <div class="span10">
+    <table class="table table-striped">
+      <tbody>
+        <% @comments.each do |comment| %>
+        <tr>
+          <td><%= link_to comment.user.name, profile_path(comment.user.id) %></td>
+          <td><%= comment.text %></td>
+          <td><%= time_ago_in_words(comment.created_at) %> ago</td>
+          <td><%= button_to "Delete", destroy_comment_path(@project.id, comment.id) %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <%= render "/footer"%>
 
 </body>
 </html>
