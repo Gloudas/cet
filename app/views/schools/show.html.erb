@@ -48,15 +48,15 @@
       </div>
       <br>
       <div class="row">
+	<% @events.each do |event| %>
 	<div class="span4">
-	  <% @events.each do |event| %>
 	  <h3><%= event.name %></h3>
 	  <p> <B>About:</B> <%= event.description %></p>
 	  <p> <%= event.location %></p>
 	  <p> Begins on <%= event.startTime.strftime("%B %d, %Y at %I:%M %p") %></p>
 	  <p> And ends on <%= event.endTime.strftime("%B %d, %Y at %I:%M %p") %></p>
-	  <% end %>
 	</div>
+	<% end %>
       </div>
 
     <hr class="featurette-divider">

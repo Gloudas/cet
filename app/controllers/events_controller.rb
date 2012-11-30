@@ -11,6 +11,7 @@ class EventsController < ApplicationController
     newEvent.name = event[:name]
     newEvent.description = event[:description]
     newEvent.location = event[:location]
+    newEvent.school_id = @user.school
     newEvent.startTime = startTime
     newEvent.endTime = endTime
     
