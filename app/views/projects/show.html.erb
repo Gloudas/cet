@@ -110,24 +110,6 @@
 	</div>
   <% end %>
 	
-	<div class="row">
-	  <div class="span10">
-	    <table class="table table-striped">
-	      <tbody>
-		<% @comments.each do |comment| %>
-		<tr>
-		  <td><%= link_to comment.user.name, profile_path(comment.user.id) %></td>
-		  <td><%= comment.text %></td>
-		  <td><%= time_ago_in_words(comment.created_at) %> ago</td>
-		  <td><%= button_to "Delete", destroy_comment_path(@project.id, comment.id) %></td>
-		</tr>
-		<% end %>
-	      </tbody>
-	    </table>
-	  </div>
-	</div>
-      </div>
-
   <div class="row">
   <div class="span10">
     <table class="table table-striped">

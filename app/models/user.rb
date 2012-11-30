@@ -7,8 +7,9 @@ class User < ActiveRecord::Base
 
   belongs_to :school
   has_and_belongs_to_many :projects, :uniq => true
-  has_many :created_projects, :class_name => 'Project', :foreign_key => "creator_id"
-  has_many :comments
+  # should user deletion caused all created projects to be destroyed? hmm... right now yes
+  has_many :created_projects, :class_name => 'Project', :foreign_key => "creator_id", :dependent => :destroy
+  has_many :comments, :dependent => :destroy
 
   def self.find_or_create_from_auth_hash(auth_hash)
     # create a new user or retreive the user if he already exists

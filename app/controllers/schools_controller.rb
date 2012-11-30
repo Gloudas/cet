@@ -13,7 +13,7 @@ class SchoolsController < ApplicationController
   end
 
   def show
-    @projects = @school.projects
+    @projects = @school.projects.order("created_at DESC")
     @events = @school.events.sort_by &:startTime
   end
 
