@@ -95,8 +95,9 @@ class ProjectsController < ApplicationController
 
   def destroy_collaborator
     collaborator = User.find_by_id(params[:cid])
-    if collaborator == @user
-      # can't delete yourself
+    if collaborator == @user or collaborator == @project.creator
+      # can't delete yourself or creator
+      flash[:error] = "Oops, you can't do that!"
       redirect_to edit_collaborators_path(@project.id) and return
     end
     success = @project.users.delete(collaborator)

@@ -13,8 +13,8 @@
   <br>
 
   <% @project.users.each do |user| %>
-    <% # you have to make it so your own name doesn't appear on this list %>
-    <% if user != @user %>
+    <% # you have to make it so your own name and creator doesn't appear on this list %>
+    <% if @user != user and user != @project.creator %>
       <p><%= user.email %></p>
       <%= button_to "Delete", destroy_collaborator_path(@project.id, user.id), :id => 'delete_' + user.id.to_s %>
     <% end %>
