@@ -26,9 +26,9 @@
       </div>
 
 
-              <%= form_tag '/search/new', :method => 'get' do %>
-            <%= text_field_tag :search, params[:search], {:placeholder=>"Search"}  %>                
-        <% end %>
+      <%= form_tag search_path, :method => 'get' do %>
+        <%= text_field_tag :search, params[:search], {:placeholder=>"Search"}  %>                
+      <% end %>
 
 	<div class="container marketing">
 	  <div class="row">
@@ -68,12 +68,12 @@
 	<hr class="featurette-divider">
 
 	<div class="row">
-	  <div class="span6 offset6">
-	    <h3><%= "Newest Projects by #{@name} students" %></h3>
+	  <div class="span6 offset4">
+	    <h3><%= "Newest Projects by #{@name} Students" %></h3>
 	  </div>
 	</div>
 	<div class="row">
-	  <div class="span6 offset6">
+	  <div class="span6 offset4">
 	    <table class="table table-striped">
 	      <thead>
 		<tr>
