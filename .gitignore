@@ -16,3 +16,6 @@
 
 # Ignore all coverage files
 /coverage
+
+# Ignore all local files
+/public/system
