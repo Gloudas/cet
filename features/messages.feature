@@ -24,7 +24,7 @@ Scenario: Send a message to another user
   Given I am on the profile page for "bruh@berkeley.edu"
   When I follow "Send message"
   Then I should be on the messages page for "bruh@berkeley.edu"
-  When I fill in "message" with "I really like you."
+  When I fill in "new_message" with "I really like you."
   And I press "Send"
   Then I should be on the messages page for "bruh@berkeley.edu"
   And I should see "Message sent!"

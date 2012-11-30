@@ -269,6 +269,9 @@ a:hover {
 
 .span5 {
   width: 380px;
+  font-size: 1000%;
+  position: relative;
+  top: 80px;
 }
 
 .span4 {
@@ -819,6 +822,13 @@ hr {
   border: 0;
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #ffffff;
+}
+
+hr_event {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
 }
 
 abbr[title],

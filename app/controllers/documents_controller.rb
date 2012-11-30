@@ -11,24 +11,23 @@ class DocumentsController < ApplicationController
     end
   end
   
-  def new
-    logger.info("hello")
-    @document = Document.create(params[:document])
-    logger.info("nice to see you")
-    #@document.project = @project
-    @project.documents << @document
+  def create
+    @document = Document.new(params[:document])
     @document.project = @project
-    #document.description = params[:document][:descriptrion]
-    #document.uploader = @user
     @document.updater = @user
-    logger.info("hope shit is well")
-    
-    flash[:notice] = "Document Created Successfully"    
-    redirect_to project_path(@project.id)
-    
-    logger.info("goodbye")
-    
-    #THIS REDIRECT IS NOT WORKING!!!
+    @project.documents << @document
+
+    if @document.save
+      flash[:notice] = "Document created successfully"
+      redirect_to project_path(@project.id)        
+    else
+      flash[:error] = "There was a problem creating your document"
+      redirect_to new_doc_path(@project.id)
+    end
+  end
+  
+  def new
+    @document = Document.new
   end
   
   def edit
@@ -38,7 +37,8 @@ class DocumentsController < ApplicationController
     else
       #THIS SHOULD NEVER HAPPEN, BUT I GUESS IT DOES
       #@document = Document.create(params[:document])
-      new
+      #new
+      
     end
   end
 
