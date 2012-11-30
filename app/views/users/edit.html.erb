@@ -7,46 +7,50 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Le styles -->
-
     <%= stylesheet_link_tag "bootstrap" %>
     <%= stylesheet_link_tag "bootstrap-responsive" %>
   </head>
 
   <body>
-
-    <%= render "/navbar"%>
-
-    <br><br>
-    <div class="row">
-      <div class="span3 offset5" style = "text-align:left">
-        <p class="text-info" style="font-size: 40pt; color: 0x000000">Edit Profile</p>
-      </div>
-    </div>
-    <hr class="featurette-divider">
-      <div class="row">
-	
-        <%= form_tag edit_profile_path(@user.id) do %>
+    <div id="wrapper">
       
+      <div id="header">
+	<%= render "/navbar"%>
+      </div>
+
+      <div id="content">
+	<br>
+	<div class="row">
+            <p class="text-info" style="font-size: 40pt; color: 0x000000">Edit Profile</p>
+	</div>
+	<hr class="featurette-divider">
+	<div class="row">
+	  
+          <%= form_tag edit_profile_path(@user.id) do %>
+	  
           <%= label :profile, :name, "Name:" %>
           <%= text_field :profile, 'name', :value => @user.name, :id => 'name' %>
-
+	  
           <%= label :profile, :major, "Major:" %>
           <%= text_field :profile, 'major', :value => @user.major, :id => 'major' %>
-
+	  
           <%= label :profile, :gradyear, "Graduation Year:" %>
           <%= text_field :profile, 'gradyear', :value => @user.gradyear, :id => 'gradyear' %>
-
+	  
           <%= label :profile, :aboutme, "About Me:" %>
           <%= text_field :profile, 'aboutme', :value => @user.aboutme, :id => 'aboutme' %>
-
+	  
 	  <br>
           <%= submit_tag "Update Profile" %>
-
-        <% end %>
+	  
+          <% end %>
+	</div>
       </div>
-    </hr>
 
-    <%= render "/footer"%>
+      <div id="footer">
+	<%= render "/footer"%>
+      </div>
 
+    </div>
   </body>
 </html>

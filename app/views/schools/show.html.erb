@@ -19,75 +19,85 @@
   </head>
 
   <body>
+    <div id="wrapper">
 
-    <%= render "/navbar"%>
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="span2 offset2">
-          <%= image_tag("berkeleySeal.png", :size => "150x150") %>
-        </div>
-        <div class="span5">
-          <%= @school.name %>
-          <!-- <h4 style="font-size: 72pt; color: 0xfefefe"><em>UC Berkeley</em> </h4> -->
-        </div>
-      </div><!-- /.row -->
-    
-    <br>
-    <hr class="featurette-divider">
-      <div class="row">
-        <div class="span6 offset3">
-          <p style="font-size: 30pt; color: 0xf4f4f4"><B>Upcoming Events</B></p>
-        </div>
+      <div id="header">
+	<%= render "/navbar"%>
       </div>
-      <br>
-      <div class="row">
-	<% @events.take(3).each do |event| %>
-	<div class="span4">
-	  <h3><%= event.name %></h3>
-	  <p> <B>About:</B> <%= event.description %></p>
-	  <p> <%= event.location %></p>
-	  <p> Begins on <%= event.startTime.strftime("%B %d, %Y at %I:%M %p") %></p>
-	  <p> And ends on <%= event.endTime.strftime("%B %d, %Y at %I:%M %p") %></p>
+
+      <div id="content">
+
+	<div class="container marketing">
+	  <div class="row">
+	    <div class="span2 offset2">
+	      <%= image_tag("berkeleySeal.png", :size => "150x150") %>
+	    </div>
+	    <div class="span5">
+	      <%= @school.name %>
+	      <!-- <h4 style="font-size: 72pt; color: 0xfefefe"><em>UC Berkeley</em> </h4> -->
+	    </div>
+	  </div>
 	</div>
-	<% end %>
+	
+	<br>
+	<!-- <hr class="featurette-divider" border-top="1px solid #0e0e0e" border-bottom="1pm solid #0e0e0e"> -->
+	<!-- <hr style="color: 0x0e0e0e; border-top: 1px solid #0e0e0e; border-bottom: 1px solid #0e0e0e"> -->
+	<hr>
+	
+	<div class="row">
+	  <div class="span6 offset6">
+            <p style="font-size: 30pt; color: 0xf4f4f4"><B>Upcoming Events</B></p>
+	  </div>
+	</div>
+	<br>
+	<div class="row">
+	  <% @events.take(3).each do |event| %>
+	  <div class="span4">
+	    <h3><%= event.name %></h3>
+	    <p> <B>About:</B> <%= event.description %></p>
+	    <p> <%= event.location %></p>
+	    <p> Begins on <%= event.startTime.strftime("%B %d, %Y at %I:%M %p") %></p>
+	    <p> And ends on <%= event.endTime.strftime("%B %d, %Y at %I:%M %p") %></p>
+	  </div>
+	  <% end %>
+	</div>
+	
+	<hr class="featurette-divider">
+
+	<div class="row">
+	  <div class="span6 offset6">
+	    <h3><%= "Newest Projects by #{@name} students" %></h3>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="span6 offset6">
+	    <table class="table table-striped">
+	      <thead>
+		<tr>
+		  <th>Project Name</th>
+		  <th>Project Owner</th>
+		  <th>Date Created</th>
+		</tr>
+	      </thead>
+	      <tbody>
+		<% @school.projects.each do |project| %>
+		<tr>
+		  <td><%= link_to project.title, project_path(project.id) %></td>
+		  <td><%= link_to project.creator.name, profile_path(project.creator.id) %></td>
+		  <td><%= time_ago_in_words(project.created_at) %></td>
+		</tr>
+		<% end %>
+	      </tbody>
+	    </table>
+	  </div>
+	</div>
+
       </div>
 
-    <hr class="featurette-divider">
-      <!-- START THE FEATURETTES -->
-      <div class="row">
-        <div class = "span6 offset3">
-          <h3><%= "Newest Projects by #{@name} students" %></h3>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Project Name</th>
-                  <th>Project Owner</th>
-                  <th>Date Created</th>
-                </tr>
-              </thead>
-            <tbody>
-              <% @school.projects.each do |project| %>
-              <tr>
-                <td><%= link_to project.title, project_path(project.id) %></td>
-                <td><%= link_to project.creator.name, profile_path(project.creator.id) %></td>
-                <td><%= time_ago_in_words(project.created_at) %></td>
-              </tr>
-            <% end %>
-            </tbody>
-          </table>
-        </div>
+      <div id="footer">
+	<%= render "/footer"%>
       </div>
-		</hr>
-</div>
-    <%= render "/footer"%>
 
-<!-- /.container -->
+    </div>
   </body>
 </html>
