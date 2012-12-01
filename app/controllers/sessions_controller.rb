@@ -8,6 +8,16 @@ class SessionsController < ApplicationController
   end
 
   def create
+    
+    # CAS TEST CODE - DELETE LATER
+    @output = "Here is the CAS info:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+    auth_hash.each do |key, value|
+      @output << "here is key: #{key}  ____"
+      @output << "here is value: #{value}  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+    end
+    render :text => @output
+    return
+    
     #print "\n\n\n\n\n\n\n\n\n\n"
     #params[:login_hash].each do |key, value|
     #  print "here is the key: #{key} \n"
@@ -17,15 +27,6 @@ class SessionsController < ApplicationController
       auth_hash[:info][:email] = params[:login_hash]['email']
       auth_hash[:info][:name] = params[:login_hash]['name']
     end
-
-    # CAS TEST CODE - DELETE LATER
-    @output = "Here is the CAS info:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-    auth_hash.each do |key, value|
-      @output << "here is key: #{key}  ____"
-      @output << "here is value: #{value}  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-    end
-    render :text => @output
-    return
     
     if User.find_by_uid(auth_hash[:uid]).nil?
       
