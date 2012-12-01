@@ -9,6 +9,9 @@ class SessionsController < ApplicationController
 
   def create
     
+    render :text => auth_hash
+    return
+
     # CAS TEST CODE - DELETE LATER
     @output = "Here is the CAS info:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     auth_hash.each do |key, value|
