@@ -25,7 +25,8 @@ class SessionsController < ApplicationController
         @output << "here is key: #{key}  ____"
         @output << "here is value: #{value}  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       end
-      render @output and return
+      render :text => @output
+      return
       
       # validate email format
       results = ValidatesEmailFormatOf::validate_email_format(auth_hash[:uid], :message => "is not of a valid format!")
