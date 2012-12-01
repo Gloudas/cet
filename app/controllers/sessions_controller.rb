@@ -17,16 +17,18 @@ class SessionsController < ApplicationController
       auth_hash[:info][:email] = params[:login_hash]['email']
       auth_hash[:info][:name] = params[:login_hash]['name']
     end
+
+    # CAS TEST CODE - DELETE LATER
+    @output = "Here is the CAS info:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+    auth_hash.each do |key, value|
+      @output << "here is key: #{key}  ____"
+      @output << "here is value: #{value}  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+    end
+    render :text => @output
+    return
+    
     if User.find_by_uid(auth_hash[:uid]).nil?
       
-      # CAS TEST CODE - DELETE LATER
-      @output = "Here is the CAS info:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-      auth_hash.each do |key, value|
-        @output << "here is key: #{key}  ____"
-        @output << "here is value: #{value}  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-      end
-      render :text => @output
-      return
       
       # validate email format
       results = ValidatesEmailFormatOf::validate_email_format(auth_hash[:uid], :message => "is not of a valid format!")
