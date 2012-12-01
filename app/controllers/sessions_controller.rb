@@ -20,10 +20,10 @@ class SessionsController < ApplicationController
     if User.find_by_uid(auth_hash[:uid]).nil?
       
       # CAS TEST CODE - DELETE LATER
-      @output = "Here is the CAS info:  \n"
+      @output = "Here is the CAS info:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       auth_hash.each do |key, value|
-        @output << "here is key: #{key}  \n"
-        @output << "here is value: #{value}  \n"
+        @output << "here is key: #{key}  ____"
+        @output << "here is value: #{value}  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       end
       render @output and return
       
