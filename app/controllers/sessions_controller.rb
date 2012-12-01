@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
   def create
     
-    render :text => auth_hash
+    render :text => params[:ticket]
     return
 
     # CAS TEST CODE - DELETE LATER
