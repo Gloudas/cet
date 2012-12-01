@@ -34,4 +34,7 @@ Cet::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # heroku app stuff
+  config.assets.precompile += %w( bootstrap.css )
 end
