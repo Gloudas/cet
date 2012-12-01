@@ -67,4 +67,5 @@ Cet::Application.configure do
   #
   # heroku app stuff
   config.assets.precompile += %w( bootstrap.css )
+  config.assets.precompile += %w( bootstrap-responsive.css )
 end
