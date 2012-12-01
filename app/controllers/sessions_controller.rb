@@ -8,7 +8,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    
+    redirect_to login_path() and return
+
     render :text => params[:ticket]
     return
 
