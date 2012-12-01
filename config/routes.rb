@@ -20,6 +20,7 @@ Cet::Application.routes.draw do
   match '/auth/failure', :to => 'sessions#failure'
   match '/login' => 'sessions#login', :as => 'login'
   match '/logout' => 'sessions#destroy', :as => 'logout'
+  match '/login/cas/validate' => 'sessions#validate', :as => 'service_validate'
   # Schools
   match '/:school' => 'schools#show', :as => 'school'
   match '/:school/projects' => 'schools#projects', :as => 'school_projects'

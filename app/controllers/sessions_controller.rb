@@ -10,9 +10,6 @@ class SessionsController < ApplicationController
   def create
     redirect_to login_path() and return
 
-    render :text => params[:ticket]
-    return
-
     # CAS TEST CODE - DELETE LATER
     @output = "Here is the CAS info:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     auth_hash.each do |key, value|
@@ -63,6 +60,10 @@ class SessionsController < ApplicationController
   def destroy
     @@current_user = nil
     session[:user_id] = nil
+  end
+
+  def validate
+    render :text => "HIT THE VALIDATE PAGE"
   end
 
   def auth_hash
