@@ -13,11 +13,16 @@ class SessionsController < ApplicationController
     #params[:login_hash].each do |key, value|
     #  print "here is the key: #{key} \n"
     # mimic the behavior of omniauth by converting login-info into an auth_hash
+    
+    puts 'hahahahahaha ok hit create'
+
     unless (params[:login_hash]).nil?
       auth_hash[:uid] = params[:login_hash]['email']
       auth_hash[:info][:email] = params[:login_hash]['email']
       auth_hash[:info][:name] = params[:login_hash]['name']
     end
+
+    puts 'moohaha hit this'
     
     if User.find_by_uid(auth_hash[:uid]).nil?
       # validate email format
@@ -31,6 +36,9 @@ class SessionsController < ApplicationController
     else
       @is_new_user = false
     end
+
+    puts 'jfoiawifjasodfjSDJF hit this'
+
     @user = User.find_or_create_from_auth_hash(auth_hash)
     @@current_user = @user
     session[:user_id] = @user.id
