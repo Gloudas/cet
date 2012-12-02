@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+  class User < ActiveRecord::Base
 
   attr_accessible :uid, :name, :email, :school, :major, :gradyear, :aboutme, :admin
 
@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
 
   def self.search(search)
     if search != nil
-      find(:all, :conditions => ['email LIKE ? OR name LIKE ?', "%#{search}%", "%#{search}%"])
+      find(:all, :conditions => ['lower(email) WHERE ? OR 3 lower(name) LIKE ?', "%#{search}%.lowercase", "%#{search}%.lowercase"])
     end
   end
 
