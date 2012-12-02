@@ -47,7 +47,7 @@
 	    Until: <%= f.datetime_select :endTime, :prompt => {:hour => @event.endTime.hour, :minute => @event.endTime.min}, :ampm => true, :minute_step => 15 %>
 	    
 	    <br><br> 
-	    <%= f.submit "Update Event" %>
+	    <%= f.submit "Update Event", {:class => "btn btn-primary btn-medium" } %>
 	    
 	    <% end %>
 	  </div>
