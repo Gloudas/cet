@@ -23,7 +23,7 @@ Scenario: Edit an event ( happy )
 
 	  Given I am logged in as "admin@berkeley.edu"
 	  Given I am on the Events page
-	  And I follow "Edit"
+	  And I press "Edit"
 	  And I fill in "description" with "new description"
 	  And I press "Update Event"
 	  Then I should see "Upcoming Events"
@@ -33,7 +33,7 @@ Scenario: Edit an event ( sad )
 
 	  Given I am logged in as "admin@berkeley.edu"
 	  Given I am on the Events page
-	  And I follow "Edit"
+	  And I press "Edit"
 	  And I fill in "description" with "new description"
 	  And I fill in "name" with ""
 	  And I press "Update Event"
