@@ -38,7 +38,7 @@
           <%= text_field :profile, 'gradyear', :value => @user.gradyear, :id => 'gradyear' %>
 	  
           <%= label :profile, :aboutme, "About Me:" %>
-          <%= text_area :profile, 'aboutme', :value => @user.aboutme, :id => 'aboutme', :class => 'field span6', :rows => 10 %>
+          <%= text_area :profile, 'aboutme', :value => @user.aboutme, :id => 'aboutme', :class => 'field span6', :rows => 7 %>
 	  
 	  <br>
           <%= submit_tag "Update Profile", {:class => "btn btn-primary btn-medium" } %>
