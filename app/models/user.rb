@@ -14,7 +14,7 @@
   def self.find_or_create_from_auth_hash(auth_hash)
     # create a new user or retreive the user if he already exists
     @user = User.find_by_uid(auth_hash[:uid])
-    if @user.nil?
+    if @user
       #TODO: school should be set differently
       @user = User.create!(:uid => auth_hash[:uid], :name => auth_hash[:info][:name], :email => auth_hash[:info][:email], :school => School.find_by_uri('berkeley'), :admin => false)
     end
@@ -23,7 +23,7 @@
 
   def self.search(search)
     if search != nil
-      find(:all, :conditions => ['lower(email) LIKE ? OR lower(name) LIKE ?', "%#{search}%.lowercase", "%#{search}%.lowercase"])
+      find(:all, :conditions => ['lower(email) LIKE ? OR lower(name) LIKE ?', "%#{search}%".downcase, "%#{search}%".downcase])
     end
   end
 
