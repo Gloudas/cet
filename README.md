@@ -2,21 +2,23 @@
 This is the readme. It will describe all of the entities of this project, and assist in the transition of code ownership.
 
 -----
+#DATABASE ENTITIES#
 
-*Comments*
+##Comments:##
 
-*Documents*: This is the file storage entity for projects. Files are stored in the cloud on Amazon's S3 using the paperclip gem. At the time of the writing of this readme, my own personal aws account is tied to this project; at the handover point, I will disable my access keys. Change them to allow the filesystem to store files correctly. __AWS account keys are stored in config/s3.yaml__. If AWS S3 is undesirable, remove the arguments to the "has attached file" association in the model, and files will be stored locally instead.
+##Documents:##
+This is the file storage entity for projects. Files are stored in the cloud on Amazon's S3 using the paperclip gem. At the time of the writing of this readme, my own personal aws account is tied to this project; at the handover point, I will disable my access keys. Change them to allow the filesystem to store files correctly. **AWS account keys are stored in config/s3.yaml**. If AWS S3 is undesirable, remove the arguments to the "has attached file" association in the model, and files will be stored locally instead.
 
-*Events*
-
-
-*Projects*
-
-
-*Schools*
+##Events:##
 
 
-*Users*
+##Projects:##
+
+
+##Schools:##
+
+
+##Users:##
 
 
 -----
