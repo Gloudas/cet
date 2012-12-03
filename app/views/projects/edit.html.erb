@@ -12,8 +12,8 @@
 
   <div id="content">
 
-
     <div class = "row">
+
 
     <h2>Edit Project: <%= link_to @project.title, project_path(@project.id) %></h2>
 
@@ -32,14 +32,14 @@
 
     <div class = "row">
       <div class = "span2 offset3">
-        <%= submit_tag "Update Project" %>
+        <%= submit_tag "Update Project", :class => "btn btn-primary" %>
         <% end %>
       </div>
       <div class = "span2">
-        <%= button_to "Edit Collaborators", edit_collaborators_path(@project.id) %>
+        <%= button_to "Edit Collaborators", edit_collaborators_path(@project.id), :class => "btn btn-warning" %>
       </div>
       <div class = "span2">
-        <%= button_to "Delete Project", (destroy_project_path(@project.id) if @can_delete), :confirm => "Are you sure you wish to delete this project?"%>
+        <%= button_to "Delete Project", (destroy_project_path(@project.id) if @can_delete), :class => "btn btn-danger", :confirm => "Are you sure you wish to delete this project?"%>
       </div>
     </div>
 </div>

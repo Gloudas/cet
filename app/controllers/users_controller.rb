@@ -14,7 +14,8 @@ class UsersController < ApplicationController
   def edit
     if not @is_mine
       # this is not your profile
-      redirect_to edit_profile_path and return
+      flash[:error] = "Permission denied..."
+      redirect_to profile_path and return
     end
     if params[:profile]
       # the form has been submitted
