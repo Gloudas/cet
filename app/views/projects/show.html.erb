@@ -64,7 +64,7 @@
 	</div>
   
 	<div class = "row">
-	  <div class = "span10" align=left>
+	  <div class = "span12" align=left>
 	    <h3 align=left><%= "Project Documents" %></h3>	    
 	    <table class="table table-striped">
 	      <!--
@@ -84,18 +84,24 @@
 		<% @project.documents.each do |doc| %>
 		<tr>
 		  <td><%= link_to doc.avatar_file_name, doc.avatar.url %></td>
-		  <!--<td><%= doc.avatar_content_type %></td>-->
 		  <td><%= doc.description %></td>
 		  <td><%= doc.avatar_file_size/1000 %>kB</td>
-		  <td>Updated By: <%= link_to doc.updater.name, profile_path(doc.updater.id) %></td>          
+		  <td>Uploaded By: <%= link_to doc.updater.name, profile_path(doc.updater.id) %></td>          
 		  <td><%= time_ago_in_words(doc.avatar_updated_at) %> ago</td>
-		  <!--<td><%= link_to "Update", edit_doc_path(@project.id, doc.id) %></td>-->
 		  <td><%= link_to "Delete", destroy_doc_path(@project.id, doc.id) %></td>
 		</tr>
 		<% end %>
+		<tr>
+		  <%= form_for @document, :url => create_doc_path, :html => { :multipart => true } do |form| %>
+		  <td colspan=2><%= form.file_field :avatar %></td>
+		  <td colspan=3>
+		    <%= text_field :document, "description", :placeholder => "add description...", :id => "description"%>
+		    </td>
+		  <td><%= submit_tag "Upload New File" %></td>
+		  <% end %>
+		</tr>
 	      </tbody>
 	    </table>
-	    <h4 align=left><%= link_to "Add a File", new_doc_path%></h4>
 	  </div>
 	</div>
 	
