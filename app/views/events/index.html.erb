@@ -34,7 +34,7 @@
 	    <p> <%= event.location %></p>
 	    <p> Begins on <%= event.startTime.strftime("%B %d, %Y at %I:%M %p") %></p>
 	    <p> And ends on <%= event.endTime.strftime("%B %d, %Y at %I:%M %p") %></p>
-	    <table>
+	    <table class="transparent">
 	      <tr>
 	      <td><%= button_to "Edit", edit_event_path(event.id), {:class => "btn btn-warning btn-medium" } %></td>
 	      <td><%= button_to "Delete", delete_event_path(event.id), :class => "btn btn-danger btn-medium", :confirm => "Are you sure you wish to delete this event?" %></td>
