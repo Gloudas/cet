@@ -29,7 +29,7 @@ class Project < ActiveRecord::Base
 
   def self.search(search)
     if search != nil
-      find(:all, :conditions => ['lower(title) LIKE ?', "%#{search}%".downcase])
+      find(:all, :conditions => ['lower(title) LIKE ? OR lower(description) LIKE ?', "%#{search}%".downcase, "%#{search}%".downcase])
     end
   end
 end
