@@ -14,7 +14,7 @@
 
     <h1><%= link_to @project.title, project_path(@project.id) %></h1>
 
-    <%= button_to "Delete Project", (destroy_project_path(@project.id) if @can_delete), :confirm => "Are you sure you wish to delete this project?"%>
+    <%= button_to "Delete Project", (destroy_project_path(@project.id) if @can_delete), :class => "btn btn-danger" :confirm => "Are you sure you wish to delete this project?"%>
 
   <%= link_to "Edit Collaborators", edit_collaborators_path(@project.id) %>
 
@@ -26,7 +26,7 @@
     <%= label :project, :description, "Enter a short description:" %>
     <textarea class="field span12" id="project_description" name="project[description]" rows="6"><%= @project.description %></textarea>
 
-  <br><br> <%= submit_tag "Update Project" %>
+  <br><br> <%= submit_tag "Update Project", :class => "btn btn-primary" %>
 
   <% end %>
 </div>
