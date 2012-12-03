@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(:version => 20121130064153) do
     t.integer  "school_id"
     t.string   "major"
     t.integer  "gradyear"
-    t.string   "aboutme"
+    t.text     "aboutme"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.boolean  "admin"

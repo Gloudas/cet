@@ -24,11 +24,11 @@ Background: student is logged into ai2
 Scenario: Search for a project
   Given I am on the Berkeley page
   When I fill in "searchbar" with "My New Project"
-  And I press "Search"
-  Then I should see "Here is the description for my project"
+  And I enter my search terms
+  Then I should see "My New Project"
 
 Scenario: Search for a user
   Given I am on the Berkeley page
   When I fill in "searchbar" with "Breh"
-  And I press "Search"
+  And I enter my search terms
   Then I should see "breh@berkeley.edu"

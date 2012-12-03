@@ -25,7 +25,7 @@ Background: User is logged in and has projects
 
 Scenario: Successfully add collaborator to project 1
   When I follow "Project 1"
-  And I follow "Edit Collaborators"
+  And I press "Edit Collaborators"
   And I fill in "collaborator" with "bruh@berkeley.edu"
   And I press "Add Collaborator"
   Then I should be on the edit collaborators page for "Project 1"
@@ -34,7 +34,7 @@ Scenario: Successfully add collaborator to project 1
 
 Scenario: Fail to add inexistent collaborator to project 1
   When I follow "Project 1"
-  And I follow "Edit Collaborators"
+  And I press "Edit Collaborators"
   And I fill in "collaborator" with "idontexist@berkeley.edu"
   And I press "Add Collaborator"
   Then I should be on the edit collaborators page for "Project 1"
@@ -42,7 +42,7 @@ Scenario: Fail to add inexistent collaborator to project 1
 
 Scenario: Fail to add duplicate collaborator to project 2
   When I follow "Project 2"
-  And I follow "Edit Collaborators"
+  And I press "Edit Collaborators"
   And I fill in "collaborator" with "bruh@berkeley.edu"
   And I press "Add Collaborator"
   Then I should be on the edit collaborators page for "Project 2"
@@ -53,7 +53,7 @@ Scenario: Fail to add duplicate collaborator to project 2
 
 Scenario: Delete collaborator
   When I follow "Project 3"
-  And I follow "Edit Collaborators"
+  And I press "Edit Collaborators"
   And I press delete collaborator "bruh@berkeley.edu"
   Then I should be on the edit collaborators page for "Project 3"
   And I should see "Collaborator deleted!"

@@ -14,7 +14,7 @@
   def self.find_or_create_from_auth_hash(auth_hash)
     # create a new user or retreive the user if he already exists
     @user = User.find_by_uid(auth_hash[:uid])
-    if @user
+    if @user.nil?
       #TODO: school should be set differently
       @user = User.create!(:uid => auth_hash[:uid], :name => auth_hash[:info][:name], :email => auth_hash[:info][:email], :school => School.find_by_uri('berkeley'), :admin => false)
     end

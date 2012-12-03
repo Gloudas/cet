@@ -34,7 +34,7 @@ Scenario: Unsuccessfully edit my project
   When I fill in "project_title" with ""
 	And I fill in "project_description" with "Here is the description for my project"
   And I press "Update Project"
-  Then I should be on the edit project page for "new proj"
+  Then I should be on the edit project page for "Project 1"
   And I should see "Sorry, something went wrong with editing this project."
 
 Scenario: Delete a project
