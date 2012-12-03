@@ -17,7 +17,7 @@ class DocumentsController < ApplicationController
       redirect_to project_path(@project.id)        
     else
       flash[:error] = "There was a problem uploading your file"
-      redirect_to new_doc_path(@project.id)
+      redirect_to project_path(@project.id)
     end
   end
   

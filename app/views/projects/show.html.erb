@@ -72,7 +72,7 @@
 <tr>
 <%= form_for @document, :url => create_doc_path, :html => { :multipart => true } do |form| %>
   <td colspan=2><%= form.file_field :avatar %></td>
-  <td colspan=3><%= text_field :document, "description", :placeholder => "add description...", :id => "description"%></td>
+  <td colspan=3><%= text_field :document, "description", :placeholder => "add description...", :class => "input-xlarge", :id => "description"%></td>
   <td><%= submit_tag "Upload New File", :class => "btn btn-primary" %></td>
 <% end %>
 </tr>
@@ -101,21 +101,20 @@
 	
 	<hr class="featurette-divider">
 	<h3>Comments</h3>
-	<% if @can_edit %>
-	<div class="row">
-	  <div class="span6" align=left>
-	    <%= form_tag create_comment_path do %>
-	    <%= text_field :comment, :text, :id => 'new_comment' %>
-	    <%= submit_tag "Add Comment", :class => "btn btn-primary" %>
-	    <% end %>
-	  </div>
-	</div>
-	<% end %>
 	
 	<div class="row">
 	  <div class="span10">
 	    <table class="table table-striped">
 	      <tbody>
+	  <tr>
+	  <% if @can_edit%>
+	    <%= form_tag create_comment_path do %>
+	    <td colspan=3><%= text_field :comment, :text, :placeholder => "add comment...", :class => "input-xxlarge", :id => "new_comment" %></td>
+	    <td><%= submit_tag "Add Comment", :class => "btn btn-primary" %></td>
+	    <% end %>
+	  <% end %>
+	  </tr>
+	  
 		<% @comments.each do |comment| %>
 		<tr>
 		  <td><%= link_to comment.user.name, profile_path(comment.user.id) %></td>
