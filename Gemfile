@@ -18,12 +18,9 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails'
   gem 'simplecov', "0.4.2"
-  gem 'omniauth'
 end
 group :production do
   gem 'pg'
-  gem 'omniauth'
-  gem 'omniauth-cas'
 end
 
 group :test do
