@@ -20,6 +20,7 @@ Background: Users exist and one is logged in
   | Project 1  | p1             | bro@berkeley.edu  |                   |
 
 Scenario: Send a message to another user
+  pending
   Given I am logged in as "bro@berkeley.edu"
   Given I am on the profile page for "bruh@berkeley.edu"
   When I follow "Send message"
