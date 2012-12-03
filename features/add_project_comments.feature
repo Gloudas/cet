@@ -23,17 +23,26 @@ Background: user is logged in
 Scenario: add a comment
   Given I am on the project page for "Project 1"
   When I fill in "new_comment" with "This is a new comment."
-  And I press "Comment"
+  And I press "Add Comment"
   Then I should be on the project page for "Project 1"
   And I should see "This is a new comment."
 
 Scenario: see comments in reverse chronological order
   Given I am on the project page for "Project 1"
   When I fill in "new_comment" with "Comment one"
-  And I press "Comment"
+  And I press "Add Comment"
   Then I should be on the project page for "Project 1"
   When I fill in "new_comment" with "Comment two"
-  And I press "Comment"
+  And I press "Add Comment"
   Then I should be on the project page for "Project 1"
   And I should see "Comment two" before "Comment one"
 
+Scenario: delete comments as a project collaborator
+  Given I am on the project page for "Project 1"
+  When I fill in "new_comment" with "i hate this comment"
+  And I press "Add Comment"
+  Then I should be on the project page for "Project 1"
+  And I should see "i hate this comment"
+  Given I press "Delete Comment"
+  Then I should be on the project page for "Project 1"
+  And I should not see "i hate this comment"
