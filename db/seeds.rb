@@ -21,6 +21,11 @@ p2 = Project.create!(title: 'Chinese Sushi', description: 'Have you ever thought
 p3 = Project.create!(title: 'Space Pizza Delivery', description: 'Our company strives to seamlessly merge West Coast Pizza and the planet Jupiter. By partnering with NASA, we have created a service that allows users to have pizza delivered to different planets for an affordable price, all under 200 dollars. No longer will people be unable to satisfy their drunchies when they drink too much and then black in on Jupiter! Open late.', creator: u3, school: s)
 p4 = Project.create!(title: 'Whats in my Colon?', description: 'We are inventing technology that scans a persons colon, and then posts the results of that scan in real-time to their Facebook wall. No longer will you wonder what food is currently being processed in your friends digestive tract!', creator: u4, school: s)
 
+p1.users << u1
+p2.users << u2
+p3.users << u3
+p4.users << u4
+
 print "\n\n\n Projects seeded! \n\n\n"
 
 # Events
