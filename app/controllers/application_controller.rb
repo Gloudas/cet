@@ -12,7 +12,10 @@ class ApplicationController < ActionController::Base
 
   def set_can_edit
     @project = Project.find_by_id(params[:pid])
-    @can_edit = @project.users.include? @user
+    @can_edit = false
+    if (@project.users.include? @user) or (@user.admin and (@user.school_id == @project.school_id))
+      @can_edit = true 
+    end
   end
 
   def time_ago(timestamp)

@@ -56,7 +56,7 @@ class ProjectsController < ApplicationController
     end
     @project = Project.find_by_id(params[:pid])
     @can_delete = false
-    @can_delete = true if @project.creator == @user
+    @can_delete = true if (@project.creator == @user or (@user.admin and @user.school_id == @project.school_id))
   end
 
   def show
