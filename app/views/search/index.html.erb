@@ -23,6 +23,12 @@
 
       <div id="content">  
 
+    <div class = "row">
+      <div class = "span12 span-centered">
+        <h2> Your search results for: "<%= params[:search] %>" </h2>
+      </div>
+    </div>
+
     <% if @user_results != [] %>
   	<div class = "row">
       <div class = "span6 offset3">
@@ -49,13 +55,14 @@
 	
     <% if @project_results != [] %>
   	<div class = "row">
-      <div class = "span6 offset3">
+      <div class = "span12 span-centered">
         <h3> Projects </h3>
         <table class="table table-striped">
           <thead>
             <tr>
               <th>Name</th>
               <th>Owner</th>
+              <th>Description</th>
               <th>Collaborators</th>
               <th>Last Updated</th>
             </tr>
@@ -65,6 +72,7 @@
             <tr>
               <td><%= link_to project.title, project_path(project.id) %></td>
               <td><%= link_to project.creator.name, profile_path(project.creator.id) %></td>
+              <td><%= project.description %>
               <td><%= project.users.length %>
               <td><%= time_ago_in_words(project.updated_at) %></td>
             </tr>
@@ -77,7 +85,7 @@
 
     <% if @event_results != [] %>  
     <div class = "row">
-      <div class = "span8 offset2">
+      <div class = "span12 span-centered">
         <h3> Events </h3>
         <table class="table table-striped">
           <thead>
@@ -108,7 +116,7 @@
     <% if @event_results == [] && @project_results == [] && @user_results == [] %>
     <div class = "row">
       <div class = "span9 span-centered">
-        <h3> Your search did not find any matches. Try a different search term! </h3>
+        <h3> Your search did not find any matches. Try a different search term!</h3>
       </div>
     </div>
     <% end %>
