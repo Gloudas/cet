@@ -681,7 +681,7 @@ a.text-success:hover {
 
 p.ex
 {
-width:60ex;
+width:100ex;
 }
 
 h1,
@@ -844,8 +844,8 @@ hr {
 hr.event {
     margin: 20px 0;
     border: 0;
-    border-top: 2px dashed #6B0011;
-    width: 50%;
+    border-top: 2px solid #6B0011;
+    width: 40%;
 }
 
 abbr[title],
