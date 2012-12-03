@@ -61,6 +61,7 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find_by_id(params[:pid])
     @comments = @project.comments.order("created_at DESC")
+    @document = Document.new
   end
 
   def destroy
