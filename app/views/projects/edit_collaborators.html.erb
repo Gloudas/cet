@@ -10,6 +10,8 @@
       <%= render "/navbar"%>
     </div>
 
+
+
     <div id="content">
       <h1><%= link_to @project.title, project_path(@project.id) %></h1>
       <h2>Collaborators</h2>
@@ -19,9 +21,11 @@
     <% # you have to make it so your own name and creator doesn't appear on this list %>
     <% if @user != user and user != @project.creator %>
       <p><%= user.email %></p>
-      <%= button_to "Delete", destroy_collaborator_path(@project.id, user.id), :id => 'delete_' + user.id.to_s %>
+      <%= button_to "Delete", destroy_collaborator_path(@project.id, user.id), :confirm => 'Are you sure you want to delete this collaborator?', :id => 'delete_' + user.id.to_s %>
       <% end %>
       <% end %>
+
+      <h4> Enter the email address of the collaborator you'd like to add.</h4>
       
       <%= form_tag add_collaborator_path do %>
       <%= text_field_tag :collaborator %>
