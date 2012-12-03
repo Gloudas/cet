@@ -13,13 +13,35 @@ class SessionsController < ApplicationController
     #params[:login_hash].each do |key, value|
     #  print "here is the key: #{key} \n"
     # mimic the behavior of omniauth by converting login-info into an auth_hash
-    unless (params[:login_hash]).nil?
+
+    puts 'HIHIHIHIHIHIHIHIH'
+    puts auth_hash.to_s
+    puts 'wtf is going on here'
+    return
+
+    auth_hash[:uid] = 'noelmoldvai@berkeley.edu'
+    auth_hash[:info][:email] = 'noelmoldvai@berkeley.edu'
+    auth_hash[:info][:name] = 'Noel Moldvai'
+    
+    puts 'hahahahahaha ok hit create'
+
+    @is_new_user = true
+
+    @user = User.find_or_create_from_auth_hash({:uid => 34, :info => {:email => 'noelmoldvai2@berkeley.edu', :name => 'noel'}})
+    @@curent_user = @user
+    session[:user_id] = @user.id
+    redirect_to profile_path(@user.id) and return
+#unless (params[:login_hash]).nil?
+    if params[:login_hash]
       auth_hash[:uid] = params[:login_hash]['email']
       auth_hash[:info][:email] = params[:login_hash]['email']
       auth_hash[:info][:name] = params[:login_hash]['name']
     end
+
+    puts 'moohaha hit this'
     
-    if User.find_by_uid(auth_hash[:uid]).nil?
+#if User.find_by_uid(auth_hash[:uid]).nil?
+    if not User.find_by_uid(auth_hash[:uid])
       # validate email format
       results = ValidatesEmailFormatOf::validate_email_format(auth_hash[:uid], :message => "is not of a valid format!")
       unless results.nil?
@@ -31,6 +53,9 @@ class SessionsController < ApplicationController
     else
       @is_new_user = false
     end
+
+    puts 'jfoiawifjasodfjSDJF hit this'
+
     @user = User.find_or_create_from_auth_hash(auth_hash)
     @@current_user = @user
     session[:user_id] = @user.id
