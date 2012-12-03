@@ -21,7 +21,7 @@
       <div id="content">
 
         <div class = "row pull-right">
-          <%= button_to "Edit Profile", edit_profile_path(@user.id), {:class => "btn btn-warning btn-medium" } if @is_mine %>
+          
       	</div>
 
         <div class="row span-centered">
@@ -33,7 +33,7 @@
             <table>
               <thead align = "left">
 		            <tr>
-                  <th><h2><%= @profile.name %></h2></th>
+                  <th><h2><%= @profile.name %></h2> </th>
 		            </tr>
               </thead>
               <tbody>
@@ -64,11 +64,16 @@
 		            </tr>
               </tbody>
             </table>
+
+           
+          </div>
+
+          <div class = "span 2">
+             <%= button_to "Edit Profile", edit_profile_path(@user.id), {:class => "btn btn-warning btn-small" } if @is_mine %>
+
           </div>
 	       </div>
-	
-	       <br>
-      
+
 	       <div class = "row span-centered">
           <div class = "span6 span-centered">
             <h3>Active Projects</h3>
