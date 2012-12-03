@@ -22,6 +22,8 @@
       <%= button_to "Delete", destroy_collaborator_path(@project.id, user.id), :id => 'delete_' + user.id.to_s %>
       <% end %>
       <% end %>
+
+      <h4> Enter the email address of the collaborator you'd like to add.</h4>
       
       <%= form_tag add_collaborator_path do %>
       <%= text_field_tag :collaborator %>
