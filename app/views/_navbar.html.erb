@@ -27,7 +27,7 @@
     	  <ul class="nav pull-right">
             <li>
               <%= form_tag search_path, :method => :post do %>
-                <%= text_field_tag :search, params[:search], :placeholder=>"Search", :class => "navbar-search"  %>                  
+                <%= text_field_tag :search, params[:search], :id=>"searchbar", :placeholder=>"Search", :class => "navbar-search"  %>                  
               <% end %>
             </li>
             <li><%= link_to "Logout", logout_path %></li>

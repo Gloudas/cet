@@ -70,6 +70,10 @@ Then /^I should see "(.*)" before "(.*)"$/ do |e1, e2|
   page.body.should =~ /#{e1}.*#{e2}/m
 end
 
+When /^I press enter on the keyboard$/ do
+
+end
+
 #################
 ##################
 
