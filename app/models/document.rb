@@ -17,4 +17,5 @@ class Document < ActiveRecord::Base
     :s3_credentials => "#{Rails.root}/config/s3.yml",
     :bucket => "cet-aii"
   
+  validates_attachment_presence :avatar
 end

@@ -47,6 +47,7 @@ class ProjectsController < ApplicationController
 
   def edit
     if not @can_edit
+      flash[:error] = "Permission denied..."
       redirect_to project_path(@project.id) and return
     end
     if params[:project]
@@ -82,9 +83,17 @@ class ProjectsController < ApplicationController
   end
 
   def edit_collaborators
+    if not @can_edit
+      flash[:error] = "Permission denied..."
+      redirect_to project_path(@project.id) and return
+    end
   end
 
   def add_collaborator
+    if not @can_edit
+      flash[:error] = "Permission denied..."
+      redirect_to project_path(@project.id) and return
+    end
     email = params[:collaborator]
     success = @project.add_collaborator_by_email(email)
     if success
@@ -96,6 +105,10 @@ class ProjectsController < ApplicationController
   end
 
   def destroy_collaborator
+    if not @can_edit
+      flash[:error] = "Permission denied..."
+      redirect_to project_path(@project.id) and return
+    end
     collaborator = User.find_by_id(params[:cid])
     if collaborator == @user or collaborator == @project.creator
       # can't delete yourself or creator

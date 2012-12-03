@@ -59,7 +59,7 @@
             <p><%= link_to user.email, profile_path(user.id) %></p>
 	    <% end %>
 	    <% end %>
-	    <h5> <%= button_to "Edit Collaborators", edit_collaborators_path(@project.id), :method => :get, :class => "btn btn-warning btn-medium" %> </h5>
+	    <h5> <%= button_to "Edit Collaborators", edit_collaborators_path(@project.id), :method => :get, :class => "btn btn-warning btn-medium" if @can_edit %> </h5>
 	  </div>
 	</div>
   
@@ -107,12 +107,10 @@
 	    <table class="table">
 	      <tbody>
 	  <tr>
-	  <% if @can_edit%>
 	    <%= form_tag create_comment_path do %>
 	    <td colspan=3><%= text_field :comment, :text, :placeholder => "add comment...", :class => "input-xxlarge", :id => "new_comment" %></td>
 	    <td><%= submit_tag "Add Comment", :class => "btn btn-primary" %></td>
 	    <% end %>
-	  <% end %>
 	  </tr>
 	  
 		<% @comments.each do |comment| %>
