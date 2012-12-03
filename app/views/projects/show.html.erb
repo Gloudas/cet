@@ -25,7 +25,7 @@
 	<div class = "row">
 	  <div align = "center">
 	    <h1><%= @project.title %></h1>
-	    <h5><%= link_to "Edit Project", edit_project_path(@project.id) if @can_edit %></h5>
+	    <h5><%= button_to "Edit Project", edit_project_path(@project.id), {:class => "btn btn-warning btn-medium" } if @can_edit %></h5>
 	  </div>
 	</div>
 	<hr class="featurette-divider">
@@ -59,58 +59,54 @@
             <p><%= link_to user.email, profile_path(user.id) %></p>
 	    <% end %>
 	    <% end %>
-	    <h5> <%= link_to "Edit Collaborators", edit_collaborators_path(@project.id) %> </h5>
+	    <h5> <%= button_to "Edit Collaborators", edit_collaborators_path(@project.id), {:class => "btn btn-primary btn-medium" } %> </h5>
 	  </div>
 	</div>
   
+  <hr class="featurette-divider">
 	<div class = "row">
 	  <div class = "span12" align=left>
-	    <h3 align=left><%= "Project Documents" %></h3>	    
+	    <h3 align=left>Project Documents</h3>	 
 	    <table class="table table-striped">
-	      <!--
-              <thead>
-		<tr>
-		  <th>File</th>
-		  <th>File Type</th>
-		  <th>Description</th>
-		  <th>Size</th>
-		  <th>Last Updated By</th>
-		  <th>Last Updated At</th>
-		  <th><th>
-		</tr>
-              </thead>
-              -->
 	      <tbody>
-		<% @project.documents.each do |doc| %>
-		<tr>
-		  <td><%= link_to doc.avatar_file_name, doc.avatar.url %></td>
-		  <td><%= doc.description %></td>
-		  <td><%= doc.avatar_file_size/1000 %>kB</td>
-		  <td>Uploaded By: <%= link_to doc.updater.name, profile_path(doc.updater.id) %></td>          
-		  <td><%= time_ago_in_words(doc.avatar_updated_at) %> ago</td>
-		  <td><%= link_to "Delete", destroy_doc_path(@project.id, doc.id) %></td>
-		</tr>
-		<% end %>
-		<tr>
-		  <%= form_for @document, :url => create_doc_path, :html => { :multipart => true } do |form| %>
-		  <td colspan=2><%= form.file_field :avatar %></td>
-		  <td colspan=3>
-		    <%= text_field :document, "description", :placeholder => "add description...", :id => "description"%>
-		    </td>
-		  <td><%= submit_tag "Upload New File" %></td>
-		  <% end %>
-		</tr>
+<tr>
+<%= form_for @document, :url => create_doc_path, :html => { :multipart => true } do |form| %>
+  <td colspan=2><%= form.file_field :avatar %></td>
+  <td colspan=3><%= text_field :document, "description", :placeholder => "add description...", :id => "description"%></td>
+  <td><%= submit_tag "Upload New File", :class => "btn btn-success" %></td>
+<% end %>
+</tr>
+
+<% @project.documents.each do |doc| %>
+<tr>
+  <td>
+    <% if @can_edit%>
+      <%= link_to doc.avatar_file_name, doc.avatar.url %>
+    <% else %>
+      <%= doc.avatar_file_name %>
+    <% end %>
+  </td>
+  <td><%= doc.description %></td>
+  <td><%= doc.avatar_file_size/1000 %>kB</td>
+  <td>Uploaded By: <%= link_to doc.updater.name, profile_path(doc.updater.id) %></td>          
+  <td><%= time_ago_in_words(doc.avatar_updated_at) %> ago</td>
+  <td><%= button_to "Delete", destroy_doc_path(@project.id, doc.id), :class => "btn btn-danger btn-mini" %></td>
+</tr>
+<% end %>
+
 	      </tbody>
 	    </table>
 	  </div>
 	</div>
 	
+	<hr class="featurette-divider">
+	<h3>Comments</h3>
 	<% if @can_edit %>
 	<div class="row">
-	  <div align="span4">
+	  <div class="span6" align=left>
 	    <%= form_tag create_comment_path do %>
 	    <%= text_field :comment, :text, :id => 'new_comment' %>
-	    <%= submit_tag "Comment" %>
+	    <%= submit_tag "Add Comment", :class => "btn btn-primary" %>
 	    <% end %>
 	  </div>
 	</div>
@@ -126,7 +122,7 @@
 		  <td><%= comment.text %></td>
 		  <td><%= time_ago_in_words(comment.created_at) %> ago</td>
 		  <% if @can_edit %>
-		  <td><%= button_to "Delete", destroy_comment_path(@project.id, comment.id) %></td>
+		  <td><%= button_to "Delete Comment", destroy_comment_path(@project.id, comment.id), :class => "btn btn-danger btn-mini" %></td>
 		  <% end %>
 		</tr>
 		<% end %>

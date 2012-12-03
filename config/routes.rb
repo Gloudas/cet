@@ -50,10 +50,8 @@ Cet::Application.routes.draw do
   match '/messages/:uid' => 'messages#create', :via => :post, :as => 'create_mesage'
   
   #Documents
-  #match '/project/:pid/docs/new' => 'documents#new', :as => 'new_doc'
   match '/project/:pid/docs' => 'documents#create', :as => 'create_doc'
   match '/project/:pid/docs/:did/destroy' => 'documents#destroy', :as => 'destroy_doc'
-  #match '/project/:pid/docs/:did' => 'documents#edit', :as => 'edit_doc'
     
 
   # Sample resource route with options:

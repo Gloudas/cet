@@ -34,8 +34,12 @@
 	    <p> <%= event.location %></p>
 	    <p> Begins on <%= event.startTime.strftime("%B %d, %Y at %I:%M %p") %></p>
 	    <p> And ends on <%= event.endTime.strftime("%B %d, %Y at %I:%M %p") %></p>
-	    <li><%= link_to "Edit", edit_event_path(event.id) %></li>
-	    <%= button_to "Delete", delete_event_path(event.id) %>
+	    <table>
+	      <tr>
+	      <td><%= button_to "Edit", edit_event_path(event.id), {:class => "btn btn-warning btn-medium" } %></td>
+	      <td><%= button_to "Delete", delete_event_path(event.id), {:class => "btn btn-danger btn-medium" } %></td>
+	      <tr>
+	    </table>
 	    <hr>
 	    <% end %>
 	  </div>
@@ -66,7 +70,7 @@
 	  <%= f.text_area :location, :class => 'field span6', :id => 'location', :rows => 1 %>
 	  
 	  <br>
-	  <%= f.submit "Create Event" %>
+	  <%= f.submit "Create Event", {:class => "btn btn-primary btn-medium" } %>
 	  <% end %>
 	</div>
       </div>
