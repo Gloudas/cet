@@ -71,7 +71,7 @@ Then /^I should see "(.*)" before "(.*)"$/ do |e1, e2|
 end
 
 When /^I enter my search terms$/ do
-  # code here
+  click_button("search_submit")
 end
 
 #################

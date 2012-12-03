@@ -12,8 +12,7 @@ Background:
 	| name	| email				| school	| admin |
 	| test	| test@berkeley.edu	| berkeley	| false |
   Given I am on the home page
-  Then I should see "Login"
-  When I follow "Login"
+  When I press "Login"
   Then I should be on the login page
 
 Scenario: log in as new user
