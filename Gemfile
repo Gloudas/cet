@@ -22,6 +22,7 @@ end
 group :production do
   gem 'pg'
   gem 'omniauth'
+  gem 'omniauth-cas'
 end
 
 group :test do
