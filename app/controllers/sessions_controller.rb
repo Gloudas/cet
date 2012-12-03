@@ -8,8 +8,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-
-    #print "\n\n\n\n\n\n\n\n\n\n"
     #params[:login_hash].each do |key, value|
     #  print "here is the key: #{key} \n"
     # mimic the behavior of omniauth by converting login-info into an auth_hash
