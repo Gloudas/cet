@@ -12,24 +12,36 @@
 
   <div id="content">
 
-    <h1><%= link_to @project.title, project_path(@project.id) %></h1>
 
-    <%= button_to "Delete Project", (destroy_project_path(@project.id) if @can_delete), :confirm => "Are you sure you wish to delete this project?"%>
+    <div class = "row">
 
-  <%= link_to "Edit Collaborators", edit_collaborators_path(@project.id) %>
+    <h2>Edit Project: <%= link_to @project.title, project_path(@project.id) %></h2>
+
+
+
+  </div>
+
 
   <%= form_tag edit_project_path do %>
-
+    
     <%= label :project, :title, "Title:" %>
     <%= text_field :project, :title, :value => @project.title, %>
 
     <%= label :project, :description, "Enter a short description:" %>
     <textarea class="field span12" id="project_description" name="project[description]" rows="6"><%= @project.description %></textarea>
 
-  <br><br> <%= submit_tag "Update Project" %>
-
-  <% end %>
-</div>
+    <div class = "row">
+      <div class = "span2 offset3">
+        <%= submit_tag "Update Project" %>
+        <% end %>
+      </div>
+      <div class = "span2">
+        <%= button_to "Edit Collaborators", edit_collaborators_path(@project.id) %>
+      </div>
+      <div class = "span2">
+        <%= button_to "Delete Project", (destroy_project_path(@project.id) if @can_delete), :confirm => "Are you sure you wish to delete this project?"%>
+      </div>
+    </div>
 </div>
 
     <div id="footer">
