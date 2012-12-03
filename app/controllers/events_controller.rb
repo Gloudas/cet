@@ -44,7 +44,7 @@ class EventsController < ApplicationController
       return
     end
 
-    @events = Event.all
+    @events = Event.where("school_id = ?", @user.school)
     @event = Event.new
   end
 
