@@ -13,24 +13,23 @@
   <div id="content">
 
     <div class = "row">
-
-
-    <h2>Edit Project: <%= link_to @project.title, project_path(@project.id) %></h2>
-
-
-
-  </div>
+      <h2>Edit Project: <%= link_to @project.title, project_path(@project.id) %></h2>
+    </div>
 
 
   <%= form_tag edit_project_path do %>
+    <div class = "row table-centered">
     
-    <%= label :project, :title, "Title:" %>
-    <%= text_field :project, :title, :value => @project.title %>
+      <%= label :project, :title, "Title:" %>
+      <%= text_field :project, :title, :value => @project.title %>
+    </div>
 
-    <%= label :project, :description, "Enter a short description:" %>
-    <textarea class="field span12" id="project_description" name="project[description]" rows="6"><%= @project.description %></textarea>
+    <div class = "row table-centered">
+      <%= label :project, :description, "Enter a short description:" %>
+      <textarea class="field span8" id="project_description" name="project[description]" rows="6"><%= @project.description %></textarea>
+    </div>
 
-    <div class = "row">
+    <div class = "row table-centered">
       <div class = "span2 offset3">
         <%= submit_tag "Update Project", :class => "btn btn-primary" %>
         <% end %>
