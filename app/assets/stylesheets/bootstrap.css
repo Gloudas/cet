@@ -257,6 +257,18 @@ a:hover {
   width: 940px;
 }
 
+.table-centered
+{
+  margin: 0 auto !important;
+  float: none !important;
+}
+
+.span-centered
+{
+  margin: 0 auto !important;
+  float: none !important;
+}
+
 .span12 {
   width: 940px;
 }

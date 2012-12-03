@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :school_id
       t.string :major
       t.integer :gradyear
-      t.string :aboutme
+      t.text :aboutme
       t.timestamps
     end
   end
