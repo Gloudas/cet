@@ -13,7 +13,7 @@ u1 = User.create!(name: 'Homer Simpson', uid: 'homer@berkeley.edu', email: 'home
 u2 = User.create!(name: 'Marge Simpson', uid: 'marge@berkeley.edu', email: 'marge@berkeley.edu', school: s, admin: false)
 u3 = User.create!(name: 'Lisa Simpson', uid: 'lisa@berkeley.edu', email: 'lisa@berkeley.edu', school: s, admin: false)
 u4 = User.create!(name: 'Bart Simpson', uid: 'bart@berkeley.edu', email: 'bart@berkeley.edu', school: s, admin: false)
-u5 = User.create!(name: 'testAdmin', uid: 'testAdmin@berkeley.edu', email: 'testAdmin@berkeley.edu', school: s, admin: false)
+u5 = User.create!(name: 'testAdmin', uid: 'testAdmin@berkeley.edu', email: 'testAdmin@berkeley.edu', school: s, admin: true)
 
 # Projects
 p1 = Project.create!(title: 'The New Facebook', description: 'We will be making a new version of facebook, except where people post their thoughts on the current weather instead of statuses. Also, the app will sell users personal information to Samalian Pirates.', creator: u1, school: s)
