@@ -14,25 +14,7 @@ class SessionsController < ApplicationController
     #  print "here is the key: #{key} \n"
     # mimic the behavior of omniauth by converting login-info into an auth_hash
 
-    puts 'HIHIHIHIHIHIHIHIH'
-    puts auth_hash.to_s
-    puts 'wtf is going on here'
-    return
-
-    auth_hash[:uid] = 'noelmoldvai@berkeley.edu'
-    auth_hash[:info][:email] = 'noelmoldvai@berkeley.edu'
-    auth_hash[:info][:name] = 'Noel Moldvai'
-    
-    puts 'hahahahahaha ok hit create'
-
-    @is_new_user = true
-
-    @user = User.find_or_create_from_auth_hash({:uid => 34, :info => {:email => 'noelmoldvai2@berkeley.edu', :name => 'noel'}})
-    @@curent_user = @user
-    session[:user_id] = @user.id
-    redirect_to profile_path(@user.id) and return
-#unless (params[:login_hash]).nil?
-    if params[:login_hash]
+    unless (params[:login_hash]).nil?
       auth_hash[:uid] = params[:login_hash]['email']
       auth_hash[:info][:email] = params[:login_hash]['email']
       auth_hash[:info][:name] = params[:login_hash]['name']
