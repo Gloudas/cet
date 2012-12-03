@@ -15,63 +15,62 @@
   <body>
     <div id="wrapper">
       <div id="header">
-	<%= render "/navbar"%>
+        <%= render "/navbar"%>
       </div>
 
       <div id="content">
 
-	<div class = "span1 offset11">
+        <div class = "row pull-right">
           <%= button_to "Edit Profile", edit_profile_path(@user.id), {:class => "btn btn-warning btn-medium" } if @is_mine %>
-	</div>
+      	</div>
 
-	<div class="row">
-          <div class = "span3 offset2">
-            <%= image_tag("goat.jpg", :size => "300x300") %>
+        <div class="row span-centered">
+          <div class = "span4 offset2">
+            <%= image_tag("goat.jpg", :size => "400x400") %>
           </div>
 
           <div class = "span4">
             <table>
               <thead align = "left">
-		<tr>
+		            <tr>
                   <th><h2><%= @profile.name %></h2></th>
-		</tr>
+		            </tr>
               </thead>
               <tbody>
-		<tr align = "left">
+		            <tr align = "left">
                   <td> About Me: <br> <%= @profile.aboutme %></td>
-		</tr>
+		            </tr>
               </tbody>
             </table>
             <br>
 
             <table class="table table-striped">
               <tbody>
-		<tr>
+		            <tr>
                   <td>Email</td>
                   <td><%= @profile.email %></td>
-		</tr>
-		<tr>
+		            </tr>
+		            <tr>
                   <td>School</td>
                   <td><%= @profile.school.name %></td>
-		</tr>
-		<tr>
+		            </tr>
+		            <tr>
                   <td>Major</td>
                   <td><%= @profile.major %></td>
-		</tr>
-		<tr>
+            		</tr>
+            		<tr>
                   <td>Graduation Year</td>
                   <td><%= @profile.gradyear %></td>
-		</tr>
+		            </tr>
               </tbody>
             </table>
-	  
           </div>
-	</div>
+	       </div>
 	
-	<br><br>
+	       <br>
       
-	<div class = "row">
-          <div class = "span6 offset3">
+	       <div class = "row span-centered">
+          <div class = "span6 span-centered">
             <h3>Active Projects</h3>
             <table class="table table-striped">
               <thead>
@@ -83,21 +82,22 @@
                 </tr>
               </thead>
               <tbody>
-		<% @projects.each do |project| %>
-		<tr>
-                  <td><%= link_to project.title, project_path(project.id) %></td>
-                  <td><%= link_to project.creator.name, profile_path(project.creator.id) %></td>
-                  <td><%= project.users.length %>
-                  <td><%= time_ago_in_words(project.updated_at) %> ago</td>
-		</tr>
-		<% end %>
+		            <% @projects.each do |project| %>
+		              <tr>
+                    <td><%= link_to project.title, project_path(project.id) %></td>
+                    <td><%= link_to project.creator.name, profile_path(project.creator.id) %></td>
+                    <td><%= project.users.length %>
+                    <td><%= time_ago_in_words(project.updated_at) %> ago</td>
+		              </tr>
+		            <% end %>
               </tbody>
             </table>
           </div>
-	</div>
+	       </div>
       </div>
+
       <div id="footer">
-	<%= render "/footer"%>
+	       <%= render "/footer"%>
       </div>
 
     </div>
