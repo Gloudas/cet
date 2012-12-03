@@ -23,7 +23,7 @@
 
   def self.search(search)
     if search != nil
-      find(:all, :conditions => ['lower(email) LIKE ? OR lower(name) LIKE ?', "%#{search}%.lowercase", "%#{search}%.lowercase"])
+      find(:all, :conditions => ['lower(email) LIKE ? OR lower(name) LIKE ?', "%#{search}%".downcase, "%#{search}%".downcase])
     end
   end
 
