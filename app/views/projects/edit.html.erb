@@ -25,7 +25,7 @@
   <%= form_tag edit_project_path do %>
     
     <%= label :project, :title, "Title:" %>
-    <%= text_field :project, :title, :value => @project.title, %>
+    <%= text_field :project, :title, :value => @project.title %>
 
     <%= label :project, :description, "Enter a short description:" %>
     <textarea class="field span12" id="project_description" name="project[description]" rows="6"><%= @project.description %></textarea>
