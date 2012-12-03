@@ -21,6 +21,8 @@ Cet::Application.routes.draw do
   match '/login' => 'sessions#login', :as => 'login'
   match '/logout' => 'sessions#destroy', :as => 'logout'
   match '/login/cas/validate' => 'sessions#validate', :as => 'service_validate'
+  match '/home/bylaws' => 'home#bylaws', :as => 'bylaws'
+  match '/home/aboutus' => 'home#aboutus', :as => 'aboutus'
   # Schools
   match '/:school' => 'schools#show', :as => 'school'
   match '/:school/projects' => 'schools#projects', :as => 'school_projects'
