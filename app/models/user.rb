@@ -1,6 +1,6 @@
   class User < ActiveRecord::Base
 
-  attr_accessible :uid, :name, :email, :school, :major, :gradyear, :aboutme, :admin, :avatar
+  attr_accessible :uid, :name, :email, :school, :major, :gradyear, :aboutme, :admin, :avatar, :avatar_file_name
 
   validates :email, :presence => true, :uniqueness => true, :email_format => {:message => "is not in a valid format!"}
   validates :school, :presence => true
