@@ -18,7 +18,7 @@ describe User do
     it 'should create a new user' do
       User.should_receive(:find_by_uid).with('1').and_return @fake_nil_user
       @fake_nil_user.should_receive(:nil?).and_return(true)
-      User.should_receive(:create).and_return @fake_user
+      User.should_receive(:create!).and_return @fake_user
       User.find_or_create_from_auth_hash(@fake_auth_hash)
     end
   end

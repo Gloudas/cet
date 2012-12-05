@@ -24,7 +24,7 @@
     # create a new user or retreive the user if he already exists
     @user = User.find_by_uid(auth_hash[:uid])
     if @user.nil?
-      #TODO: school should be set differently
+      #TODO: once multiple schools are registered with CET, School field should be set dynamically
       @user = User.create!(:uid => auth_hash[:uid], :name => auth_hash[:info][:name], :email => auth_hash[:info][:email], :school => School.find_by_uri('berkeley'), :admin => false, :avatar => nil)
     end
     return @user

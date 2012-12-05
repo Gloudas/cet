@@ -17,8 +17,11 @@ class SessionsController < ApplicationController
       auth_hash[:info][:email] = params[:login_hash]['email']
       auth_hash[:info][:name] = params[:login_hash]['name']
     end
-    
-    if User.find_by_uid(auth_hash[:uid]).nil?
+    #if auth_hash.nil?
+    #  auth_hash = {}
+    #end
+
+    if auth_hash and User.find_by_uid(auth_hash[:uid]).nil?
       # validate email format
       results = ValidatesEmailFormatOf::validate_email_format(auth_hash[:uid], :message => "is not of a valid format!")
       unless results.nil?
@@ -30,6 +33,7 @@ class SessionsController < ApplicationController
     else
       @is_new_user = false
     end
+
     @user = User.find_or_create_from_auth_hash(auth_hash)
     @@current_user = @user
 
@@ -48,10 +52,6 @@ class SessionsController < ApplicationController
   def destroy
     @@current_user = nil
     session[:user_id] = nil
-  end
-
-  def validate
-    render :text => "HIT THE VALIDATE PAGE"
   end
 
   def auth_hash
