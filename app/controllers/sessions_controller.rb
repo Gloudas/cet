@@ -37,6 +37,7 @@ class SessionsController < ApplicationController
       redirect_to edit_profile_path(@user.id)
     else
       redirect_to profile_path(@user.id)
+    end
 =begin
     @user = User.find_by_provider_and_password_digest(auth[:provider], auth[:uid])
     if @user
