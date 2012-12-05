@@ -34,4 +34,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def update_profile_picture
+    old_profile_picture = @user.avatar
+    @user.attributes = params[:user]
+    if @user.save
+      old_profile_picture.destroy if old_profile_picture
+      flash[:notice] = "Profile picture added successfully"
+    else
+      flash[:error] = "Oops, something went wrong!"
+    end
+    redirect_to profile_path(@user.id)
+  end
+
 end

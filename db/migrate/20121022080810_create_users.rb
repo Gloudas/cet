@@ -9,6 +9,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :gradyear
       t.text :aboutme
       t.timestamps
+      t.has_attached_file :avatar
     end
   end
 

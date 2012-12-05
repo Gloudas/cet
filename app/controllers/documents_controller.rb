@@ -1,12 +1,15 @@
 class DocumentsController < ApplicationController
   before_filter :set_current_user
   before_filter :set_can_edit
-  
+
   def create
     if not @can_edit
       flash[:error] = "Permission denied..."
       redirect_to project_path(@project.id) and return
     end
+
+    puts "\n\n#{params[:document]}\n\n"
+
     @document = Document.new(params[:document])
     @document.project = @project
     @document.updater = @user
@@ -14,13 +17,13 @@ class DocumentsController < ApplicationController
 
     if @document.save
       flash[:notice] = "File added successfully"
-      redirect_to project_path(@project.id)        
+      redirect_to project_path(@project.id)
     else
       flash[:error] = "There was a problem uploading your file"
       redirect_to project_path(@project.id)
     end
   end
-  
+
   def destroy
     if not @can_edit
       flash[:error] = "Permission denied..."
