@@ -13,6 +13,7 @@ Background: student is logged into ai2
   | name      | email             | school   | admin	|
   | Breh      | breh@berkeley.edu | berkeley | false	|
   | Bro 	    | bro@berkeley.edu  |	berkeley | false	|
+  | admin      | admin@berkeley.edu   | berkeley  | true    |
 
   Given I am logged in as "bro@berkeley.edu"
   And I am on the new project page
@@ -35,6 +36,36 @@ Scenario: Search for a user
   When I fill in "search" with "Breh"
   And I enter my search terms
   Then I should see "breh@berkeley.edu"
+
+Scenario: Search for an event
+  Given I am logged in as "admin@berkeley.edu"
+  Given I am on the Events page
+  When I fill in "name" with "event name"
+  And I fill in "description" with "event description"
+  And I fill in "location" with "event location"
+
+  And I select "2012" from "event_startTime_1i"
+  And I select "November" from "event_startTime_2i"
+  And I select "20" from "event_startTime_3i"
+  And I select "12 AM" from "event_startTime_4i"
+  And I select "00" from "event_startTime_5i"
+
+  And I select "2012" from "event_endTime_1i"
+  And I select "November" from "event_endTime_2i"
+  And I select "20" from "event_endTime_3i"
+  And I select "12 AM" from "event_endTime_4i"
+  And I select "30" from "event_endTime_5i"
+  
+  And I press "Create Event"
+  Then I should see "Upcoming Events"
+  And I should see "event name"
+
+  Given I am on the Berkeley page
+  When I fill in "search" with "event name"
+  Then I should see "event description"
+  And I should see "event name"
+  And I should see "November"
+
 
 Scenario: No results come up (sad path)
   Given I am on the Berkeley page

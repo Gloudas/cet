@@ -27,6 +27,7 @@ Scenario: View my profile information
   And I should see "Major"
   And I should see "About Me"
   And I should see "Graduation Year"
+  And I should not see "Active Projects"
 
 Scenario: Edit my profile information (happy path)
   Given I am on the profile page for "bruh@berkeley.edu"
