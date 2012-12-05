@@ -27,6 +27,7 @@
       #TODO: school should be set differently
       @user = User.create!(:uid => auth_hash[:uid], :name => auth_hash[:info][:name], :email => auth_hash[:info][:email], :school => School.find_by_uri('berkeley'), :admin => false, :avatar => nil)
     end
+    return @user
   end
 
   def self.search(search)

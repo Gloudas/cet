@@ -20,13 +20,13 @@
       </div>
       <br>
       <div class="row">	
-	<%= form_for(:sessions, url: "/auth/password/callback") do |f| %>
+  <%= form_tag login_callback_path("developer") do %>
 	
-        <%= label_tag :email %>
-        <%= f.text_field :email %>
+        <%= label :login_hash, :email, "Email:" %>
+        <%= text_field :login_hash, 'email', :id => 'email' %>
 	
-        <%= label_tag :password %>
-        <%= f.password_field :password %>
+        <%= label :login_hash, :name, "Password:" %>
+        <%= text_field :login_hash, 'name', :id => 'name' %>
 	
 	<div class="row">
   	  <% if flash[:error] %>

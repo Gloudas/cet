@@ -12,7 +12,6 @@ class SessionsController < ApplicationController
     #params[:login_hash].each do |key, value|
     #  print "here is the key: #{key} \n"
     # mimic the behavior of omniauth by converting login-info into an auth_hash
-=begin
     unless (params[:login_hash]).nil?
       auth_hash[:uid] = params[:login_hash]['email']
       auth_hash[:info][:email] = params[:login_hash]['email']
@@ -33,7 +32,12 @@ class SessionsController < ApplicationController
     end
     @user = User.find_or_create_from_auth_hash(auth_hash)
     @@current_user = @user
-=end
+    session[:user_id] = @user.id
+    if @is_new_user
+      redirect_to edit_profile_path(@user.id)
+    else
+      redirect_to profile_path(@user.id)
+=begin
     @user = User.find_by_provider_and_password_digest(auth[:provider], auth[:uid])
     if @user
       # user already exists
@@ -44,6 +48,7 @@ class SessionsController < ApplicationController
       redirect_to edit_profile_path(@user.id)
     end
     session[:user_id] = @user.id
+=end
   end
 
   def failure
@@ -59,7 +64,7 @@ class SessionsController < ApplicationController
     render :text => "HIT THE VALIDATE PAGE"
   end
 
-  def auth
+  def auth_hash
     request.env['omniauth.auth']
   end
 
