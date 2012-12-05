@@ -32,6 +32,7 @@ Cet::Application.routes.draw do
   match '/profile/:uid' => 'users#show', :as => 'profile'
   match '/profile/:uid/edit' => 'users#edit', :as => 'edit_profile'
   match '/profile/:uid/picture' => 'users#update_profile_picture', :as => 'update_profile_picture'
+  match '/profile/:uid/picture/destroy' => 'users#destroy_profile_picture', :as => 'destroy_profile_picture'
   # Projects
   match '/project/new' => 'projects#new', :as => 'new_project'
   match '/project/:pid' => 'projects#show', :via => :get, :as => 'project'
