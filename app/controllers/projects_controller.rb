@@ -10,12 +10,12 @@ class ProjectsController < ApplicationController
     else
       project = Project.new
       project.add_collaborator(@user)
+      project.creator = @user
     end
 
     project_info = params[:project]
     project.title = project_info[:title]
     project.description = project_info[:description]
-    project.creator = @user
     project.school_id = @user.school #HOW DOES THIS WORK!?!?
 
     # to do: validations on the project model
