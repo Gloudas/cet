@@ -26,7 +26,11 @@
 
         <div class="row span-centered">
           <div class = "span4 offset2">
-            <%= image_tag("goat.jpg", :size => "400x400") %>
+            <% if @user.avatar and @user.avatar.url != "/avatars/original/missing.png" %>
+              <%= image_tag(@user.avatar.url, :width => "400") %>
+            <% else %>
+              <%= image_tag("goat.jpg", :width => "400") %>
+            <% end %>
           </div>
 
           <div class = "span4">

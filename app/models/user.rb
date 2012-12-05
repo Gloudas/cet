@@ -16,13 +16,16 @@
     :storage => :s3,
     :s3_credentials => "#{Rails.root}/config/s3.yml",
     :bucket => "cet-aii"
+  
+    #image_types = ['image/png', 'image/jpg', 'image/jpeg', 'image/pjpeg', 'image/gif', 'image/tiff', 'image/x-png']
+    #validates_attachment_content_type :avatar, :content_type => image_types
 
   def self.find_or_create_from_auth_hash(auth_hash)
     # create a new user or retreive the user if he already exists
     @user = User.find_by_uid(auth_hash[:uid])
     if @user.nil?
       #TODO: school should be set differently
-      @user = User.create!(:uid => auth_hash[:uid], :name => auth_hash[:info][:name], :email => auth_hash[:info][:email], :school => School.find_by_uri('berkeley'), :admin => false)
+      @user = User.create!(:uid => auth_hash[:uid], :name => auth_hash[:info][:name], :email => auth_hash[:info][:email], :school => School.find_by_uri('berkeley'), :admin => false, :avatar => nil)
     end
     return @user
   end
