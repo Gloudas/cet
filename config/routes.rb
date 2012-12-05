@@ -49,10 +49,7 @@ Cet::Application.routes.draw do
   match '/events/:event_id/edit' => 'events#edit', :as => 'edit_event'  
   match '/events/:event_id/update' => 'events#update', :as => 'update_event' 
   match '/events/:event_id/delete' => 'events#delete', :as => 'delete_event'
-  # Messages
-  match '/messages/:uid' => 'messages#show', :via => :get, :as => 'message'
-  match '/messages/:uid' => 'messages#create', :via => :post, :as => 'create_mesage'
-  
+
   #Documents
   match '/project/:pid/docs' => 'documents#create', :as => 'create_doc'
   match '/project/:pid/docs/:did/destroy' => 'documents#destroy', :as => 'destroy_doc'
