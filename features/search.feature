@@ -66,7 +66,6 @@ Scenario: Search for an event
   And I should see "event name"
   And I should see "November"
 
-
 Scenario: No results come up (sad path)
   Given I am on the Berkeley page
   When I fill in "search" with "BASDFWEADSFWEADSFWERASDFWEA"
