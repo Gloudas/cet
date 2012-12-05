@@ -90,7 +90,7 @@
   <td><%= doc.avatar_file_size/1000 %>kB</td>
   <td>Uploaded By: <%= link_to doc.updater.name, profile_path(doc.updater.id) %></td>          
   <td><%= time_ago_in_words(doc.avatar_updated_at) %> ago</td>
-  <td><%= button_to "Delete File", destroy_doc_path(@project.id, doc.id), :class => "btn btn-danger btn-mini" %></td>
+  <td><%= button_to "Delete File", destroy_doc_path(@project.id, doc.id), :class => "btn btn-danger btn-mini", :confirm => "Are you sure?" %></td>
 </tr>
 <% end %>
 
@@ -118,8 +118,8 @@
 		  <td><%= link_to comment.user.name, profile_path(comment.user.id) %></td>
 		  <td><%= comment.text %></td>
 		  <td><%= time_ago_in_words(comment.created_at) %> ago</td>
-		  <% if @can_edit %>
-		  <td><%= button_to "Delete Comment", destroy_comment_path(@project.id, comment.id), :class => "btn btn-danger btn-mini" %></td>
+		  <% if @can_edit or @user.id == comment.user.id %>
+		  <td><%= button_to "Delete Comment", destroy_comment_path(@project.id, comment.id), :class => "btn btn-danger btn-mini", :confirm => "Are you sure?" %></td>
 		  <% end %>
 		</tr>
 		<% end %>
