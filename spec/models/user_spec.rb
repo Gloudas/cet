@@ -7,7 +7,7 @@ describe User do
     before :each do
       @fake_auth_hash = mock 'auth_hash'
       @fake_auth_hash.stub!(:[]).with(:uid).and_return('1')
-      @fake_auth_hash.stub!(:[]).with(:info).and_return({:name => "test", :email => "test"})
+      @fake_auth_hash.stub!(:[]).with(:info).and_return({:name => "test", :email => "test@berkeley.edu"})
       @fake_user = mock 'user'
       @fake_nil_user = mock 'nil_user'
     end

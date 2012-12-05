@@ -21,18 +21,19 @@ Scenario: View my profile information
   Given I am on the Berkeley page
   When I follow "Profile"
   Then I should be on the profile page for "bruh@berkeley.edu"
-  And I should see "Name"
+  And I should see "name"
   And I should see "Email"
   And I should see "School"
   And I should see "Major"
   And I should see "About Me"
   And I should see "Graduation Year"
+  And I should not see "Active Projects"
 
 Scenario: Edit my profile information (happy path)
   Given I am on the profile page for "bruh@berkeley.edu"
   When I press "Edit Profile"
   Then I should be on the edit profile page for "bruh@berkeley.edu"
   When I fill in "aboutme" with "I'm pretty chill"
-  And I press "Update Profile"
+  And I press "updateprofile"
   Then I should be on the profile page for "bruh@berkeley.edu"
   And I should see "I'm pretty chill"

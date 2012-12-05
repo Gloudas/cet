@@ -41,10 +41,22 @@
           <%= text_area :profile, 'aboutme', :value => @user.aboutme, :id => 'aboutme', :class => 'field span6', :rows => 7 %>
 	  
 	  <br>
-          <%= submit_tag "Update Profile", {:class => "btn btn-primary btn-medium" } %>
+          <%= submit_tag "Update Profile", {:class => "btn btn-primary btn-medium", :id => 'updateprofile' } %>
 	  
           <% end %>
 	</div>
+	
+	<hr class="featurette-divider">
+	<div class = "row">
+	  <%= form_for @user, :url => update_profile_picture_path(@user.id), :html => { :multipart => true } do |form| %>
+	    <%= form.file_field :avatar %>
+	    <%= submit_tag "Update Profile Picture", :class => "btn btn-primary" %>
+	  <% end %>
+	  <% if @user.avatar and @user.avatar.url != "/avatars/original/missing.png" %>
+	    <%= button_to "Delete Profile Picture", destroy_profile_picture_path(@user.id), :class => "btn btn-danger", :confirm => "Are you sure?" %>
+	  <% end %>
+	</div>
+	
       </div>
 
       <div id="footer">
