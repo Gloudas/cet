@@ -75,32 +75,33 @@
 	
 	<br><br><br>
 	
+  <% if @projects != [] %>
 	<div class = "row span-centered">
-          <div class = "span6 span-centered">
-            <h2>Active Projects</h2>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Owner</th>
-                  <th>Collaborators</th>
-                  <th>Last Updated</th>
-                </tr>
-              </thead>
-              <tbody>
-		<% @projects.each do |project| %>
-		<tr>
-                  <td><%= link_to project.title, project_path(project.id) %></td>
-                  <td><%= link_to project.creator.name, profile_path(project.creator.id) %></td>
-                  <td><%= project.users.length %>
-                  <td><%= time_ago_in_words(project.updated_at) %> ago</td>
-		</tr>
-		<% end %>
-              </tbody>
-            </table>
-          </div>
+    <div class = "span6 span-centered">
+      <h2>Active Projects</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Owner</th>
+            <th>Collaborators</th>
+            <th>Last Updated</th>
+          </tr>
+        </thead>
+        <tbody>
+		    <% @projects.each do |project| %>
+		      <tr>
+            <td><%= link_to project.title, project_path(project.id) %></td>
+            <td><%= link_to project.creator.name, profile_path(project.creator.id) %></td>
+            <td><%= project.users.length %>
+            <td><%= time_ago_in_words(project.updated_at) %> ago</td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
 	</div>
-      </div>
+  <% end %>
       
       <div id="footer">
 	<%= render "/footer"%>
