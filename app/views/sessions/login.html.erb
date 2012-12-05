@@ -20,13 +20,13 @@
       </div>
       <br>
       <div class="row">	
-	<%= form_tag login_callback_path("developer") do %>
-	
-        <%= label :login_hash, :name, "Name:" %>
-        <%= text_field :login_hash, 'name', :id => 'name' %>
+  <%= form_tag login_callback_path("developer") do %>
 	
         <%= label :login_hash, :email, "Email:" %>
         <%= text_field :login_hash, 'email', :id => 'email' %>
+	
+        <%= label :login_hash, :name, "Password:" %>
+        <%= text_field :login_hash, 'name', :id => 'name' %>
 	
 	<div class="row">
   	  <% if flash[:error] %>

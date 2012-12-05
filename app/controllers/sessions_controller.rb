@@ -32,13 +32,24 @@ class SessionsController < ApplicationController
     end
     @user = User.find_or_create_from_auth_hash(auth_hash)
     @@current_user = @user
-
     session[:user_id] = @user.id
     if @is_new_user
       redirect_to edit_profile_path(@user.id)
     else
       redirect_to profile_path(@user.id)
     end
+=begin
+    @user = User.find_by_provider_and_password_digest(auth[:provider], auth[:uid])
+    if @user
+      # user already exists
+      redirect_to profile_path(@user.id)
+    else
+      User.create_with_omniauth(auth)
+      flash[:notice] = "Welcome new user! Please fill out your profile information."
+      redirect_to edit_profile_path(@user.id)
+    end
+    session[:user_id] = @user.id
+=end
   end
 
   def failure
