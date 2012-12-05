@@ -17,8 +17,8 @@
     :s3_credentials => "#{Rails.root}/config/s3.yml",
     :bucket => "cet-aii"
   
-    #image_types = ['image/png', 'image/jpg', 'image/jpeg', 'image/pjpeg', 'image/gif', 'image/tiff', 'image/x-png']
-    #validates_attachment_content_type :avatar, :content_type => image_types
+  image_types = ['image/png', 'image/jpg', 'image/jpeg', 'image/pjpeg', 'image/gif', 'image/tiff', 'image/x-png']
+  validates_attachment_content_type :avatar, :content_type => image_types
 
   def self.find_or_create_from_auth_hash(auth_hash)
     # create a new user or retreive the user if he already exists
