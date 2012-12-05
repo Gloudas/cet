@@ -18,6 +18,8 @@ Cet::Application.routes.draw do
   # Sessions
   match '/auth/:provider/callback' => 'sessions#create', :as => 'login_callback'
   match '/auth/failure', :to => 'sessions#failure'
+  resource :session
+
   match '/login' => 'sessions#login', :as => 'login'
   match '/logout' => 'sessions#destroy', :as => 'logout'
   match '/login/cas/validate' => 'sessions#validate', :as => 'service_validate'

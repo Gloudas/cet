@@ -34,6 +34,7 @@ Given /the following projects exist/ do |projects_table|
     p.title = project[:title]
     p.description = project[:description]
     p.creator = User.find_by_email(project[:creator])
+    p.school_id = User.find_by_email(project[:creator]).school
     p.users << User.find_by_email(project[:creator])
     project[:collaborators].split.each do |collaborator|
       p.users << User.find_by_email(collaborator)

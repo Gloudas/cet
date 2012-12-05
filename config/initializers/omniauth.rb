@@ -1,5 +1,7 @@
 
 Rails.application.config.middleware.use OmniAuth::Builder do
+#provider :password
+
   provider :developer
   # example for 3rd party:
 

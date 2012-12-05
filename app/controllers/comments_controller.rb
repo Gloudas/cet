@@ -20,11 +20,7 @@ class CommentsController < ApplicationController
     comment = Comment.find_by_id(params[:comid])
     if @can_edit or @user.id == comment.user.id
       # can destroy only if you are collaborator or you created the comment
-      if comment.destroy
-        flash[:notice] = "Comment deleted!"
-      else
-        flash[:error] = "Something went wrong with deleting your comment"
-      end
+      flash[:notice] = "Comment deleted!" if comment.destroy
     else
       flash[:error] = "You can't delete this comment!"
     end
