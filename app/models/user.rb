@@ -17,14 +17,13 @@
     :s3_credentials => "#{Rails.root}/config/s3.yml",
     :bucket => "cet-aii"
 
-  def self.find_or_create_from_auth_hash(auth_hash)
-    # create a new user or retreive the user if he already exists
-    @user = User.find_by_uid(auth_hash[:uid])
-    if @user.nil?
-      #TODO: school should be set differently
-      @user = User.create!(:uid => auth_hash[:uid], :name => auth_hash[:info][:name], :email => auth_hash[:info][:email], :school => School.find_by_uri('berkeley'), :admin => false)
+  def self.create_with_omniauth(auth)
+    create! do |user|
+      user.uid = auth[:uid]
+      user.email = auth[:info][:email]
+      user.school = School.find_by_uri('berkeley')
+      user.admin = false
     end
-    return @user
   end
 
   def self.search(search)

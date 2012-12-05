@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 gem 'omniauth'
+gem 'omniauth-password'
 gem 'omniauth-cas'
 gem 'validates_email_format_of'
 gem 'paperclip'
