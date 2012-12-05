@@ -40,9 +40,16 @@ class UsersController < ApplicationController
     if @user.save
       old_profile_picture.destroy if old_profile_picture
       flash[:notice] = "Profile picture added successfully"
+      redirect_to profile_path(@user.id)
     else
       flash[:error] = "Oops, something went wrong!"
+      redirect_to edit_profile_path(@user.id)
     end
+  end
+
+  def destroy_profile_picture
+    @user.avatar.destroy if @user.avatar
+    @user.avatar = nil
     redirect_to profile_path(@user.id)
   end
 
