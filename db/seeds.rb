@@ -45,13 +45,6 @@ e2 = Event.create!(name: 'CSUA Hackathon',
 			location: "UC Berkeley, Wozniak Lounge",
 			school: s
 )
-e3 = Event.create!(name: 'Saas Web App Competition', 
-			description: "aii is hosting a new entrepreneurial competition for Saas Web Apps! Compete in groups of 5 to develop the best new web application! Register today at bmic.org/saas." ,
-			startTime: startTime,
-			endTime: endTime,
-			location: "UC Berkeley, Wozniak Lounge",
-			school: s
-)
 
 # Comments
 c1 = Comment.create!(text: 'I cant wait to see the finished product. Its going to rock the world.', user: u2, project: p1)
