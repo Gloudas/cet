@@ -8,8 +8,6 @@ class DocumentsController < ApplicationController
       redirect_to project_path(@project.id) and return
     end
 
-    puts "\n\n#{params[:document]}\n\n"
-
     @document = Document.new(params[:document])
     @document.project = @project
     @document.updater = @user
@@ -32,7 +30,8 @@ class DocumentsController < ApplicationController
     doc = Document.find_by_id(params[:did])
     doc.avatar.destroy
     doc.destroy
-    flash[:notice] = "File deleted sucessfully."
+    flash[:notice] = "File deleted successfully."
     redirect_to project_path(@project.id)
   end
+
 end

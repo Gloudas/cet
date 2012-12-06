@@ -60,7 +60,6 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    puts 'showing project!!!!!!'
     @project = Project.find_by_id(params[:pid])
     @comments = @project.comments.order("created_at DESC")
     @document = Document.new
