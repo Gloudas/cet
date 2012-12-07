@@ -1,6 +1,10 @@
 #README#
 This is the readme. It will describe all of the entities of this project, and assist in the transition of code ownership, specifically noting where code needs change for production.
 
+##General Notes##
+*permissions*: Only users who should be allowed to make modifications are allowed to do so. For example, a non-collaborator for a project cannot access or upload/delete files, add/delete comments, or edit any project-related information - some of the buttons won't even show up, and for those that do, nothing happens when clicked and "permission denied" is flashed.
+
+*login*:
 
 ##DATABASE ENTITIES##
 ###Documents and Profile Pictures:###
@@ -19,5 +23,3 @@ Currently, Berkeley is the only supported school. It is created in the seed file
 Each user, when instantiated, has its school set to Berkeley by default; see */app/models/user.rb:19*. 
 
 
-##General Notes##
-*permissions*: Only users who should be allowed to make modifications are allowed to do so. For example, a non-collaborator for a project cannot access or upload/delete files, add/delete comments, or edit any project-related information - some of the buttons won't even show up, and for those that do, nothing happens when clicked and "permission denied" is flashed.
