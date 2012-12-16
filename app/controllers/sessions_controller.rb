@@ -3,22 +3,18 @@ class SessionsController < ApplicationController
   @@current_user
 
   def login
-    # will use omniauth in the future - for now will use custom login-page
-    # redirect_to '/auth/developer/'
+    # For now, use our custom login page.
+    # In the future, this method can be used to redirect to an omniauth login page to allow students to authenticate through their school.
   end
 
   def create
-    #params[:login_hash].each do |key, value|
-    #  print "here is the key: #{key} \n"
-    # mimic the behavior of omniauth by converting login-info into an auth_hash
+    # This allows our custom login page to mimic the behavior of omniauth by creating a new auth_hash.
+    # This code should be removed if the custom login page is removed from the application.
     unless (params[:login_hash]).nil?
       auth_hash[:uid] = params[:login_hash]['email']
       auth_hash[:info][:email] = params[:login_hash]['email']
       auth_hash[:info][:name] = params[:login_hash]['name']
     end
-    #if auth_hash.nil?
-    #  auth_hash = {}
-    #end
 
     if auth_hash and User.find_by_uid(auth_hash[:uid]).nil?
       # validate email format
@@ -41,18 +37,6 @@ class SessionsController < ApplicationController
     else
       redirect_to profile_path(@user.id)
     end
-=begin
-    @user = User.find_by_provider_and_password_digest(auth[:provider], auth[:uid])
-    if @user
-      # user already exists
-      redirect_to profile_path(@user.id)
-    else
-      User.create_with_omniauth(auth)
-      flash[:notice] = "Welcome new user! Please fill out your profile information."
-      redirect_to edit_profile_path(@user.id)
-    end
-    session[:user_id] = @user.id
-=end
   end
 
   def failure

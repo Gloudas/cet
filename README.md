@@ -3,7 +3,7 @@ This project is a prototype for the Applied Innovation Institute's new website f
 This readme will describe all of the entities of this project, and assist in the transition of code ownership, specifically noting where code needs change for production.
 This web application was created by Doug Wreden (douglas.wreden@gmail.com), Simon Janpanah (sjanpanah@gmail.com), Noel Moldvai (noelmoldvai@gmail.com), Barrett Glasauer (bglasauer@gmail.com), and Steven Farberov (farberovs@yahoo.com). 
 
-The goal of this website is to provide a hub for students to collaborate and compete in entrepreneurial endeavors. The site hopes to foster collaboration on projects and participation in school-run competitions, and will provides a mean for students across school communities to work with one another on entrepreneurial ideas.
+The goal of this website is to provide a hub for students to collaborate and compete in entrepreneurial endeavors. The site hopes to foster collaboration on projects and participation in school-run competitions, and will provides a means for students across school communities to work with one another on entrepreneurial ideas.
 The best way to begin understanding the project is to take a look around the website, which as of this writing is hosted at morning-sands-2053.herokuapp.com (a temporary url for development purposes). 
 Additionally, a screencast showing basic use of the website can be found here: *YOUTUBE LINK NEEDED*
 
@@ -40,6 +40,9 @@ These are the file storage entities for projects/users. Files are stored in the 
 
 ###Comments:###
 Comments are associated with a project and be created by any user, collaborator or not. On a high-level, this allows outside users to give feedback on students' projects, and allows collaborators to comment on the progress of any work.
+
+##Frontend##
+The focus of this project was on the backend of the code, as AII plans on having a professional graphic designer follow up on our work by redesigning the look of the website. Therefore the amount of frontend work done was minimal. We used Twitter's bootstrap for CSS and the stylesheets can be found in */app/assets/stylesheets*. Additionally, we used Erb for our html work.
 
 ##General Notes##
 *permissions*: Only users who should be allowed to make modifications are allowed to do so. For example, a non-collaborator for a project cannot access or upload/delete files, add/delete comments, or edit any project-related information - some of the buttons won't even show up, and for those that do, nothing happens when clicked and "permission denied" is flashed.

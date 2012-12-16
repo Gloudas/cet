@@ -13,13 +13,11 @@ class UsersController < ApplicationController
 
   def edit
     if not @is_mine
-      # this is not your profile
       flash[:error] = "Permission denied..."
       redirect_to profile_path and return
     end
     if params[:profile]
-      # the form has been submitted
-      # update all the fields
+      # The form has been submitted - update all the fields
       params[:profile].each do |att, value|
         @user[att] = value
       end

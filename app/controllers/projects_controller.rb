@@ -16,9 +16,8 @@ class ProjectsController < ApplicationController
     project_info = params[:project]
     project.title = project_info[:title]
     project.description = project_info[:description]
-    project.school_id = @user.school #HOW DOES THIS WORK!?!?
+    project.school_id = @user.school
 
-    # to do: validations on the project model
     success = project.save
     if success
       if params[:pid]
@@ -51,7 +50,6 @@ class ProjectsController < ApplicationController
       redirect_to project_path(@project.id) and return
     end
     if params[:project]
-      # process the form
       new_or_edit and return
     end
     @project = Project.find_by_id(params[:pid])
@@ -110,7 +108,7 @@ class ProjectsController < ApplicationController
     end
     collaborator = User.find_by_id(params[:cid])
     if collaborator == @user or collaborator == @project.creator
-      # can't delete yourself or creator
+      # You can't delete yourself or creator
       flash[:error] = "Oops, you can't do that!"
       redirect_to edit_collaborators_path(@project.id) and return
     end

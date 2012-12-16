@@ -26,7 +26,7 @@ class Project < ActiveRecord::Base
     end if user
     return success
   end
-
+  
   def self.search(search)
     if search != nil
       find(:all, :conditions => ['lower(title) LIKE ? OR lower(description) LIKE ?', "%#{search}%".downcase, "%#{search}%".downcase])

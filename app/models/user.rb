@@ -7,11 +7,12 @@
 
   belongs_to :school
   has_and_belongs_to_many :projects, :uniq => true
-  # should user deletion caused all created projects to be destroyed? hmm... right now yes
+
+  # User deletion causes all created projects to be destroyed
   has_many :created_projects, :class_name => 'Project', :foreign_key => "creator_id", :dependent => :destroy
   has_many :comments, :dependent => :destroy
 
-  #paperclip
+  # for Paperclip file gem
   has_attached_file :avatar,
     :storage => :s3,
     :s3_credentials => "#{Rails.root}/config/s3.yml",
@@ -24,7 +25,7 @@
     # create a new user or retreive the user if he already exists
     @user = User.find_by_uid(auth_hash[:uid])
     if @user.nil?
-      #TODO: once multiple schools are registered with CET, School field should be set dynamically
+      #TODO: once multiple schools are registered with CET, School field should be set dynamically. For now, default to Berkeley.
       @user = User.create!(:uid => auth_hash[:uid], :name => auth_hash[:info][:name], :email => auth_hash[:info][:email], :school => School.find_by_uri('berkeley'), :admin => false, :avatar => nil)
     end
     return @user

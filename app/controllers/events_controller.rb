@@ -9,10 +9,8 @@ class EventsController < ApplicationController
 
     event = params[:event]
     newEvent = Event.new
-
     startTime = DateTime.new(event['startTime(1i)'].to_i, event['startTime(2i)'].to_i, event['startTime(3i)'].to_i, event['startTime(4i)'].to_i, event['startTime(5i)'].to_i)
     endTime = DateTime.new(event['endTime(1i)'].to_i, event['endTime(2i)'].to_i, event['endTime(3i)'].to_i, event['endTime(4i)'].to_i, event['endTime(5i)'].to_i)
-
     if startTime > endTime
       flash[:error] = "The start date and time must come before the end date and time."
       redirect_to :action => 'index'
@@ -24,8 +22,7 @@ class EventsController < ApplicationController
     newEvent.location = event[:location]
     newEvent.school_id = @user.school
     newEvent.startTime = startTime
-    newEvent.endTime = endTime
-    
+    newEvent.endTime = endTime    
     success = newEvent.save
     
     if success
@@ -82,7 +79,6 @@ class EventsController < ApplicationController
 
     event.startTime = startTime
     event.endTime = endTime
-
     success = event.save
 
     if success
